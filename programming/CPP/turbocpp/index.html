@@ -1,0 +1,3307 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>TurboCPP - Competitive Programming</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#turbo-c-answers-to-common-questions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Competitive Programming" class="md-header__button md-logo" aria-label="Competitive Programming" data-md-component="logo">
+      
+  <img src="../../../favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Competitive Programming
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TurboCPP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shivanshu-semwal/competitive-programming" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../DS_and_ML/" class="md-tabs__link">
+        DS and ML
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../linux/" class="md-tabs__link">
+        Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../math/" class="md-tabs__link">
+        Math
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../other/" class="md-tabs__link">
+        Other
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
+        Programming
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../windows/" class="md-tabs__link">
+        Windows
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Competitive Programming" class="md-nav__button md-logo" aria-label="Competitive Programming" data-md-component="logo">
+      
+  <img src="../../../favicon.ico" alt="logo">
+
+    </a>
+    Competitive Programming
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shivanshu-semwal/competitive-programming" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          DS and ML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DS and ML" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          DS and ML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DS_and_ML/" class="md-nav__link">
+        DS and ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DS_and_ML/pandas/" class="md-nav__link">
+        Pandas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../DS_and_ML/summary/" class="md-nav__link">
+        Data Science Summary
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Manual
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Manual" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Manual
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/" class="md-nav__link">
+        Manual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/colors/" class="md-nav__link">
+        Colors in Terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/control-character/" class="md-nav__link">
+        Control Characters for terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/echo/" class="md-nav__link">
+        echo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/filesystem/" class="md-nav__link">
+        Filesystem in Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/find/" class="md-nav__link">
+        find
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/general-purpose-util/" class="md-nav__link">
+        General Purpose Utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/links/" class="md-nav__link">
+        Hard and Soft Links
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/man/" class="md-nav__link">
+        Using Linux Manual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/process/" class="md-nav__link">
+        Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/prompt/" class="md-nav__link">
+        Prompt in terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/shell/" class="md-nav__link">
+        Shells in Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/text-fu/" class="md-nav__link">
+        text-fu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/xargs/" class="md-nav__link">
+        xargs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/manual/youtube-dl/" class="md-nav__link">
+        youtube-dl
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/other/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/other/adb/" class="md-nav__link">
+        adb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/other/cli_tricks/" class="md-nav__link">
+        cli tricks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/other/dolphin/" class="md-nav__link">
+        Dolphin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/other/hindi_on_linux/" class="md-nav__link">
+        Hindi in linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/other/linux_desktop_files/" class="md-nav__link">
+        desktop files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/other/privacy_linux/" class="md-nav__link">
+        Privacy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/other/touchpad-settings/" class="md-nav__link">
+        touchpad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/other/tricks/" class="md-nav__link">
+        tricks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Ricing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ricing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Ricing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/ricing/" class="md-nav__link">
+        Ricing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/ricing/ascii_art/" class="md-nav__link">
+        ASCII Art
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/ricing/change_fonts/" class="md-nav__link">
+        Fonts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/ricing/colors/" class="md-nav__link">
+        Colors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/ricing/desktop_files/" class="md-nav__link">
+        desktop files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/ricing/gnome/" class="md-nav__link">
+        Gnome
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/ricing/kde/" class="md-nav__link">
+        KDE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/ricing/some_customizations/" class="md-nav__link">
+        More Customizations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/ricing/themes/" class="md-nav__link">
+        Themes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Shells
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Shells" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Shells
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/shells/" class="md-nav__link">
+        Shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/shells/programming/" class="md-nav__link">
+        Shell Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/shells/zsh/" class="md-nav__link">
+        zsh
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          Software
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/software/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/software/AUR/" class="md-nav__link">
+        AUR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/software/apt-key/" class="md-nav__link">
+        apt-key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/software/apt/" class="md-nav__link">
+        apt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/software/dictonatries/" class="md-nav__link">
+        Dictionaries on Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/software/mysql/" class="md-nav__link">
+        MySQL on Ubuntu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/software/package_management/" class="md-nav__link">
+        Package management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/software/pacman/" class="md-nav__link">
+        Pacman
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          Vim
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vim" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Vim
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/vim/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/vim/external-command/" class="md-nav__link">
+        External Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/vim/find-replace/" class="md-nav__link">
+        Find and replace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/vim/line_number/" class="md-nav__link">
+        Line Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/vim/macros/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/vim/renaming/" class="md-nav__link">
+        Renaming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/vim/spell/" class="md-nav__link">
+        Spell Check
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/vim/vim-galore/" class="md-nav__link">
+        Vim Galore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../linux/vim/vimium-ext/" class="md-nav__link">
+        Vimium
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/" class="md-nav__link">
+        Math
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/algebra/" class="md-nav__link">
+        Algebra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/combinatorics/" class="md-nav__link">
+        Combinatorics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/discrete_mathematics/" class="md-nav__link">
+        Discrete Math
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/number_theory/" class="md-nav__link">
+        Number Theory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/other/math-formulas/" class="md-nav__link">
+        Math Formula
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programming" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Database/" class="md-nav__link">
+        Database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audio-video-codecs/" class="md-nav__link">
+        Audio and Video Codecs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competency-matrix/" class="md-nav__link">
+        Competency Matrix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/" class="md-nav__link">
+        Configurations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../demoscene/" class="md-nav__link">
+        Database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../document-formats/" class="md-nav__link">
+        Document Formats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../google-scripts/" class="md-nav__link">
+        Google Scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iot/" class="md-nav__link">
+        IOT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mtp/" class="md-nav__link">
+        MTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../noobs_guide_cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oracle/" class="md-nav__link">
+        DBMS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pandoc/" class="md-nav__link">
+        Pandoc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../regex/" class="md-nav__link">
+        RegEx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_15" type="checkbox" id="__nav_6_15" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_15">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="C" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_15">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C/c/" class="md-nav__link">
+        C Programming
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_16" type="checkbox" id="__nav_6_16" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_16">
+          CPP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CPP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_16">
+          <span class="md-nav__icon md-icon"></span>
+          CPP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp/" class="md-nav__link">
+        C++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sfml/" class="md-nav__link">
+        SFML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          TurboCPP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        TurboCPP
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-install-turbo-c" class="md-nav__link">
+    How do I install Turbo C++?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrated-environment" class="md-nav__link">
+    Integrated Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-compiler" class="md-nav__link">
+    Command - Line Compiler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-io" class="md-nav__link">
+    General IO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-programs" class="md-nav__link">
+    Example programs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_17" type="checkbox" id="__nav_6_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_17">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_17">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/conda/" class="md-nav__link">
+        Conda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/django/" class="md-nav__link">
+        django
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_18" type="checkbox" id="__nav_6_18" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_18">
+          Web Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web Development" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_18">
+          <span class="md-nav__icon md-icon"></span>
+          Web Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Web%20Development/tech_stacks/" class="md-nav__link">
+        Tech Stack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_19" type="checkbox" id="__nav_6_19" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_19">
+          Editor
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Editor" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_19">
+          <span class="md-nav__icon md-icon"></span>
+          Editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editor/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editor/atom/" class="md-nav__link">
+        Atom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editor/emacs/" class="md-nav__link">
+        Emacs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editor/history/" class="md-nav__link">
+        History
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editor/neovim/" class="md-nav__link">
+        neovim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../editor/vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_20" type="checkbox" id="__nav_6_20" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_20">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_20">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/README_SSH/" class="md-nav__link">
+        SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/gitignore/" class="md-nav__link">
+        gitignore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/ssh/" class="md-nav__link">
+        SSH Keys
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Windows" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/" class="md-nav__link">
+        Windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/Registry/" class="md-nav__link">
+        Registry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/history/" class="md-nav__link">
+        Windows Version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/how_to_use_ps/" class="md-nav__link">
+        Powershell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/package_managers/" class="md-nav__link">
+        Package Mangers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/resources/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/terminals/" class="md-nav__link">
+        Terminals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/tool_kit/" class="md-nav__link">
+        Toolkit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/use%20diskpart/" class="md-nav__link">
+        DiskPart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/win7/" class="md-nav__link">
+        Windows 7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/wsl/" class="md-nav__link">
+        Window Sub-system for linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-install-turbo-c" class="md-nav__link">
+    How do I install Turbo C++?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrated-environment" class="md-nav__link">
+    Integrated Environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-compiler" class="md-nav__link">
+    Command - Line Compiler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-io" class="md-nav__link">
+    General IO
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-programs" class="md-nav__link">
+    Example programs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/shivanshu-semwal/competitive-programming/edit/master/programming/CPP/turbocpp.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="turbo-c-answers-to-common-questions">TURBO C++: ANSWERS TO COMMON QUESTIONS</h1>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="how-do-i-install-turbo-c">How do I install Turbo C++?</h3>
+<p>Run the INSTALL program from the INSTALL/HELP disk. To start
+the installation, change your current drive to the one that
+has the install program on it and type INSTALL. You will be
+given instructions in a box at the bottom of the screen for
+each prompt. For example, if you will be installing from
+drive A:, type:</p>
+<div class="highlight"><pre><span></span><code>A:
+INSTALL
+</code></pre></div>
+<p>At this point, the INSTALL program will appear with menus
+selections and descriptions to guide you through the installation
+process.</p>
+<p>Q. How do I run Turbo C++?
+ A. After you have installed Turbo C++, type "TC" from the DOS
+    prompt and you're ready to go.</p>
+<p>Q. What is the difference between TC.EXE and TCC.EXE?
+ A. The Turbo C++ package comes with two compilers, an Integrated
+    Environment named TC.EXE and a command-line compiler named
+    TCC.EXE. The Integrated Environment combines the command-line
+    compiler with an integrated editor, linker, debugger, and other
+    useful features (such as pop-up and pull-down menus, full keywobard
+    and mouse support, and so on). The command-line version runs from
+    the DOS command line. Please refer to the Turbo C++ User's Guide
+    for details on using both systems.</p>
+<p>Q. What is a configuration file?
+ A. A configuration file tells Turbo C++ what options to default to
+    and where to look for its library and header files. TC.EXE
+    looks for a configuration file named TCCONFIG.TC, and TCC.EXE
+    looks for a file named TURBOC.CFG.</p>
+<p>Q. How do I create a configuration file?
+ A. When you run the INSTALL program it creates a configuration
+    file named TURBOC.CFG for TCC.EXE. This file is just an
+    ASCII file which you can change with any text editor. It
+    contains the path information for the library and header
+    files for TCC.EXE to use. The INSTALL program does not
+    create a TCCONFIG.TC file for TC.EXE because it installs
+    the directory information directly into TC.EXE. You can
+    create a configuration file for TC.EXE by running Turbo C++,
+    setting your options however you want to set them, and
+    typing Alt-O/S.</p>
+<h2 id="integrated-environment">Integrated Environment</h2>
+<p>Q. Why is Turbo C++ not able to find any of my <code>#include</code> files?
+ A. The compiler searches for include files in the Turbo C++ Include
+    Directories path. You can specify this path through the
+    Options|Directories menu. The INSTALL program initially sets this
+    path to the directory where it copied all the Turbo C++ *.h files.</p>
+<p>Q. Why do I get the message:
+    Linker Error: Unable to open input file 'C0x.OBJ'
+ A. The linker searches for Turbo C++ start-up and library files in the
+    Turbo C++ Library Directories path. You can specify this path through
+    the Options|Directories menu. The INSTALL program initially sets this
+    path to the directory where it copied the start-up and library files.</p>
+<p>Q. How do I get Turbo C++ to link in my own libraries or use multiple
+    source files?
+ A. Turbo C++'s Project facility is designed to allow you to work with
+    multiple files.</p>
+<p>Q. Why does the linker tell me that all the graphics library routines
+    are undefined?
+ A. The Options|Linker|Graphics Library item must be set ON, if
+    you are using any Turbo C++ graphics functions and have not
+    specifyed GRAPHICS.LIB in a project file.</p>
+<p>Q. Why does Turbo C++ report "Unable to open include file 'stdarg.h'"
+    when I try to <code>#include &lt;stdio.h&gt;</code>?
+ A. The most probable reason is that you have exceeded the number
+    of files that DOS can have open simultaneously. Add the line</p>
+<div class="highlight"><pre><span></span><code>   FILES=20
+
+to your DOS CONFIG.SYS file. This allows DOS to open up to 20
+files at the same time. CONFIG.SYS will only be effective after
+you have rebooted your computer. See the IBM DOS Reference
+Manual for details on the CONFIG.SYS file.
+</code></pre></div>
+<p>Q. How do I change the colors of the editor and menus in TC?
+ A. The utility TCINST.EXE allows you to customize your colors.</p>
+<p>Q. How do I get a listing of my source code to my printer?
+ A. From within the Turbo C++ editor press Ctrl-K-P. This will
+    print a marked block to the printer. If no block is marked,
+    this key sequence will print the entire file in your editor.</p>
+<p>Q. When I Make, Run, or Trace a program, Turbo C++ sometimes goes
+    through the compile and link process even when the object files
+    are up-to-date.
+ A. Turbo C++'s MAKE logic works solely on a file's date and time
+    stamp. If one of your source files is marked with a date
+    that's sometime in the future, the object files that are
+    created from it will always be older than the source file,
+    and Turbo C++ will always try to rebuild the file. You can fix
+    this by using TOUCH.COM to set the file to the current date
+    and time. You should also make sure that your system's date
+    and time are always properly set. TOUCH.COM is documented in
+    the file UTIL.DOC.</p>
+<p>Q. How come my old Turbo C++ project files don't work anymore?
+ A. Project files now contain much more information about a project now,
+    and hence are no longer stored in ASCII format. To create a project
+    file, select PROJECT from the main menu, and follow the menus. To
+    convert your old project files to the new format, use the supplied
+    utility file PRJCNVT.EXE (documented in UTIL.DOC).</p>
+<p>Q. How can I convert my Turbo C 2.0 project files to the new
+    format?
+ A. There is a conversion utility in your Turbo C++ BIN directory
+    called PRJCNVT.EXE. This program will perform the conversion.</p>
+<p>Q. How come my project file is automatically loaded when I start TC. I
+    want to work on a different program.
+ A. If there is only one project file in the current directory, Turbo C++
+    will load and use that one file. If there are no project files, or
+    if there are multiple project files, Turbo C++ does not automatically
+    load one.</p>
+<p>Q. My right mouse button appears to do nothing. Can I change this so it
+    will set breakpoints?
+ A. Yes, under the menu for Options|Environment|Mouse there is a
+    dialog box for the right mouse button. You can change it to set
+    breakpoints, or to do many other things.</p>
+<p>Q. How do I get Turbo C++ to use extended or expanded memory?
+ A. Use the /X switch for extended and the /E switch for expanded when
+    you invoke Turbo C++.</p>
+<p>Q. How can I find out where my "null pointer assignment" is occurring?
+ A. Set a watch on the following expressions:</p>
+<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="n">m</span><span class="w"></span>
+<span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="mi">4</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Step through the program. When the values change, the just-executed line
+is the one that is causing the problem.
+</code></pre></div>
+<p>Q. When I compile my program, I get the following error:</p>
+<div class="highlight"><pre><span></span><code>Error: C:\TC\INCLUDE\STDIO.H: Overlays only supported in
+medium, large, and huge memory models
+
+What is happening?
+</code></pre></div>
+<p>A. The Overlay Support option has been selected and does not work
+    in the tiny, small, or medium memory models.</p>
+<div class="highlight"><pre><span></span><code>You may turn this option off with:
+Options|Compiler|Code Generation|Overlay Support
+</code></pre></div>
+<p>Q. When I try to load a new file after editing a file, the first
+    file remains on the screen. How do I close the first file?
+ A. Use Alt-F3 to close the current file. Also, use F6 to move
+    from one file to the next, if there is more than one file
+    open at a time.</p>
+<p>Q. I'm doing a search and replace operation, and the editor prompts me for
+    each replacement. I've selected "Change All", but it still does it.
+ A. To disable the prompting, you must unselect the "Prompt on replace"
+    option on the left side of the dialog box.</p>
+<p>Q. When I try to use the any of the pseudo registers, like _AX, I
+    get the error message "Undefined symbol '_AX' in function..."
+    when I compile. Why?
+ A. You are only allowed to use the pseudo registers in the Turbo
+    C++ and ANSI modes of the compiler. You can change this setting
+    in the Options|Compiler|Source menu.</p>
+<p>Q. Since I don't have a mouse, can I still copy blocks of code
+    from one file to another?
+ A. Yes. You can mark the beginning and end of a block by moving
+    to the appropriate area and pressing Ctrl-K-B (mark beginning) and
+    Ctrl-K-K (mark end). You can then use the copy and paste commands
+    in the Edit menu.</p>
+<h2 id="command-line-compiler">Command - Line Compiler</h2>
+<p>Q. Why is Turbo C++ not able to find any of my #include files?
+ A. The compiler searches for include files in the Turbo C++ Include
+    Directories path. You specify this path with the -I switch. The INSTALL
+    program initially writes a configuration file (TURBOC.CFG) that
+    sets this path to the directory where it copied all the Turbo C++
+    *.h files.</p>
+<p>Q. Why do I get the message:
+    Linker Error: Unable to open input file 'C0x.OBJ'
+ A. The linker searches for Turbo C++ start-up and library files in the
+    Turbo C++ Library Directories path. You can specify this path with
+    the -L switch. If you allow TCC to invoke the linker, it will search
+    the directories in the configuration file (TURBOC.CFG) written by the
+    INSTALL program. If you run TLINK, the configuration file is not read.</p>
+<p>Q. Why does the linker tell me that all the graphics library
+    routines are undefined?
+ A. TCC will not search the graphics library unless you tell it to.
+    You should specify the graphics library on the command line. For
+    example, to compile BGIDEMO, type</p>
+<div class="highlight"><pre><span></span><code>   TCC BGIDEMO.C GRAPHICS.LIB&lt;Enter&gt;
+</code></pre></div>
+<h2 id="general-io">General IO</h2>
+<hr />
+<p>Q. The '\n' in cprintf() does not return the cursor to the
+    beginning of the line. It only moves the cursor down one line.
+ A. cprintf() interprets '\n' as a Line Feed. To force the cursor to
+    the beginning of the line, manually insert a Carriage Return:</p>
+<div class="highlight"><pre><span></span><code>  cprintf(&quot;\n\r&quot;);
+</code></pre></div>
+<p>Q. How do I print to the printer from a Turbo C++ program?
+ A. Turbo C++ uses a FILE pointer (stdprn) defined in the STDIO.H
+    file. You do not need to open stdprn before using it:</p>
+<div class="highlight"><pre><span></span><code>   #include &lt;stdio.h&gt;
+   int main(void)
+   {
+       fprintf(stdprn, &quot;Hello, world\n&quot;);
+   }
+
+Note that if your printer is line-buffered, the output is
+flushed only after a &#39;\n&#39; is sent.
+</code></pre></div>
+<p>Q. I am reading and writing binary files. My program is translating
+    the Carriage Return (0x0D) and Line Feed (0x0A) characters. How do
+    I prevent this from happening?
+ A. Files opened in text mode will translate these characters for
+    DOS. To read a file in binary mode, open it in binary mode.
+    For example,
+,
+      #include <stdio.h>
+      int main(void)
+      {
+         FILE *binary_fp;
+         char buffer[100];</p>
+<div class="highlight"><pre><span></span><code>     binary_fp = fopen(&quot;MYFILE.BIN&quot;, &quot;rb&quot;);
+
+     fread(buffer, sizeof(char), 100, binary_fp);
+
+                :
+  }
+
+The default file mode is text.
+</code></pre></div>
+<p>Q. Why don't printf() and puts() print text in color?
+ A. Use the console I/O functions cprintf() and cputs() for color output.</p>
+<div class="highlight"><pre><span></span><code>  #include &lt;conio.h&gt;
+  int main(void)
+  {
+      textcolor(BLUE);
+      cprintf(&quot;I&#39;m blue.&quot;);
+  }
+</code></pre></div>
+<p>Q. How do I print a long integer?
+ A. Use the "%ld" format:</p>
+<div class="highlight"><pre><span></span><code>  long int l = 70000L;
+  printf(&quot;%ld&quot;, l);
+</code></pre></div>
+<p>Q. How do I print a long double?
+ A. Use the "%Lf" format.</p>
+<div class="highlight"><pre><span></span><code>  long double ldbl = 1E500;
+  printf(&quot;%Lf&quot;, ldbl);
+</code></pre></div>
+<h2 id="example-programs">Example programs</h2>
+<p>Q. How do I compile the BGIDEMO program?
+ A. 1. Make sure that the following Turbo C++ files are in your
+       current directory:</p>
+<div class="highlight"><pre><span></span><code>     BGIDEMO.C
+     *.BGI
+     *.CHR
+
+1. Run Turbo C++.
+
+2. Load BGIDEMO.C into the Editor by pressing F3, then typing
+   BGIDEMO&lt;Enter&gt;
+
+3. Go to the Run menu and choose the Run item.
+</code></pre></div>
+<p>Q. How do I create a COM file?
+ A. DOS versions 3.2 and earlier include an EXE2BIN utility that
+    converts EXE files to COM files. Users who do not have EXE2BIN can
+    use TLINK, the Turbo C++ command-line linker, to create a COM file
+    instead of an EXE file. Use the /t option. For example:</p>
+<div class="highlight"><pre><span></span><code>   tcc -mt -lt tiny
+
+will create TINY.COM instead of TINY.EXE.
+
+There are certain limitations in converting an EXE file to a COM
+file. These limitations are documented in the IBM Disk Operating
+System manual under EXE2BIN.
+
+Turbo C++&#39;s TINY model is compatible with the COM format, but programs
+that use Turbo C++&#39;s floating-point routines cannot be converted to a
+COM file.
+</code></pre></div>
+<p>G r a p h i c s</p>
+<hr />
+<p>Q. Why do I get the error message:</p>
+<div class="highlight"><pre><span></span><code>   BGI Error: graphics not initialized (use &#39;initgraph&#39;)
+
+when I use a graphics function? My program has already
+called initgraph().
+</code></pre></div>
+<p>A. For some reason initgraph() failed. To find out why, check
+    the return value of graphresult(). For example:</p>
+<div class="highlight"><pre><span></span><code>  #include &lt;graphics.h&gt;
+  int main(void)
+  {
+    int gerr;   /* graphics error */
+    int gdriver = DETECT, gmode;
+
+    /* Initialize graphics using auto-detection and look
+       for the .BGI and .CHR files in the C:\TURBOC directory.
+    */
+    initgraph(&amp;gdriver, &amp;gmode, &quot;C:\\TURBOC&quot;);
+
+    if ((gerr = graphresult()) != grOk)
+    {
+        printf(&quot;Error : %s\n&quot;, grapherrormsg(gerr));
+        exit(1);
+    }
+           :
+  }
+</code></pre></div>
+<p>M a t h  /  F l o a t i n g    P o i n t</p>
+<hr />
+<p>Q. Why do I get incorrect results from all the math library
+    functions like cos(), tan() and atof()?
+ A. You must #include <math.h> before you call any of the standard
+    Turbo C++ math functions. In general, Turbo C++ assumes that a function
+    that is not declared returns an int. In the case of math functions,
+    they usually return a double. For example</p>
+<div class="highlight"><pre><span></span><code>    /* WRONG */                       /* RIGHT */
+                                      #include &lt;math.h&gt;
+    int main(void)                    int main(void)
+    {                                 {
+      printf(&quot;%f&quot;, cos(0));             printf(&quot;%f&quot;, cos(0));
+    }                                 }
+</code></pre></div>
+<p>Q. How do I "trap" a floating-point error?
+ A. See the signal() and matherr() functions in the Turbo C++ Library
+    Reference. The signal() function may be used to trap errors in the
+    80x87 or the 80x87 emulator. The matherr() function traps errors
+    in the Math Library functions.</p>
+<p>L i n k e r    E r r o r s</p>
+<hr />
+<p>Q. Why do I get the message:
+      Linker Error: Unable to open input file 'C0x.OBJ'
+ A. See "Integrated Environment" section above.</p>
+<p>Q. Why do I get the message:
+      Linker Error: Undefined symbol '_main' in module C0
+ A. Every C program must contain a function called main(). This
+    is the first function executed in your program. The function
+    name must be all in lower case. If your program does not
+    have one, create one. If you are using multiple source files,
+    the file that contains the function main() must be one of
+    the files listed in the Project.</p>
+<div class="highlight"><pre><span></span><code>Note that an underscore character &#39;_&#39; is prepended to all
+external Turbo C++ symbols.
+</code></pre></div>
+<p>Q. Why does the linker tell me that all the graphics library
+    routines are undefined?
+ A. See the "Integrated Environment" and "Command-line Compiler"
+    sections above.</p>
+<p>Q. What is a 'Fixup overflow'?
+ A. See the listing of TLINK error messages in the Turbo C++
+    User's Guide.</p>
+<p>Q. I am linking my own assembly language functions with Turbo C++.
+    The linker reports that all of my functions are undefined.
+ A. Make sure that you have put an underbar character '_' in front of all
+    assembly language function names to be called by Turbo C++. Your assembly
+    language program should be assembled with Case Sensitivity.</p>
+<p>O t h e r    Q u e s t i o n s</p>
+<hr />
+<p>Q. How do I change the stack size?
+ A. The size of the stack of a Turbo C++ program is determined at
+    run time by the global variable _stklen. To change the size
+    to, for example, 10,000 bytes, include the following line in
+    your program:</p>
+<div class="highlight"><pre><span></span><code>  extern unsigned _stklen = 10000;
+
+This statement must not be inside any function definition.
+The default stack size is 4,096 bytes (4K).
+</code></pre></div>
+<p>Q. I'm getting a 'Stack Overflow!' message when I run my program.
+    How can I work around this?
+ A. You may increase the stack size by following the procedure above. Stack
+    overflows are usually caused by a large amount of local data or
+    recursive functions. You can decrease the amount of stack space
+    used by declaring your local variables static:</p>
+<div class="highlight"><pre><span></span><code>     int main(void)                int main(void)
+     {                             {
+         char x[5000];     --&gt;          static char x[5000];
+             :                                :
+     }                             }
+
+Of course, you should be aware that there are other effects
+that the &quot;static&quot; keyword has, as applied here. See the Turbo C++
+Programmer&#39;s Guide.
+</code></pre></div>
+<p>Q. My program comes up with the message 'Null pointer assignment'
+    after it terminates. What does this mean?
+ A. Before a small-data model Turbo C++ program returns to DOS, it will
+    check to see if the beginning of its data segment has been corrupted.
+    This message is to warn you that you have used uninitialized pointers
+    or that your program has corrupted memory in some other way.</p>
+<p>Q. Why are .EXE files generated by TC.EXE larger than those
+    generated by TCC.EXE?
+ A. In the default configuration, TC.EXE includes debugging
+    information in the .EXE files that it creates, and TCC.EXE
+    does not. If you don't want to produce this debugging
+    information, you can shut it off in the Integrated
+    Development Environment by selecting Alt-D|S|N.</p>
+<p>Q. Why do I get "declaration syntax error" messages on DOS.H?
+ A. You have set the "Ansi keywords only" option ON. Keep this option
+    OFF when using any keywords specific to Turbo C++. See the Turbo C++
+    Programmer's Guide for a list of keywords.</p>
+<p>Q. I have a working program that dynamically allocates memory
+    using malloc() or calloc() in small data models (tiny, small,
+    and medium). When I compile this program in large data models
+    (compact, large, and huge), my program hangs.
+ A. Make sure that you have #include <alloc.h> in your program.</p>
+<p>Q. I am linking my own assembly language functions with Turbo C++.
+    But the linker reports that all of my functions are undefined.
+ A. See answer above in the "Linker" section.</p>
+<p>Q. My far pointers "wrap around" when they are incremented over 64K.
+    How do I reference a data object that is greater than 64K?
+ A. Use huge pointers.</p>
+<p>Q. How do I interface Turbo C++ routines to a Turbo Pascal program?
+ A. See the example programs CPASDEMO.PAS and CPASDEMO.C on disk.
+    These files are packed in the file EXAMPLES.ARC. You will
+    need to UNPACK them before using them.</p>
+<p>Q. How do I get Clipper to link with Turbo C++?
+ A. If you are having trouble, contact Nantucket Technical Support.</p>
+<p>C o m m o n   C + +   Q u e s t i o n s</p>
+<hr />
+<p>Q. What potential problems can arise from typecasting a base
+    class pointer into a derived class pointer so that the derived
+    class's member functions can be called?
+ A. Syntactically this is allowable. There is always a possibility of
+    a base pointer actually pointing to a base class. If this is
+    typecast to a derived type, the method being called may not exist
+    in the base class. Therefore, you would be grabbing the address of
+    a function that does not exist.</p>
+<p>Q: What's the difference between the keywords STRUCT and CLASS?
+ A: The members of a STRUCT are PUBLIC by default, while in CLASS,
+    they default to PRIVATE. They are otherwise functionally equivalent.</p>
+<p>Q: I have declared a derived class from a base class, but I can't access any
+    of the base class members with the derived class function.
+ A: Derived classes DO NOT get access to private members of a base class.
+    In order to access members of a base class, the base class members must
+    be declared as either public or protected. If they are public, then
+    any portion of the program can access them. If they are protected, they
+    are accessible by the class members, friends, and any derived classes.</p>
+<p>Q: How can I use the Paradox Engine with C++?,
+ A: Because the Paradox Engine functions are all compiled as C functions
+    you will have to assure that the names of the functions do not get
+    "mangled" by the C++ compiler. To do this you need to prototype the
+    Engine functions as extern "C". In the pxengine.h header file insert
+    the following code at the lines indicated.</p>
+<div class="highlight"><pre><span></span><code>   /* inserted at line # 268 */
+   #ifdef __cplusplus
+   extern &quot;C&quot; {
+   #endif
+
+   /* inserted at line # 732, just before the final #endif */
+   #ifdef __cplusplus
+   }
+   #endif
+</code></pre></div>
+<p>Q: I have a class that is derived from three base classes. Can I insure that
+    one base class constructor will be called before all other constructors?
+ A: If you declare the base class as a virtual base class, its constructor
+    will be called before any non-virtual base class constructors. Otherwise
+    the constructors are called in left-to-right order on the declaration
+    line for the class.</p>
+<p>Q: Are the standard library I/O functions still available for use with
+    the C++ iostreams library?
+ A: Yes, using</p>
+<div class="highlight"><pre><span></span><code>   #include &lt;stdio.h&gt;
+
+functions such as printf() and scanf() will continue to be
+available.
+</code></pre></div>
+<p>Q: When debugging my program in Turbo Debugger, I notice that none of my
+    inline functions are expanded inline. Instead, they are all done as
+    function calls.
+ A: Whenever you compile your program with debugging information included,
+    no functions are expanded inline. To verify that your inline functions
+    are indeed expanding inline, compile a module with the -S flag of the
+    command-line compiler, then examine the .asm file that is generated.</p>
+<p>Q. In C++, given two variables of the same name, one local and one global,
+    how do I access the global instance within the local scope?
+ A. Use the scope (::) operator.</p>
+<div class="highlight"><pre><span></span><code>   int x = 10;
+   for(int x=0; x &lt; ::x; x++)
+   {
+       cout &lt;&lt; &quot;Loop # &quot; &lt;&lt; x &lt;&lt; &quot;\n&quot;; // This will loop 10 times
+   }
+</code></pre></div>
+<p>Q. Will the following two functions be overloaded by the compiler, or
+    will the compiler flag it as an error? Why?
+        void test( int x, double y);  &amp;  int test( int a, double b);
+ A. The compiler will flag this as a redeclaration error because
+    neither return types nor argument names are considered when determining
+    unique signatures for overloading functions. Only number and type
+    of arguments are considered.</p>
+<p>Q. If I pass a character to a function which only only accepts an int,
+    what will the compiler do? Will it flag it as an error?
+ A. No. The compiler will promote the char to an int and use the integer
+    representation in the function instead of the character itself.</p>
+<p>Q. I was trying to allocate an array of function pointers using the new
+    operator but I keep getting declaration syntax errors using the following
+    syntax:  new int(<em>[10])();   What's wrong?
+ A. The new operator is a unary operator and binds first to the int keyword
+    producing the following:  (new int) (</em>[10])();
+    You need to put parentheses around the expression to produce the
+    expected results:  new (int (*<a href="">10</a>);</p>
+<p>Q. What are inline functions? What are their advantages? How are they
+    declared?
+ A. An inline function is a function which gets textually inserted by
+    the compiler, much like macros. The advantage is that execution time
+    is shortened because linker overhead is minimized. They are declared
+    by using the inline keyword when the function is declared:
+    inline void func(void) { cout &lt;&lt; "printing inline function \n"; }
+    or by including the function declaration and code body within a class:</p>
+<div class="highlight"><pre><span></span><code>   class test
+   {
+   public:
+   void func(void) { cout &lt;&lt; &quot;inline function within a class.\n&quot;}
+   };
+</code></pre></div>
+<p>Q. If I don't specify either public or private sections in a class,
+    what is the default?
+ A. A class will default all members to private if neither public nor
+    private sections are declared.</p>
+<p>Q. What does the _seg modifier do?
+ A. Using _seg cause a pointer to become a storage place for a
+    segment value, rather than an offset ( or a segment/offset ).
+    For instance, if "int _seg <em>x" contains the value 0x40,
+    then when you use "</em>x", the value pointed to will be at
+    segment 0x40, offset 0. If you add a value to the pointer,
+    the value is multiplied by the size of the pointer type. That
+    new value is used as an offset, and is combined with the segment
+    value contained in the pointer. For instance,</p>
+<div class="highlight"><pre><span></span><code>   int _seg *x;
+   int value;
+
+   x = (int _seg *)0x40;
+   value = *(x + 20);
+
+value is assigned the value of the integer at 0x40:0x28
+(Remember, 20 * sizeof(int) = 40 = 0x28).
+</code></pre></div>
+<p>Q. Can I statically allocate more than 64K of data in a single module?
+ A. Yes. Far data items are now supported:</p>
+<div class="highlight"><pre><span></span><code>   ...
+   char far array1[60000L];
+   char far array2[60000L];
+   ...
+
+For arrays larger than 64k use:
+
+   char huge array3[100000L];
+</code></pre></div>
+<p>Q. Why do I get a "Type name expected" error on my definition of a
+    friend class in my new class?
+ A  You need to let the compiler know that the label you use for your
+    friend class is another class. If you do not want to define your
+    entire class, you can simply have "class xxx", where xxx is your
+    label.</p>
+<p>Q: How can I output hex values in upper case using the iostream libraries?
+ A: You need to set the state of the stream using setf(). For example,</p>
+<div class="highlight"><pre><span></span><code>   #include &lt;iostream.h&gt;
+
+   int main(void)
+   {
+      cout &lt;&lt; hex;
+      cout &lt;&lt; &quot;\nNot upper-case : &quot; &lt;&lt; 255;
+      cout.setf(ios::upper-case);
+      cout &lt;&lt; &quot;\nUppercase     : &quot; &lt;&lt; 255;
+      return 0;
+    }
+</code></pre></div>
+<p>Q. What is the "this" pointer?
+ A. "this" is a local variable in the body of a non-static member function.
+    It is a pointer to the object for which the function was invoked. It
+    cannot be used outside of a class member function body.</p>
+<p>Q. Why does a binary member function only accept a single argument?
+ A. The first argument is defined implicitly.</p>
+<p>Q. What is a friend member function?
+ A. Declaring a friend gives non-members of a class access to the
+    non-public members of a class.</p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../sfml/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SFML" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              SFML
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../Python/conda/" class="md-footer__link md-footer__link--next" aria-label="Next: Conda" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Conda
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright Shivanshu Semwal
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.tabs"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+        <script src="../../../javascript/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

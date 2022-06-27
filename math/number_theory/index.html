@@ -1,0 +1,3060 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.8">
+    
+    
+      
+        <title>Number Theory - Competitive Programming</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Ubuntu";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#number-theory" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Competitive Programming" class="md-header__button md-logo" aria-label="Competitive Programming" data-md-component="logo">
+      
+  <img src="../../favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Competitive Programming
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Number Theory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shivanshu-semwal/competitive-programming" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../DS_and_ML/" class="md-tabs__link">
+        DS and ML
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../linux/" class="md-tabs__link">
+        Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Math
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../other/" class="md-tabs__link">
+        Other
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../programming/" class="md-tabs__link">
+        Programming
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../windows/" class="md-tabs__link">
+        Windows
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Competitive Programming" class="md-nav__button md-logo" aria-label="Competitive Programming" data-md-component="logo">
+      
+  <img src="../../favicon.ico" alt="logo">
+
+    </a>
+    Competitive Programming
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shivanshu-semwal/competitive-programming" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          DS and ML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DS and ML" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          DS and ML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DS_and_ML/" class="md-nav__link">
+        DS and ML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DS_and_ML/pandas/" class="md-nav__link">
+        Pandas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DS_and_ML/summary/" class="md-nav__link">
+        Data Science Summary
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Manual
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Manual" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Manual
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/" class="md-nav__link">
+        Manual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/colors/" class="md-nav__link">
+        Colors in Terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/control-character/" class="md-nav__link">
+        Control Characters for terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/echo/" class="md-nav__link">
+        echo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/filesystem/" class="md-nav__link">
+        Filesystem in Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/find/" class="md-nav__link">
+        find
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/general-purpose-util/" class="md-nav__link">
+        General Purpose Utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/links/" class="md-nav__link">
+        Hard and Soft Links
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/man/" class="md-nav__link">
+        Using Linux Manual
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/process/" class="md-nav__link">
+        Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/prompt/" class="md-nav__link">
+        Prompt in terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/shell/" class="md-nav__link">
+        Shells in Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/text-fu/" class="md-nav__link">
+        text-fu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/xargs/" class="md-nav__link">
+        xargs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/manual/youtube-dl/" class="md-nav__link">
+        youtube-dl
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/other/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/other/adb/" class="md-nav__link">
+        adb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/other/cli_tricks/" class="md-nav__link">
+        cli tricks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/other/dolphin/" class="md-nav__link">
+        Dolphin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/other/hindi_on_linux/" class="md-nav__link">
+        Hindi in linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/other/linux_desktop_files/" class="md-nav__link">
+        desktop files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/other/privacy_linux/" class="md-nav__link">
+        Privacy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/other/touchpad-settings/" class="md-nav__link">
+        touchpad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/other/tricks/" class="md-nav__link">
+        tricks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Ricing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ricing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Ricing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ricing/" class="md-nav__link">
+        Ricing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ricing/ascii_art/" class="md-nav__link">
+        ASCII Art
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ricing/change_fonts/" class="md-nav__link">
+        Fonts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ricing/colors/" class="md-nav__link">
+        Colors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ricing/desktop_files/" class="md-nav__link">
+        desktop files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ricing/gnome/" class="md-nav__link">
+        Gnome
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ricing/kde/" class="md-nav__link">
+        KDE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ricing/some_customizations/" class="md-nav__link">
+        More Customizations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/ricing/themes/" class="md-nav__link">
+        Themes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Shells
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Shells" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Shells
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/shells/" class="md-nav__link">
+        Shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/shells/programming/" class="md-nav__link">
+        Shell Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/shells/zsh/" class="md-nav__link">
+        zsh
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          Software
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Software" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/software/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/software/AUR/" class="md-nav__link">
+        AUR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/software/apt-key/" class="md-nav__link">
+        apt-key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/software/apt/" class="md-nav__link">
+        apt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/software/dictonatries/" class="md-nav__link">
+        Dictionaries on Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/software/mysql/" class="md-nav__link">
+        MySQL on Ubuntu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/software/package_management/" class="md-nav__link">
+        Package management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/software/pacman/" class="md-nav__link">
+        Pacman
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          Vim
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vim" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Vim
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/vim/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/vim/external-command/" class="md-nav__link">
+        External Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/vim/find-replace/" class="md-nav__link">
+        Find and replace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/vim/line_number/" class="md-nav__link">
+        Line Numbers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/vim/macros/" class="md-nav__link">
+        Macros
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/vim/renaming/" class="md-nav__link">
+        Renaming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/vim/spell/" class="md-nav__link">
+        Spell Check
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/vim/vim-galore/" class="md-nav__link">
+        Vim Galore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/vim/vimium-ext/" class="md-nav__link">
+        Vimium
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Math
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algebra/" class="md-nav__link">
+        Algebra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../combinatorics/" class="md-nav__link">
+        Combinatorics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../discrete_mathematics/" class="md-nav__link">
+        Discrete Math
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Number Theory
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other/math-formulas/" class="md-nav__link">
+        Math Formula
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programming" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Programming
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/" class="md-nav__link">
+        Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/Database/" class="md-nav__link">
+        Database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/audio-video-codecs/" class="md-nav__link">
+        Audio and Video Codecs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/competency-matrix/" class="md-nav__link">
+        Competency Matrix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/config/" class="md-nav__link">
+        Configurations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/demoscene/" class="md-nav__link">
+        Database
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/document-formats/" class="md-nav__link">
+        Document Formats
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/google-scripts/" class="md-nav__link">
+        Google Scripts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/iot/" class="md-nav__link">
+        IOT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/mtp/" class="md-nav__link">
+        MTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/noobs_guide_cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/oracle/" class="md-nav__link">
+        DBMS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/pandoc/" class="md-nav__link">
+        Pandoc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/regex/" class="md-nav__link">
+        RegEx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_15" type="checkbox" id="__nav_6_15" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_15">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="C" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_15">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/C/c/" class="md-nav__link">
+        C Programming
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_16" type="checkbox" id="__nav_6_16" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_16">
+          CPP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CPP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_16">
+          <span class="md-nav__icon md-icon"></span>
+          CPP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/CPP/cpp/" class="md-nav__link">
+        C++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/CPP/sfml/" class="md-nav__link">
+        SFML
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/CPP/turbocpp/" class="md-nav__link">
+        TurboCPP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_17" type="checkbox" id="__nav_6_17" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_17">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_17">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/Python/conda/" class="md-nav__link">
+        Conda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/Python/django/" class="md-nav__link">
+        django
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_18" type="checkbox" id="__nav_6_18" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_18">
+          Web Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Web Development" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_18">
+          <span class="md-nav__icon md-icon"></span>
+          Web Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/Web%20Development/tech_stacks/" class="md-nav__link">
+        Tech Stack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_19" type="checkbox" id="__nav_6_19" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_19">
+          Editor
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Editor" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_19">
+          <span class="md-nav__icon md-icon"></span>
+          Editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/editor/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/editor/atom/" class="md-nav__link">
+        Atom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/editor/emacs/" class="md-nav__link">
+        Emacs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/editor/history/" class="md-nav__link">
+        History
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/editor/neovim/" class="md-nav__link">
+        neovim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/editor/vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_20" type="checkbox" id="__nav_6_20" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_20">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Git" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_20">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/git/README_SSH/" class="md-nav__link">
+        SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/git/gitignore/" class="md-nav__link">
+        gitignore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/git/ssh/" class="md-nav__link">
+        SSH Keys
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Windows" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Windows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/" class="md-nav__link">
+        Windows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/Registry/" class="md-nav__link">
+        Registry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/history/" class="md-nav__link">
+        Windows Version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/how_to_use_ps/" class="md-nav__link">
+        Powershell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/package_managers/" class="md-nav__link">
+        Package Mangers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/resources/" class="md-nav__link">
+        Resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/terminals/" class="md-nav__link">
+        Terminals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/tool_kit/" class="md-nav__link">
+        Toolkit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/use%20diskpart/" class="md-nav__link">
+        DiskPart
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/win7/" class="md-nav__link">
+        Windows 7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../windows/wsl/" class="md-nav__link">
+        Window Sub-system for linux
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/shivanshu-semwal/competitive-programming/edit/master/math/number_theory.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+<h1 id="number-theory">Number Theory</h1>
+<h1 id="modular-arithmetic">Modular arithmetic</h1>
+<h2 id="formulas">Formulas</h2>
+<ul>
+<li><span class="arithmatex">\(a \equiv (a-p) \mod p\)</span></li>
+<li><span class="arithmatex">\(a \equiv (a+np) \mod p\)</span>, <span class="arithmatex">\(n \in \text{Z}\)</span></li>
+<li><span class="arithmatex">\(a \equiv b \mod p \implies a - k \equiv b - k \mod p\)</span></li>
+<li><span class="arithmatex">\(a_1 \equiv b_1 \mod p\)</span> and <span class="arithmatex">\(a_2 \equiv b_2 \mod p\)</span>, then</li>
+<li><span class="arithmatex">\(a_1 + a_2 \equiv b_1 + b_2 \mod p\)</span></li>
+<li><span class="arithmatex">\(a_1 - a_2 \equiv b_1 - b_2 \mod p\)</span></li>
+<li><span class="arithmatex">\(a_1 \times a_2 \equiv b_1 \times b_2 \mod p\)</span></li>
+<li><span class="arithmatex">\((ab) \mod p = ((a \mod p)(b \mod p))\mod p\)</span></li>
+<li><span class="arithmatex">\((a+b) \mod p = ((a \mod p) + (b \mod p))\mod p\)</span></li>
+</ul>
+<h3 id="fermat-little-theorem">Fermat little theorem</h3>
+<p>Given, a no. <span class="arithmatex">\(a\)</span> and a prime no. <span class="arithmatex">\(p\)</span>, </p>
+<div class="arithmatex">\[
+a^{p-1} \equiv 1 \mod p
+\]</div>
+<p>Implications:</p>
+<ul>
+<li>for a prime <span class="arithmatex">\(p\)</span> and no. <span class="arithmatex">\(a\)</span> there will always a cycle formed
+  if we keep on doing <span class="arithmatex">\(a^n\)</span>, <span class="arithmatex">\(n \in \text{Z+}\)</span></li>
+<li>e.g. <span class="arithmatex">\(p = 7, a = 3\)</span></li>
+<li><span class="arithmatex">\(3^1 \equiv 3 \mod 7\)</span></li>
+<li><span class="arithmatex">\(3^2 \equiv 2 \mod 7\)</span></li>
+<li><span class="arithmatex">\(3^3 \equiv 6 \mod 7\)</span></li>
+<li><span class="arithmatex">\(3^4 \equiv 4 \mod 7\)</span></li>
+<li><span class="arithmatex">\(3^5 \equiv 5 \mod 7\)</span></li>
+<li><span class="arithmatex">\(3^6 \equiv 1 \mod 7\)</span>, fermat theorem so now cycle repeat</li>
+<li><span class="arithmatex">\(3^7 \equiv 3 \mod 7\)</span>, as <span class="arithmatex">\(3^7 = 3^6 \times 3\)</span> and <span class="arithmatex">\(3^6 \equiv 1 \mod 7\)</span>
+    so cycle repeats</li>
+</ul>
+<h3 id="eulers-theorem">Euler's Theorem</h3>
+<p>Given no <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>, and <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> are co-primes</p>
+<div class="arithmatex">\[
+a^{\phi(b)} \equiv 1 \mod b
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\phi(b)\)</span> is equal to number of positive integers till <span class="arithmatex">\(b\)</span> that are relative
+  prime to <span class="arithmatex">\(b\)</span>, also called Euler's totient function.</li>
+<li>more formally,
+  <span class="arithmatex">\(\phi(n) = n(\{x:x \in \{1,2,...,n\} \text{ and } \gcd(x, n) = 1\})\)</span></li>
+</ul>
+<p>Implications
+- <span class="arithmatex">\(a=3, b=10\)</span>, and 10, 3 are co-prime, 
+  - <span class="arithmatex">\(\phi(10) = 4\)</span> as pairs are <span class="arithmatex">\(\{(1,10), (3, 10), (7,10), (9,10)\}\)</span>
+  - <span class="arithmatex">\(3^4 \equiv 1 \mod 10\)</span>, euler theorem
+  - so 3 power will also form a cycle of 4 with 10</p>
+<h3 id="wilsons-theorem">Wilson's theorem</h3>
+<p>Given a prime no <span class="arithmatex">\(a\)</span>,</p>
+<div class="arithmatex">\[
+(a-1)! \equiv -1 \mod a
+\]</div>
+<ul>
+<li><span class="arithmatex">\(1! = -1 \mod 2\)</span></li>
+<li><span class="arithmatex">\(2! = -1 \mod 3\)</span></li>
+<li><span class="arithmatex">\(4! = -1 \mod 5\)</span></li>
+<li><span class="arithmatex">\(6! = -1 \mod 7\)</span></li>
+<li><span class="arithmatex">\(12! = -1 \mod 13\)</span></li>
+</ul>
+<h1 id="modulus-of-any-given-exponent">Modulus of any given Exponent</h1>
+<h2 id="general">General</h2>
+<ul>
+<li>find the value of</li>
+</ul>
+<div class="arithmatex">\[
+a^b \mod c
+\]</div>
+<ul>
+<li>find the cycle length, let it be <span class="arithmatex">\(l\)</span></li>
+<li>then <span class="arithmatex">\(a^{b \mod l} \mod c\)</span> is the sol.</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<ol>
+<li>
+<p><span class="arithmatex">\(5^{123} \mod 7\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(5^{123} \mod 7\)</span></p>
+</li>
+<li>use fermat theorem, <span class="arithmatex">\(a^{p-1} \equiv 1 \mod p\)</span>, for prime <span class="arithmatex">\(p\)</span></li>
+<li>so cycle length is 6</li>
+<li><span class="arithmatex">\(5^{123 \mod 6} \mod 7\)</span></li>
+<li><span class="arithmatex">\(5^3 \mod 7\)</span></li>
+<li><span class="arithmatex">\(25*5 \mod 7\)</span></li>
+<li><span class="arithmatex">\(4*5 \mod 7\)</span></li>
+<li><span class="arithmatex">\(20 \mod 7\)</span></li>
+<li>
+<p><span class="arithmatex">\(6\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(2^{34} \mod 5\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(2^{34} \mod 5\)</span></p>
+</li>
+<li><span class="arithmatex">\(2^{34 \mod 4} \mod 5\)</span></li>
+<li><span class="arithmatex">\(2^{2} \mod 5\)</span></li>
+<li>
+<p><span class="arithmatex">\(4\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(60^{60} \mod 11\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(60^{60} \mod 11\)</span></p>
+</li>
+<li><span class="arithmatex">\(5^{60 \mod 10} \mod 11\)</span></li>
+<li><span class="arithmatex">\(5^{10} \mod 11\)</span></li>
+<li>
+<p><span class="arithmatex">\(1\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(83^{1002} \mod 39\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(83^{1002} \mod 39\)</span></p>
+</li>
+<li><span class="arithmatex">\(5^{1002} \mod 39\)</span></li>
+<li>find cycle length</li>
+<li><span class="arithmatex">\(5^{1} \equiv 5 \mod 39\)</span></li>
+<li><span class="arithmatex">\(5^{2} \equiv 25 \mod 39\)</span></li>
+<li><span class="arithmatex">\(5^{3} \equiv 8 \mod 39\)</span></li>
+<li><span class="arithmatex">\(5^{4} \equiv 1 \mod 39\)</span></li>
+<li>so 4 </li>
+<li><span class="arithmatex">\(5^{1002 \mod 4} \mod 39\)</span></li>
+<li><span class="arithmatex">\(5^{2} \mod 39\)</span></li>
+<li><span class="arithmatex">\(25\)</span></li>
+</ol>
+<h1 id="factors">Factors</h1>
+<h2 id="number-of-factors-of-a-number">Number of factors of a number</h2>
+<ul>
+<li>given number <span class="arithmatex">\(n\)</span>, represent it in prime factors (prime factorization)</li>
+<li><span class="arithmatex">\(n = a^p b^q c^r ...\)</span></li>
+<li><span class="arithmatex">\(a, b, c\)</span> are prime numbers, and <span class="arithmatex">\(p, q, r\)</span> are positive numbers</li>
+<li>then total factors are </li>
+<li><span class="arithmatex">\(f(n) = (p+1)(q+1)(r+1)...\)</span> where <span class="arithmatex">\(f(n)\)</span> gives is number of 
+  factors in <span class="arithmatex">\(n\)</span></li>
+</ul>
+<h2 id="products-of-factors-of-a-number">Products of factors of a number</h2>
+<ul>
+<li><span class="arithmatex">\(g(n) = n^{f(n)/2}\)</span>, <span class="arithmatex">\(f(n)\)</span> is number of factors of <span class="arithmatex">\(n\)</span></li>
+</ul>
+<h2 id="number-of-ways-of-expressing-a-number-as-product-of-two-numbers">Number of ways of expressing a number as product of two numbers</h2>
+<ul>
+<li>given, <span class="arithmatex">\(n\)</span> and its prime factorization <span class="arithmatex">\(a^p b^q c^r...\)</span></li>
+<li><span class="arithmatex">\(f(n) = (p+1)(q+1)(r+1)...\)</span></li>
+<li><span class="arithmatex">\(F(n) = \frac{1}{2}f(n)\)</span>, </li>
+<li>is not possible when <span class="arithmatex">\(f(n)\)</span> is odd</li>
+<li>if, <span class="arithmatex">\(p, q, r,...\)</span> are all even then <span class="arithmatex">\(n\)</span> is a prefect square<ul>
+<li>that means that <span class="arithmatex">\(\sqrt{n}\)</span> is a whole no.</li>
+<li>therefore <span class="arithmatex">\(F(n) = \frac{1}{2}f(n) - 1\)</span>, 
+  <span class="arithmatex">\(\sqrt{n} \times \sqrt{n}\)</span> is not counted</li>
+</ul>
+</li>
+</ul>
+<h2 id="sum-of-all-factors-of-a-number">Sum of all factors of a number</h2>
+<ul>
+<li>given, <span class="arithmatex">\(n\)</span> and its prime factorization <span class="arithmatex">\(a^p b^q c^r...\)</span></li>
+<li>sum is </li>
+</ul>
+<div class="arithmatex">\[\frac{a^{p+1} - 1}{a-1} \frac{b^{q+1} - 1}{b-1} \frac{c^{r+1} - 1}{c-1} ...\]</div>
+<h2 id="number-of-ways-of-writing-a-number-as-product-of-two-co-primes">Number of ways of writing a number as product of two co-primes</h2>
+<ul>
+<li><strong>co-primes</strong> - there gcd (hcf) is 1</li>
+<li>given, <span class="arithmatex">\(n\)</span> and its prime factorization <span class="arithmatex">\(a^p b^q c^r...\)</span></li>
+<li><span class="arithmatex">\(n(\{a, b, c, ...\}) = x\)</span>, i.e. no of unique prime in prime factorization is <span class="arithmatex">\(x\)</span></li>
+<li>then, total no of co-primes are <span class="arithmatex">\(2^{x-1}\)</span></li>
+</ul>
+<h2 id="number-of-coprimes-to-n-that-are-less-than-n">Number of coprimes to <span class="arithmatex">\(n\)</span> that are less than <span class="arithmatex">\(n\)</span></h2>
+<ul>
+<li>given, <span class="arithmatex">\(n\)</span> and its prime factorization <span class="arithmatex">\(a^p b^q c^r...\)</span></li>
+<li>then, </li>
+</ul>
+<div class="arithmatex">\[\phi(n) = n\Big(1-\frac{1}{a}\Big) \Big(1-\frac{1}{b} \Big) \Big(1-\frac{1}{c}\Big)\]</div>
+<h3 id="number-of-coprimes-to-n-that-are-less-than-n_1">Number of coprimes to <span class="arithmatex">\(n\)</span> that are less than <span class="arithmatex">\(n\)</span></h3>
+<ul>
+<li><span class="arithmatex">\(\frac{n}{2} \times \phi(n)\)</span></li>
+</ul>
+<h1 id="general-method-to-find-no-of-factors">General method to find no of factors</h1>
+<h2 id="number-of-factors">Number of factors</h2>
+<ul>
+<li>given number <span class="arithmatex">\(n\)</span></li>
+<li>represent it in prime factorization <span class="arithmatex">\(a^p b^q c^r...\)</span></li>
+<li>so, <span class="arithmatex">\(a\)</span> can acquire powers <span class="arithmatex">\(\{0, 1, 2, ..., p\}\)</span>, <span class="arithmatex">\(n(\{0, 1, 2, ..., p\}) = p+1\)</span></li>
+<li>so, <span class="arithmatex">\(b\)</span> can acquire powers <span class="arithmatex">\(\{0, 1, 2, ..., q\}\)</span>, <span class="arithmatex">\(n(\{0, 1, 2, ..., p\}) = q+1\)</span></li>
+<li>so, <span class="arithmatex">\(c\)</span> can acquire powers <span class="arithmatex">\(\{0, 1, 2, ..., r\}\)</span>, <span class="arithmatex">\(n(\{0, 1, 2, ..., p\}) = r+1\)</span></li>
+<li>and so on, here <span class="arithmatex">\(n(\text{A})\)</span> is to represent the cardinality of set <span class="arithmatex">\(\text{A}\)</span></li>
+<li>so total no. of factors are <span class="arithmatex">\((p+1)(q+1)(r+1)\)</span></li>
+</ul>
+<h2 id="number-of-factors-which-are-even">Number of factors which are even</h2>
+<ul>
+<li>should have at least one 2</li>
+<li>given number <span class="arithmatex">\(n\)</span></li>
+<li>represent it in prime factorization <span class="arithmatex">\(2^p b^q c^r...\)</span></li>
+<li>so, <span class="arithmatex">\(a\)</span> can acquire powers <span class="arithmatex">\(\{1, 2, ..., p\}\)</span>, <span class="arithmatex">\(n(\{1, 2, ..., p\}) = p\)</span></li>
+<li>so, <span class="arithmatex">\(b\)</span> can acquire powers <span class="arithmatex">\(\{0, 1, 2, ..., q\}\)</span>, <span class="arithmatex">\(n(\{0, 1, 2, ..., p\}) = q+1\)</span></li>
+<li>so, <span class="arithmatex">\(c\)</span> can acquire powers <span class="arithmatex">\(\{0, 1, 2, ..., r\}\)</span>, <span class="arithmatex">\(n(\{0, 1, 2, ..., p\}) = r+1\)</span></li>
+<li>and so on, here <span class="arithmatex">\(n(\text{A})\)</span> is to represent the cardinality of set <span class="arithmatex">\(\text{A}\)</span></li>
+<li>so total no. of even factors are <span class="arithmatex">\((p)(q+1)(r+1)\)</span></li>
+</ul>
+<h2 id="number-of-factors-which-are-perfect-square">Number of factors which are perfect square</h2>
+<ul>
+<li>given number <span class="arithmatex">\(n\)</span></li>
+<li>represent it in prime factorization <span class="arithmatex">\(a^p b^q c^r...\)</span></li>
+<li>so, <span class="arithmatex">\(a\)</span> can acquire powers <span class="arithmatex">\(\{0, 2, 4, ..., p\}\)</span>, 
+  <span class="arithmatex">\(n(\{0, 1, 2, ..., p\}) = \lceil{\frac{p+1}{2}}\rceil\)</span></li>
+<li>so, <span class="arithmatex">\(b\)</span> can acquire powers <span class="arithmatex">\(\{0, 2, 4, ..., q\}\)</span>, 
+  <span class="arithmatex">\(n(\{0, 1, 2, ..., p\}) = \lceil{\frac{q+1}{2}}\rceil\)</span></li>
+<li>so, <span class="arithmatex">\(c\)</span> can acquire powers <span class="arithmatex">\(\{0, 2, 4, ..., r\}\)</span>, 
+  <span class="arithmatex">\(n(\{0, 1, 2, ..., p\}) = \lceil{\frac{r+1}{2}}\rceil\)</span></li>
+<li>and so on, here <span class="arithmatex">\(n(\text{A})\)</span> is to represent the cardinality of set <span class="arithmatex">\(\text{A}\)</span></li>
+<li>so total no. of factors are </li>
+</ul>
+<div class="arithmatex">\[
+\left\lceil\frac{p+1}{2}\right\rceil 
+\left\lceil\frac{q+1}{2}\right\rceil 
+\left\lceil\frac{r+1}{2}\right\rceil
+\]</div>
+<h2 id="number-of-factors-of-n-and-m-that-are-common">number of factors of <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(m\)</span> that are common</h2>
+<ul>
+<li><span class="arithmatex">\(n = a^p b^q c^r...\)</span></li>
+<li><span class="arithmatex">\(m = a^l b^m c^n...\)</span></li>
+<li>total no of common factors are 
+  <span class="arithmatex">\((\min(p, l) + 1) \times (\min(q, m) + 1) \times (\min(r, m) + 1) ...\)</span></li>
+</ul>
+<h1 id="finding-unit-digit">Finding Unit Digit</h1>
+<h2 id="general-method">General Method</h2>
+<ul>
+<li>given <span class="arithmatex">\(n\)</span> find <span class="arithmatex">\(n \mod 10\)</span></li>
+</ul>
+<h2 id="some-general-numbers">Some general numbers</h2>
+<ul>
+<li>2</li>
+<li>given <span class="arithmatex">\(2^n\)</span>, represent <span class="arithmatex">\(n\)</span> as <span class="arithmatex">\(n=4k + x\)</span>, cycle = <span class="arithmatex">\(\{2, 4, 8, 6\}\)</span></li>
+<li><span class="arithmatex">\(2^1 \equiv 2 \mod 10\)</span>, <span class="arithmatex">\(2^5 \equiv 2 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k + 1\)</span></li>
+<li><span class="arithmatex">\(2^2 \equiv 4 \mod 10\)</span>, <span class="arithmatex">\(2^6 \equiv 4 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k + 2\)</span></li>
+<li><span class="arithmatex">\(2^3 \equiv 8 \mod 10\)</span>, <span class="arithmatex">\(2^7 \equiv 8 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k + 3\)</span></li>
+<li>
+<p><span class="arithmatex">\(2^4 \equiv 6 \mod 10\)</span>, <span class="arithmatex">\(2^8 \equiv 6 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k\)</span></p>
+</li>
+<li>
+<p>3</p>
+</li>
+<li>given <span class="arithmatex">\(3^n\)</span>, represent <span class="arithmatex">\(n\)</span> as <span class="arithmatex">\(n=4k + x\)</span>, cycle = <span class="arithmatex">\(\{3, 9, 7, 1\}\)</span></li>
+<li><span class="arithmatex">\(3^1 \equiv 3 \mod 10\)</span>, <span class="arithmatex">\(2^5 \equiv 3 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k + 1\)</span></li>
+<li><span class="arithmatex">\(3^2 \equiv 9 \mod 10\)</span>, <span class="arithmatex">\(2^6 \equiv 9 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k + 2\)</span></li>
+<li><span class="arithmatex">\(3^3 \equiv 7 \mod 10\)</span>, <span class="arithmatex">\(2^7 \equiv 7 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k + 3\)</span></li>
+<li>
+<p><span class="arithmatex">\(3^4 \equiv 1 \mod 10\)</span>, <span class="arithmatex">\(2^8 \equiv 1 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k\)</span> </p>
+</li>
+<li>
+<p>4</p>
+</li>
+<li>represent 4 as <span class="arithmatex">\(2^2\)</span>, cycle <span class="arithmatex">\(\{4,6\}\)</span></li>
+<li><span class="arithmatex">\(4^1 \equiv 4 \mod 10\)</span>, <span class="arithmatex">\(4^3 \equiv 4 \mod 10\)</span>, for <span class="arithmatex">\(n = 2k + 1\)</span></li>
+<li><span class="arithmatex">\(4^2 \equiv 6 \mod 10\)</span>, <span class="arithmatex">\(4^4 \equiv 6 \mod 10\)</span>, for <span class="arithmatex">\(n = 2k\)</span></li>
+<li>
+<p>so we do <span class="arithmatex">\(\mod 2\)</span> of the power</p>
+</li>
+<li>
+<p>5 </p>
+</li>
+<li>given <span class="arithmatex">\(5^n\)</span></li>
+<li>
+<p><span class="arithmatex">\(5^n \equiv 5 \mod 10\)</span></p>
+</li>
+<li>
+<p>6</p>
+</li>
+<li>given <span class="arithmatex">\(6^n\)</span></li>
+<li>
+<p><span class="arithmatex">\(6^n \equiv 6 \mod 10\)</span></p>
+</li>
+<li>
+<p>7</p>
+</li>
+<li>given <span class="arithmatex">\(7^n\)</span>, represent <span class="arithmatex">\(n\)</span> as <span class="arithmatex">\(n=4k + x\)</span>, cycle = <span class="arithmatex">\(\{7, 9, 3, 1\}\)</span></li>
+<li><span class="arithmatex">\(7^1 \equiv 7 \mod 10\)</span>, <span class="arithmatex">\(7^5 \equiv 7 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k + 1\)</span></li>
+<li><span class="arithmatex">\(7^2 \equiv 9 \mod 10\)</span>, <span class="arithmatex">\(7^6 \equiv 9 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k + 2\)</span></li>
+<li><span class="arithmatex">\(7^3 \equiv 3 \mod 10\)</span>, <span class="arithmatex">\(7^7 \equiv 3 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k + 3\)</span></li>
+<li>
+<p><span class="arithmatex">\(7^4 \equiv 1 \mod 10\)</span>, <span class="arithmatex">\(7^8 \equiv 1 \mod 10\)</span>, for <span class="arithmatex">\(n = 4k\)</span> </p>
+</li>
+<li>
+<p>8</p>
+</li>
+<li>
+<p><span class="arithmatex">\(2^3\)</span>, cycle <span class="arithmatex">\(\{8, 4, 2, 6\}\)</span></p>
+</li>
+<li>
+<p>9</p>
+</li>
+<li>
+<p><span class="arithmatex">\(3^2\)</span>, cycle <span class="arithmatex">\(\{9, 1\}\)</span></p>
+</li>
+<li>
+<p>10</p>
+</li>
+<li>
+<p>0</p>
+</li>
+<li>
+<p><span class="arithmatex">\(a&gt;10\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(a^n \equiv (a-10k)^n \mod 10\)</span>, i.e. reduce the no. to a no. <span class="arithmatex">\(&lt;=10\)</span></p>
+</li>
+<li>
+<p>for <span class="arithmatex">\(2,3,7\)</span> we have to do <span class="arithmatex">\(\mod 4\)</span> of the power, because of cycle length of <span class="arithmatex">\(4\)</span></p>
+</li>
+<li>also, if <span class="arithmatex">\(\mod 4\)</span> is <span class="arithmatex">\(0\)</span>, we put <span class="arithmatex">\(4\)</span> instead to generalize procedure for <span class="arithmatex">\(2\)</span></li>
+<li><span class="arithmatex">\(3^4 \equiv 1 \mod 10\)</span> and <span class="arithmatex">\(3^0 \equiv 1 \mod 10\)</span></li>
+<li><span class="arithmatex">\(7^4 \equiv 1 \mod 10\)</span> and <span class="arithmatex">\(7^0 \equiv 1 \mod 10\)</span></li>
+<li><span class="arithmatex">\(2^4 \equiv 6 \mod 10\)</span> but <span class="arithmatex">\(2^0 \equiv 1 \mod 10\)</span>, </li>
+<li>so to generalize for <span class="arithmatex">\(2\)</span> we say put <span class="arithmatex">\(4\)</span> instead of <span class="arithmatex">\(0\)</span></li>
+</ul>
+<h2 id="some-questions">Some questions</h2>
+<p>Find unit digit of <span class="arithmatex">\(7^{105}\)</span>?</p>
+<ul>
+<li><span class="arithmatex">\(7^{105} \mod 10\)</span></li>
+<li><span class="arithmatex">\(7^{105 \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(7^{(100 + 5) \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(7^{5 \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(7^{1 \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(7 \mod 10\)</span></li>
+<li><span class="arithmatex">\(7\)</span></li>
+</ul>
+<p>Find the unit digit of <span class="arithmatex">\(3^{69} \times 6^{59} \times 7^{71}\)</span>?</p>
+<ul>
+<li><span class="arithmatex">\(3^{69} \times 6^{59} \times 7^{71} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{69} \times (3*2)^{59} \times 7^{71} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{69} \times (3*2)^{59} \times 7^{71} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{69+59} \times 2^{59} \times 7^{71} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{69+59 \mod 4} \times 2^{59 \mod 4} \times 7^{71 \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{1+3 \mod 4} \times 2^{3} \times 7^{3} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{4} \times 2^{3} \times 7^{3} \mod 10\)</span>, when found mod as 0 put 4 instead</li>
+<li><span class="arithmatex">\(1 \times 8 \times 3 \mod 10\)</span></li>
+<li><span class="arithmatex">\(24 \mod 10\)</span></li>
+<li><span class="arithmatex">\(4\)</span></li>
+</ul>
+<p>Find the unit digit of <span class="arithmatex">\(13^{13^{13}}\)</span>?</p>
+<ul>
+<li><span class="arithmatex">\(13^{13^{13}} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{13^{13}} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{13^{13} \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{1^{13} \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{1} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3\)</span></li>
+</ul>
+<p>Find the unit digit of <span class="arithmatex">\(13^{14^{15^{16}}}\)</span></p>
+<ul>
+<li><span class="arithmatex">\(13^{14^{15^{16}}} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{14^{15^{16}}} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{14^{15^{16}} \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{2^{15^{16}} \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(3^{2^{15^{16}} \mod 4} \mod 10\)</span>, </li>
+<li>note that <span class="arithmatex">\(2^n \equiv 0 \mod 4\)</span>, if <span class="arithmatex">\(n&gt;1\)</span></li>
+<li><span class="arithmatex">\(3^{4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(1\)</span></li>
+</ul>
+<p>Find the unit digit of <span class="arithmatex">\(12^{13^{14^{15}}}\)</span></p>
+<ul>
+<li><span class="arithmatex">\(12^{13^{14^{15}}} \mod 10\)</span></li>
+<li><span class="arithmatex">\(2^{13^{14^{15}}} \mod 10\)</span></li>
+<li><span class="arithmatex">\(2^{13^{14^{15}} \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(2^{1^{14^{15}} \mod 4} \mod 10\)</span></li>
+<li><span class="arithmatex">\(2 \mod 10\)</span></li>
+<li><span class="arithmatex">\(2\)</span></li>
+</ul>
+<p><a href="https://www.quora.com/How-do-I-find-Unit-digit-of-12-13-14-15">relevant</a></p>
+<h1 id="finding-the-last-two-digits">Finding the last two digits</h1>
+<h2 id="general-method_1">General Method</h2>
+<ul>
+<li><span class="arithmatex">\(x^n \mod 100\)</span></li>
+</ul>
+<h2 id="for-numbers-ending-with-1">for numbers ending with 1</h2>
+<ul>
+<li>give no. <span class="arithmatex">\((100x_3 + 10x_2 + 1)^{(100n_3 + 10n_2 + n_1)}\)</span>,</li>
+<li><span class="arithmatex">\(0&lt;=x_2&lt;=9\)</span>, <span class="arithmatex">\(0&lt;=n_2&lt;=9\)</span>, <span class="arithmatex">\(0&lt;=n_1&lt;=9\)</span></li>
+</ul>
+<div class="arithmatex">\[
+(100x_3 + 10x_2 + 1)^{(100n_3 + 10n_2 + n_1)} 
+\equiv
+(10n_1x_2 + 1)
+\mod 100
+\]</div>
+<h3 id="proof">proof:</h3>
+<ul>
+<li><span class="arithmatex">\((100x_3 + 10x_2 + 1)^{(100n_3 + 10n_2 + n_1)} \mod 100\)</span></li>
+<li><span class="arithmatex">\((10x_2 + 1)^{(100n_3 + 10n_2 + n_1)} \mod 100\)</span></li>
+<li>let <span class="arithmatex">\(100n_3 + 10n_2 + n_1 = n\)</span></li>
+<li><span class="arithmatex">\((10x_2 + 1)^{n} \mod 100\)</span></li>
+<li>use binomial expansion</li>
+<li><span class="arithmatex">\(1 + C_1^n(10x_2) + C_2^n(10x_2)^2 + ... + (10x_2)^n \mod 100\)</span></li>
+<li><span class="arithmatex">\((10x_i)^a \equiv 0 \mod 100\)</span>, for <span class="arithmatex">\(a &gt;=2\)</span></li>
+<li><span class="arithmatex">\(1 + 10nx_2 \mod 100\)</span></li>
+<li><span class="arithmatex">\(1 + 10((100n_3 + 10n_2 + n_1)x_2 \mod 100\)</span></li>
+<li><span class="arithmatex">\(1 + (1000n_3 + 100n_2 + 10n_1)x_2 \mod 100\)</span></li>
+<li><span class="arithmatex">\(1 + 10n_1x_2 \mod 100\)</span></li>
+<li><span class="arithmatex">\(\blacksquare\)</span></li>
+</ul>
+<h2 id="for-numbers-ending-with-3-7-9">for numbers ending with 3, 7, 9</h2>
+<ul>
+<li>convert to number ending with 1</li>
+<li>because there cycle contains 1</li>
+<li>for 3, and 7 calculate to power 4 to reach 1</li>
+<li>for 9 to power 2</li>
+</ul>
+<h2 id="for-number-ending-with-2">for number ending with 2</h2>
+<ul>
+<li>cycle repeats for last two digits <span class="arithmatex">\(2^10\)</span></li>
+<li><span class="arithmatex">\((2^{10})^2 \mod 100 = 76\)</span> also  <span class="arithmatex">\((2^{10})^{2n} \mod 100 = 76\)</span></li>
+<li><span class="arithmatex">\((2^{10})^1 \mod 100 = 24\)</span> also  <span class="arithmatex">\((2^{10})^{2n+1} \mod 100 = 24\)</span></li>
+<li>so convert it in this form, and for less than this compute manually</li>
+</ul>
+<h2 id="for-number-ending-with-4-and-6-ans-8">for number ending with 4 and 6 ans 8</h2>
+<ul>
+<li>split no as <span class="arithmatex">\(2^n*x\)</span> and then solve</li>
+</ul>
+<h2 id="for-no-ending-the-5">for no ending the 5</h2>
+<ul>
+<li>25</li>
+</ul>
+<h2 id="for-no-ending-with-0">for no ending with 0</h2>
+<ul>
+<li>if power is <span class="arithmatex">\(&gt;2, 0\)</span></li>
+</ul>
+<h1 id="questions">Questions</h1>
+<h1 id="find-unit-digit-in">find unit digit in</h1>
+<ul>
+<li><span class="arithmatex">\(7^{105}\)</span></li>
+<li><span class="arithmatex">\(3^{65} 6^{59} 7^{71}\)</span></li>
+<li><span class="arithmatex">\(25^{6251} + 36^{528} + 73^{54}\)</span></li>
+<li><span class="arithmatex">\(49237 \times 3995 \times 738 \times 83 \times 9\)</span></li>
+<li><span class="arithmatex">\(13^{13^{13}}\)</span></li>
+<li><span class="arithmatex">\(13^{14^{15^{16}}}\)</span></li>
+<li><span class="arithmatex">\(12^{13^{14^{15}}}\)</span></li>
+<li><span class="arithmatex">\(137^{13^{47}}\)</span></li>
+<li><span class="arithmatex">\(1! + 2! + 3! + 4! + ... + 50!\)</span></li>
+<li><span class="arithmatex">\(6^1 + 6^2 + ... + 6^{49}\)</span></li>
+<li><span class="arithmatex">\(22^3 + 23^3 + ... + 49^3\)</span></li>
+</ul>
+<h1 id="find-two-digit">find two digit</h1>
+<ul>
+<li><span class="arithmatex">\(31^{786}\)</span></li>
+<li><span class="arithmatex">\(62^{302}\)</span></li>
+<li><span class="arithmatex">\(19^{19}\)</span></li>
+<li><span class="arithmatex">\(583^{512}\)</span></li>
+</ul>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../discrete_mathematics/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Discrete Math" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Discrete Math
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../other/math-formulas/" class="md-footer__link md-footer__link--next" aria-label="Next: Math Formula" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Math Formula
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright Shivanshu Semwal
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.0238f547.min.js"></script>
+      
+        <script src="../../javascript/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
