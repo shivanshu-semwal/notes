@@ -1,4 +1,4 @@
-site_name: Competitive Programming
+site_name: Notes
 theme:
   name: material
   palette:
@@ -32,8 +32,6 @@ copyright: Copyright Shivanshu Semwal
 extra_css:
   - stylesheets/extra.css
 extra_javascript:
-  - javascript/config.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 markdown_extensions:
   - pymdownx.arithmatex:
