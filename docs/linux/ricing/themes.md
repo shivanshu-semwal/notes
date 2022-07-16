@@ -12,3 +12,6 @@ title: Themes
 - for `qt` applications
   - `exec=env QT_STYLE_OVERRIDE=[theme-name] [appname]`
     - e.g. `exec=env QT_STYLE_OVERRIDE=Breeze equalx`
+
+- [https://wiki.archlinux.org/title/HiDPI](https://wiki.archlinux.org/title/HiDPI)
+  - font size `QT_SCALE_FACTOR`
