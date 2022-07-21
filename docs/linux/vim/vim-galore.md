@@ -123,10 +123,6 @@ title: Vim Galore
 
 - [Vim script? Vimscript? VimL?](#vim-script-vimscript-viml)
 
-### [List of colorschemes](PLUGINS.md#colorschemes-1)
-
-### [List of plugins](PLUGINS.md)
-
 <br>
 
 # Intro
