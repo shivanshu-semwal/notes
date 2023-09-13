@@ -1,0 +1,61 @@
+site_name: Notes
+theme:
+  name: material
+  custom_dir: theme
+  palette:
+  - media: "(prefers-color-scheme)"
+    scheme: default
+    accent: deep purple
+    toggle:
+      icon: material/brightness-auto
+      name: "Switch to light mode"
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    accent: amber
+    toggle:
+      icon: material/brightness-2
+      name: "Switch to system theme"
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    accent: deep purple
+    toggle:
+      icon: material/brightness-5
+      name: "Switch to dark mode"
+  logo: assets/favicon.ico
+  favicon: assets/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+# repo_url: https://github.com/shivanshu-semwal/notes
+# edit_uri:
+copyright: Copyright Shivanshu Semwal
+extra_css:
+  - assets/stylesheets/extra.css
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - assets/javascript/mathjax.js
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji 
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - meta
+plugins:
+  - search
+watch:
+  - ./theme

@@ -1,0 +1,77 @@
+# Sysinternals
+
+- <https://learn.microsoft.com/en-us/sysinternals/>
+
+- AccessChk - check access for files
+- AccessEnum -
+- AdExplorer - Active Directory Explorer
+- AdInsight
+- AdRestore
+- Autologon - automatically login on starting pc
+- Autoruns - startup programs, programs at boot everything
+- BgInfo - write pc info into background
+- BlueScreen - fake blue screen
+- CacheSet - cache settings
+- ClockRes
+- Contig - defragment individual files
+- Coreinfo -
+- Ctrl2Cap - change caps lock to ctrl key
+- DebugView - show debug output
+- Desktops - create four virtual desktops
+- Disk2vhd -
+- DiskExt
+- DiskMon - logs and displays all hard disk activity
+- DiskView - graphical map of your disk
+- Disk Usage (DU)
+- EFSDump - Encrypting File System
+- FindLinks -  file index and any hard links
+- Handle - cli tool for viewing resources used by a program
+- Hex2dec - convert hex to decimal with cli
+- Junction
+- LDMDump
+- ListDLLs - reports the DLLs loaded into processes
+- LiveKd
+- LoadOrder - order in which drivers are loaded
+- LogonSessions -
+- MoveFile/PendMoves - move a file which you are note able to move on next boot
+- NotMyFault - crash windows
+- NTFSInfo -
+- PipeList
+- PortMon -  monitors and displays all serial and parallel port activity on a system
+- ProcDump - get process dump during high spikes
+- Process Explorer
+- Process Monitor
+- PsExec
+- PsFile
+- PsGetSid
+- PsInfo
+- PsKill
+- PsList
+- PsLoggedOn
+- PsLogList
+- PsPasswd
+- PsPing
+- PsService
+- PsShutdown
+- PsSuspend
+- PsTools
+- RAMMap
+- RDCMan
+- RegDelNull
+- RegHide
+- RegJump
+- Registry Usage (RU)
+- SDelete
+- ShareEnum
+- ShellRunas - run a program as another account
+- Sigcheck - check signature of files
+- Streams
+- Strings - seach unicode strings
+- Sync - sync files to create backup
+- Sysmon - system monitor
+- TCPView - show tcp/ip connections
+- VMMap - memory map for processes, virtual and physical
+- VolumeID - chance drive labels
+- WhoIs - dns whois
+- WinObj - security
+- ZoomIt - zoom object record

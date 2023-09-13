@@ -1,0 +1,29 @@
+# CLI Tools
+
+- exa
+    - ls modern replacement
+    - <https://github.com/ogham/exa>
+- vis
+    - music visualizer
+    - <https://github.com/dpayne/cli-visualizer>
+- ffcast
+    - screen recording
+    - <https://github.com/ropery/FFcast>
+- fzf
+- osd-clock
+- peaclock
+    - <https://github.com/octobanana/peaclock>
+- rdrview
+    - <https://github.com/eafer/rdrview>
+- rofi
+- qalc
+- rofi-calc
+    - <https://github.com/svenstaro/rofi-calc.git>
+- libinput-gestures
+    - <https://github.com/bulletmark/libinput-gestures>
+- figlet
+    - <https://github.com/xero/figlet-fonts.git>
+- screenkey
+    - show pressed key on screen
+- autojump
+    - <https://github.com/wting/autojump.git>

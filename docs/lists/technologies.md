@@ -1,0 +1,468 @@
+# lists of technologies
+
+- aarch64
+    - AArch64 or ARM64 is the 64-bit extension of the ARM architecture family.
+- adonisjs
+    - AdonisJs is a fullstack Web framework with focus on ergonomics and speed .
+- aftereffects
+    - Adobe After Effects is a digital visual effects, motion graphics, and compositing application developed by Adobe Inc., and used in the post-production process of film making, video games and television production.
+- amazonwebservices
+- anaconda
+    - Anaconda is a distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment.
+- android
+    - Android is a mobile operating system based on a modified version of the Linux kernel and other open-source software, designed primarily for touchscreen mobile devices such as smartphones and tablets.
+- androidstudio
+- angularjs
+    - AngularJS is a discontinued free and open-source JavaScript-based web framework for developing single-page applications.
+- ansible
+    - Ansible is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes software provisioning, configuration management, and application deployment functionality.
+- apache
+    - The Apache HTTP Server is a free and open-source cross-platform web server software, released under the terms of Apache License 2.0.
+- apachekafka
+    - Apache Kafka is a distributed event store and stream-processing platform. It is an open-source system developed by the Apache Software Foundation written in Java and Scala. The project aims to provide a unified, high-throughput, low-latency platform for handling real-time data feeds.
+- appcelerator
+- apple
+- appwrite
+    - Appwrite is an end-to-end backend server for Web, Mobile, Native, or Backend apps packaged as a set of Docker microservices.
+- arduino
+- argocd
+    - Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes.
+- atom
+    - text-editor
+- azure
+    - cloud service
+- babel
+    - Babel is a free and open-source JavaScript transcompiler that is mainly used to convert ECMAScript 2015+ code into backwards-compatible JavaScript code that can be run by older JavaScript engines. It allows web developers to take advantage of the newest features of the language.
+- backbonejs
+    - Backbone.js is a JavaScript rich-client web app framework based on the model–view–controller design paradigm, intended to connect to an API over a RESTful JSON interface.
+- bamboo
+    - Bamboo is a continuous integration and deployment tool that ties automated builds, tests and releases together in a single workflow.
+- bash
+    - shell
+- behance
+    - Behance is a social media platform owned by Adobe whose main focus is to showcase and discover creative work.
+- bitbucket
+    - Bitbucket Cloud is a Git-based code and CI/CD tool optimized for teams using Jira.
+- blender
+    - Blender is a free and open-source 3D computer graphics software tool set used for creating animated films, visual effects, art, 3D-printed models
+- bootstrap
+    - Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.
+- bower
+    - Bower runs over Git, and is package-agnostic. A packaged component can be made up of any type of asset, and use any type of transport
+- bulma
+    - Bulma is a free, open source CSS framework based on Flexbox and built with Sass. It's 100% responsive, fully modular, and available for free.
+- c
+    - programming
+- cakephp
+    - CakePHP is an open-source web framework. It follows the model–view–controller approach and is written in PHP, modeled after the concepts of Ruby on Rails, and distributed under the MIT License.
+- canva
+    - Canva is an Australian graphic design platform that is used to create social media graphics and presentations. The app includes readymade templates for users to use, and the platform is free and offers paid subscriptions such as Canva Pro and Canva for Enterprise for additional functionality.
+- centos
+    - linux distro
+- ceylon
+    - <https://en.wikipedia.org/wiki/Ceylon_(programming_language>)
+    - Ceylon is an object-oriented, strongly statically typed programming language with an emphasis on immutability, created by Red Hat. Ceylon programs run on the Java virtual machine (JVM), and could be compiled to JavaScript. The language design focuses on source code readability, predictability, toolability, modularity, and metaprogrammability.
+- chrome
+- circleci
+    - <https://en.wikipedia.org/wiki/CircleCI>
+    - CircleCI is a continuous integration and continuous delivery platform that can be used to implement DevOps practices.
+- clojure
+    - <https://en.wikipedia.org/wiki/Clojure>
+    - Clojure [/ˈkloʊʒər/, like closure] is a dynamic and functional dialect of the Lisp programming language on the Java platform. Like other Lisp dialects, Clojure treats code as data and has a Lisp macro system. The current development process is community-driven, overseen by Rich Hickey as its benevolent dictator for life (BDFL).
+- clojurescript
+    - ClojureScript is a compiler for Clojure that targets JavaScript.
+- cmake
+    - In software development, CMake is cross-platform free and open-source software for build automation, testing, packaging and installation of software by using a compiler-independent method. CMake is not a build system itself; it generates another system's build files.
+- codecov
+    - Codecov provides metrics and insights into the results of tests through code coverage reports. Coverage reports are used to determine which lines of code were tested and which lines were not tested, which may contain bugs and syntax errors. These reports are uploaded to Codecov to be analyzed and stored historically.
+- codeigniter
+    - CodeIgniter is an open-source software rapid development web framework, for use in building dynamic web sites with PHP.
+- codepen
+- coffeescript
+    - CoffeeScript is a programming language that compiles to JavaScript. It adds syntactic sugar inspired by Ruby, Python, and Haskell in an effort to enhance JavaScript's brevity and readability. Specific additional features include list comprehension and destructuring assignment.
+- composer
+    - Composer is an application-level dependency manager for the PHP programming language that provides a standard format for managing dependencies of PHP software and required libraries.
+- confluence
+    - Confluence is a web-based corporate wiki developed by Australian software company Atlassian. Atlassian wrote Confluence in the Java programming language and first published it in 2004. Confluence Standalone comes with a built-in Tomcat web server and hsql database, and also supports other databases.
+- couchdb
+    - Apache CouchDB is an open-source document-oriented NoSQL database, implemented in Erlang. CouchDB uses multiple formats and protocols to store, transfer, and process its data. It uses JSON to store data, JavaScript as its query language using MapReduce, and HTTP for an API.
+- cplusplus
+    - C++ is a high-level general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or "C with Classes".
+- crystal
+    - Crystal's syntax is heavily inspired by Ruby's, so it feels natural to read and easy to write, and has the added benefit of a lower learning curve
+- csharp
+    - C# is a general-purpose, high-level multi-paradigm programming language. C# encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented, and component-oriented programming disciplines.
+- css3
+    - CSS describes how HTML elements should be displayed. This tutorial will teach you CSS from basic to advanced.
+- cucumber
+    - Cucumber is a software tool that supports behavior-driven development (BDD). Central to the Cucumber BDD approach is its ordinary language parser called Gherkin. It allows expected software behaviors to be specified in a logical language that customers can understand.
+- d3js
+    - D3.js is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of Scalable Vector Graphics, HTML5, and Cascading Style Sheets standards. It is the successor to the earlier Protovis framework.
+- dart
+    - Dart is a programming language designed for client development, such as for the web and mobile apps. It is developed by Google and can also be used to build server and desktop applications. It is an object-oriented, class-based, garbage-collected language with C-style syntax.
+- debian
+- denojs
+    - Deno is a runtime for JavaScript, TypeScript, and WebAssembly that is based on the V8 JavaScript engine and the Rust programming language. Deno was co-created by Ryan Dahl, who also created Node.js.
+- devicon
+- digitalocean
+    - DigitalOcean Holdings, Inc. is an American multinational technology company and cloud service provider.
+- discordjs
+    - Discord.js is a powerful node.js module that allows you to interact with the Discord API very easily.
+- django
+    - Discord is a VoIP and instant messaging social platform. Users have the ability to communicate with voice calls, video calls, text messaging, media and files in private chats or as part of communities called "servers".
+- docker
+    - Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. The service has both free and premium tiers. The software that hosts the containers is called Docker Engine.
+- doctrine
+    - The Doctrine Project (or Doctrine) is a set of PHP libraries primarily focused on providing persistence services and related functionality.
+- dot-net
+    - .NET is a free and open-source, managed computer software framework for Windows, Linux, and macOS operating systems. It is a cross-platform successor to .NET Framework. The project is primarily developed by Microsoft employees by way of the .NET Foundation, and released under the MIT License.
+- dotnetcore
+    - .NET is a free and open-source, managed computer software framework for Windows, Linux, and macOS operating systems. It is a cross-platform successor to .NET Framework. The project is primarily developed by Microsoft employees by way of the .NET Foundation, and released under the MIT License.
+- dropwizard
+    - Dropwizard is an open source Java framework for developing ops-friendly, high-performance RESTful backends.
+- drupal
+    - Drupal is a free and open-source web content management system written in PHP and distributed under the GNU General Public License.
+- electron
+    - Electron is a free and open-source software framework developed and maintained by GitHub. The framework is designed to create desktop applications using web technologies that are rendered using a version of the Chromium browser engine and a back end using the Node.js runtime environment.
+- eleventy
+- elixir
+    - Elixir is a functional, concurrent, general-purpose programming language that runs on the BEAM virtual machine which is also used to implement the Erlang programming language. Elixir builds on top of Erlang and shares the same abstractions for building distributed, fault-tolerant applications.
+- elm
+    - Elm is a domain-specific programming language for declaratively creating web browser-based graphical user interfaces. Elm is purely functional, and is developed with emphasis on usability, performance, and robustness.
+- embeddedc
+- ember
+    - Ember.js is a productive, battle-tested JavaScript framework for building modern web applications.
+- erlang
+    - Erlang is a general-purpose, concurrent, functional programming language, and a garbage-collected runtime system.
+- eslint
+    - ESLint is a static code analysis tool for identifying problematic patterns found in JavaScript code.
+- express
+    - Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js, released as free and open-source software under the MIT License.
+- facebook
+- fastapi
+- feathersjs
+    - Feathers is a full-stack web-framework for creating APIs and real-time applications with TypeScript or JavaScript.
+- fedora
+- figma
+- filezilla
+    - FileZilla is a free and open-source, cross-platform FTP application, consisting of FileZilla Client and FileZilla Server.
+- firebase
+    - Firebase is a set of hosting services for any type of application (Android, iOS, Javascript, Node.js, Java, Unity, PHP, C++ ...). It offers NoSQL and real-time hosting of databases, content, social authentication (Google, Facebook, Twitter and Github), and notifications, or services, such as a real-time communication server.
+- firefox
+- flask
+    - Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.
+- flutter
+    - Flutter is an open-source UI software development kit created by Google. It is used to develop cross-platform applications for Android, iOS, Linux, macOS, Windows, Google Fuchsia, and the web from a single codebase.
+- foundation
+    - Foundation is a free and open-source responsive front-end framework, providing a responsive grid and HTML and CSS UI components, templates, and code snippets, including typography, forms, buttons, navigation and other interface elements, as well as optional functionality provided by JavaScript extensions.
+- fsharp
+    - F# is a functional-first, general purpose, strongly typed, multi-paradigm programming language that encompasses functional, imperative, and object-oriented programming methods.
+- gatling
+    - Gatling is an open-source load- and performance-testing framework based on Scala, Akka and Netty.
+- gatsby
+    - Gatsby is an open-source static site generator built on top of Node.js using React and GraphQL. It provides over 2500 plugins to create static sites based on sources as Markdown documents, MDX, images, and numerous Content Management Systems such as WordPress, Drupal and more.
+- gcc
+- gentoo
+- gimp
+- git
+- github
+- gitlab
+- gitter
+    - Gitter is an open-source instant messaging and chat room system for developers and users of GitLab and GitHub repositories
+- go
+    - Go is a statically typed, compiled programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency.
+- godot
+    - Godot is a cross-platform, free and open-source game engine released under the MIT license. It was initially developed by Argentine software developers Juan Linietsky and Ariel Manzur for several companies in Latin America prior to its public release.
+- google
+- googlecloud
+- gradle
+    - Gradle is a build automation tool for multi-language software development. It controls the development process in the tasks of compilation and packaging to testing, deployment, and publishing. Supported languages include Java, C/C++, and JavaScript.
+- grafana
+    - Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources.
+- grails
+    - Grails is an open source web application framework that uses the Apache Groovy programming language. It is intended to be a high-productivity framework by following the "coding by convention" paradigm, providing a stand-alone development environment and hiding much of the configuration detail from the developer.
+- graphql
+    - GraphQL is an open-source data query and manipulation language for APIs, and a runtime for fulfilling queries with existing data.
+- groovy
+    - Apache Groovy is a Java-syntax-compatible object-oriented programming language for the Java platform. It is both a static and dynamic language with features similar to those of Python, Ruby, and Smalltalk.
+- grunt
+    - Grunt is a JavaScript task runner, a tool used to automatically perform frequent tasks such as minification, compilation, unit testing, and linting. It uses a command-line interface to run custom tasks defined in a file.
+- gulp
+    - Gulp is a command-line task runner for Node. js. Gulp let us automate processes and run repetitive tasks with ease. What makes Gulp different from other task runners is that it uses Node streams; piping output from one task as an input to the next.
+- handlebars
+    - Handlebars compiles templates into JavaScript functions. This makes the template execution faster than most other template engines.
+- haskell
+    - Haskell is a general-purpose, statically-typed, purely functional programming language with type inference and lazy evaluation.
+- haxe
+    - Haxe is an open source high-level cross-platform programming language and compiler that can produce applications and source code, for many different computing platforms from one code-base.
+- heroku
+- html5
+- hugo
+    - Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again.
+- ie10
+- ifttt
+    - IFTTT is a private commercial company that runs online digital automation platforms which it offers as a service. Their platforms provide a visual interface for making cross-platform if statements to its users, which, as of 2020, numbered 18 million people.
+- illustrator
+- inkscape
+- intellij
+- ionic
+    - Ionic is a complete open-source SDK for hybrid mobile app development created by Max Lynch, Ben Sperry, and Adam Bradley of Drifty Co. in 2013. The original version was released in 2013 and built on top of AngularJS and Apache Cordova.
+- jamstack
+    - Jamstack, previously stylized as JAMStack, is a web development architecture pattern and solution stack. The initialism "JAM" stands for JavaScript, API and Markup and was coined by Mathias Biilmann in 2015. The idea of combining using JavaScript, APIs, and markup together has existed since the beginnings of HTML5.
+- jasmine
+    - Jasmine is an open-source testing framework for JavaScript. It aims to run on any JavaScript-enabled platform, to not intrude on the application nor the IDE, and to have easy-to-read syntax. It is heavily influenced by other unit testing frameworks, such as ScrewUnit, JSSpec, JSpec, and RSpec.
+- java
+- javascript
+- jeet
+    - Jeet is a simple fractional grid system for Sass and Stylus.
+- jenkins
+    - Jenkins is an open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery. It is a server-based system that runs in servlet containers such as Apache Tomcat.
+- jest
+    - Jest is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase.
+- jetbrains
+- jira
+    - Jira is a proprietary issue tracking product developed by Atlassian that allows bug tracking and agile project management.
+- jquery
+    - jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax.
+- julia
+    - Julia is a high-level, dynamic programming language. Its features are well suited for numerical analysis and computational science. Distinctive aspects of Julia's design include a type system with parametric polymorphism in a dynamic programming language; with multiple dispatch as its core programming paradigm.
+- jupyter
+    - The Jupyter Notebook is a web-based interactive computing platform.
+- k3s
+    - K3s is a distribution because it packages additional components and services necessary for a fully functional cluster that go beyond vanilla Kubernetes.
+- kaggle
+- karma
+    - test runner for javascript
+- knockout
+    - Knockout is a JavaScript library that helps you to create rich, responsive display and editor user interfaces with a clean underlying data model.
+- kotlin
+    - Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference. Kotlin is designed to interoperate fully with Java, and the JVM version of Kotlin's standard library depends on the Java Class Library, but type inference allows its syntax to be more concise.
+- krakenjs
+    - Kraken is a secure and scalable layer that extends express by providing structure and convention.
+- kubernetes
+    - Kubernetes is an open-source container orchestration system for automating software deployment, scaling, and management. Originally designed by Google, the project is now maintained by the Cloud Native Computing Foundation.
+- labview
+    - Laboratory Virtual Instrument Engineering Workbench is a system-design platform and development environment for a visual programming language from National Instruments.
+- laravel
+    - Laravel is a free and open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller architectural pattern and based on Symfony.
+- latex
+    - LaTeX is a software system for document preparation.
+- less
+    - Less is a dynamic preprocessor style sheet language that can be compiled into Cascading Style Sheets and run on the client side or server side.
+- linkedin
+- linux
+- lua
+    - Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications.
+- magento
+    - Magento is an open-source e-commerce platform written in PHP. It uses multiple other PHP frameworks such as Laminas and Symfony.
+- markdown
+- materialui
+- matlab
+- maya
+    - Autodesk Maya, commonly shortened to just Maya, is a 3D computer graphics application that runs on Windows, macOS and Linux, originally developed by Alias and currently owned and developed by Autodesk.
+- meteor
+    - Meteor is an open-source platform for web, mobile, and desktop used by over half a million developers around the globe.
+- microsoftsqlserver
+- minitab
+    - Minitab is a statistics package developed at the Pennsylvania State University
+- mocha
+    - Mocha is a JavaScript test framework for Node.js programs, featuring browser support, asynchronous testing, test coverage reports, and use of any assertion library.
+- modx
+    - cloud
+- mongodb
+- moodle
+- msdos
+- mysql
+- neo4j
+- nestjs
+    - Nest. JS is a framework that helps build Node. JS server-side applications. The Nest framework is built using TypeScript which allows developers to build highly scalable and testable applications. Built on top of Express
+- networkx
+    - NetworkX is a Python library for studying graphs and networks.
+- nextjs
+    - Next.js is an open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites.
+- nginx
+    - Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.
+- nixos
+    - NixOS is a non-GNU Linux relative built on top of the Nix package manager. It uses declarative configuration and allows reliable system upgrades. Several official package "channels" are offered, including the current Stable release and the Unstable release which follows the latest development.
+- nodejs
+    - Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.
+- nodewebkit
+    - NW.js (previously known as node-webkit) lets you call all Node.js modules directly from DOM and enables a new way of writing applications with all Web
+- npm
+    - Relied upon by more than 11 million developers worldwide, npm is committed to making JavaScript development elegant, productive, and safe.
+- nuget
+    - NuGet is a package manager designed to enable developers to share reusable code. It is a software as a service solution whose client app is free and open-source.
+- numpy
+- nuxtjs
+    - Nuxt.js is a free and open source JavaScript library based on Vue.js, Node.js, Webpack and Babel.js. Nuxt is inspired by Next.js, which is a framework of similar purpose, based on React.js.
+- objectivec
+- ocaml
+    - OCaml (/oʊˈkæməl/ oh-KAM-əl, formerly Objective Caml) is a general-purpose, multi-paradigm programming language which extends the Caml dialect of ML with object-oriented features.
+- openal
+    - OpenAL is a cross-platform audio application programming interface. It is designed for efficient rendering of multichannel three-dimensional positional audio.
+- opencv
+    - OpenCV is a library of programming functions mainly aimed at real-time computer vision. Originally developed by Intel, it was later supported by Willow Garage then Itseez.
+- opengl
+    - OpenGL is a cross-language, cross-platform application programming interface for rendering 2D and 3D vector graphics.
+- opensuse
+- opera
+- oracle
+- packer
+    - Packer is a free and open source tool for creating golden images for multiple platforms from a single source configuration.
+- pandas
+- perl
+- phalcon
+    - Phalcon is a PHP web framework based on the model–view–controller pattern.
+- phoenix
+    - Phoenix is a web development framework written in the functional programming language Elixir. Phoenix uses a server-side model–view–controller pattern.
+- photoshop
+- php
+- phpstorm
+- podman
+    - Podman (the POD MANager) is a tool for managing containers and images, volumes mounted into those containers, and pods made from groups of containers.
+- polygon
+    - Polygon is a blockchain platform that enables blockchain networks to connect and scale.
+- postgresql
+    - PostgreSQL, also known as Postgres, is a free and open-source relational database management system emphasizing extensibility and SQL compliance.
+- premierepro
+- processing
+    - Processing is a free graphical library and integrated development environment built for the electronic arts, new media art, and visual design communities with the purpose of teaching non-programmers the fundamentals of computer programming in a visual context.
+- prometheus
+    - An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
+- protractor
+    - Protractor is an end-to-end test framework for Angular and AngularJS applications.
+- putty
+- pycharm
+- pytest
+- python
+- pytorch
+- qt
+- r
+- rails
+- raspberrypi
+- react
+- rect
+- redhat
+- redis
+    - Redis is an in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability.
+- redux
+    - Redux is an open-source JavaScript library for managing and centralizing application state. It is most commonly used with libraries such as React or Angular for building user interfaces.
+- rocksdb
+    - RocksDB is a high performance embedded database for key-value data. It is a fork of Google's LevelDB optimized to exploit many CPU cores, and make efficient use of fast storage, such as solid-state drives, for input/output bound workloads.
+- rspec
+    - RSpec is a computer domain-specific language testing tool written in the programming language Ruby to test Ruby code. It is a behavior-driven development framework which is extensively used in production applications.
+- rstudio
+- ruby
+- rubymine
+- rust
+- safari
+- salesforce
+- sass
+    - Sass is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets. SassScript is the scripting language itself. Sass consists of two syntaxes. The original syntax, called "the indented syntax," uses a syntax similar to Haml.
+- scala
+- sdl
+    - Simple DirectMedia Layer is a cross-platform software development library designed to provide a hardware abstraction layer for computer multimedia hardware components.
+- selenium
+- sequelize
+    - Sequelize is a modern TypeScript and Node.js ORM for Oracle, Postgres, MySQL, MariaDB, SQLite and SQL Server, and more.
+- shopware
+    - Shopware 6 is an open headless commerce platform powered by Symfony 5.4 and Vue.js 2.6 that is used by thousands of shops and supported by a huge worldwide.
+- shotgrid
+    - ShotGrid makes project management and pipeline tools that help creative studios track, schedule, review, collaborate, and manage their digital assets.
+- sketch
+    - Sketch is a vector graphics editor for macOS
+- slack
+- socketio
+    - Socket.IO is an event-driven library for real-time web applications. It enables real-time, bi-directional communication between web clients and servers. It consists of two parts: a client-side library that runs in the browser, and a server-side library for Node.js. Both components have a nearly identical API.
+- solidity
+    - Solidity is an object-oriented programming language for implementing smart contracts on various blockchain platforms, most notably, Ethereum.
+- sourcetree
+    - Sourcetree is a free graphical user interface (GUI) desktop client that simplifies how you interact with Git repositories so that you can fully concentrate on coding.
+- spring
+    - The Spring Framework is an application framework and inversion of control container for the Java platform. The framework's core features can be used by any Java application, but there are extensions for building web applications on top of the Java EE platform.
+- spss
+    - SPSS Statistics is a statistical software suite developed by IBM for data management, advanced analytics, multivariate analysis, business intelligence, and criminal investigation.
+- sqlalchemy
+    - SQLAlchemy is an open-source SQL toolkit and object-relational mapper for the Python programming language released under the MIT License.
+- sqlite
+    - SQLite is a database engine written in the C programming language. It is not a standalone app; rather, it is a library that software developers embed in their apps. As such, it belongs to the family of embedded databases.
+- ssh
+    - The Secure Shell Protocol is a cryptographic network protocol for operating network services securely over an unsecured network. Its most notable applications are remote login and command-line execution. SSH applications are based on a client–server architecture, connecting an SSH client instance with an SSH server.
+- storybook
+    - Storybook is a frontend workshop for building UI components and pages in isolation.
+- stylus
+    - An expressive, robust, feature-rich CSS language built for nodejs
+- subversion
+    - Apache Subversion is a software versioning and revision control system distributed as open source under the Apache License.
+- svelte
+    - Svelte is a free and open-source front end component framework or language created by Rich Harris and maintained by the Svelte core team members.
+- swift
+    - Swift is a general-purpose, multi-paradigm, compiled programming language developed by Apple Inc. and the open-source community.
+- symfony
+    - Symfony is a free and open-source PHP web application framework and a set of reusable PHP component libraries. It was published as free software on October 18, 2005, and released under the MIT license.
+- tailwindcss
+    - Tailwind CSS is an open source CSS framework. The main feature of this library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables.
+- tensorflow
+- terraform
+    - Terraform is an open-source infrastructure-as-code software tool created by HashiCorp. Users define and provide data center infrastructure using a declarative configuration language known as HashiCorp Configuration Language, or optionally JSON.
+- thealgorithms
+    - We are a group of programmers helping each other build new things, whether it be writing complex encryption programs, or simple ciphers.
+- threejs
+    - Three.js is a cross-browser JavaScript library and application programming interface used to create and display animated 3D computer graphics in a web browser using WebGL.
+- tomcat
+    - Apache Tomcat is a free and open-source implementation of the Jakarta Servlet, Jakarta Expression Language, and WebSocket technologies. It provides a "pure Java" HTTP web server environment in which Java code can also run. Thus it's a Java web application server, although not a full JEE application server.
+- tortoisegit
+    - TortoiseGit is a Git revision control client, implemented as a Windows shell extension and based on TortoiseSVN. It is free software released under the GNU General Public License.
+- towergit
+    - Tower is the perfect level of abstraction away from command-line Git usage. A simple and powerful UI, but without hiding what makes Git powerful.
+- travis
+    - Travis CI is a hosted continuous integration service used to build and test software projects hosted on GitHub, Bitbucket, GitLab, Perforce, Apache Subversion and Assembla. Travis CI was the first CI service that provided services to open-source projects for free and continues to do so.
+- trello
+    - Trello is a web-based, kanban-style, list-making application and is developed by Trello Enterprise, a subsidiary of Atlassian.
+- twitter
+- typescript
+- typo3
+    - TYPO3 is a free and open-source Web content management system written in PHP. It is released under the GNU General Public License.
+- ubuntu
+- unity
+    - Unity is a cross-platform game engine developed by Unity Technologies, first announced and released in June 2005 at Apple Worldwide Developers Conference as a Mac OS X game engine.
+- unix
+- unrealengine
+- uwsgi
+    - uWSGI is an open source software application that "aims at developing a full stack for building hosting services". It is named after the Web Server Gateway Interface, which was the first plugin supported by the project. uWSGI is maintained by Italian based software company unbit.
+- vagrant
+    - Vagrant is an open-source software product for building and maintaining portable virtual software development environments; e.g., for VirtualBox, KVM, Hyper-V, Docker containers, VMware, and AWS. It tries to simplify the software configuration management of virtualization in order to increase development productivity.
+- vim
+- visualstudio
+- vscode
+- vuejs
+    - Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.
+- vuestorefront
+    - The open-source frontend for any eCommerce. Built with a PWA and headless approach, using a modern JS stack.
+- vuetify
+    - Vuetify is a Material Design component framework for Vue.js.
+- webflow
+    - Webflow, Inc. is an American company, based in San Francisco, that provides software as a service for website building and hosting. Their online visual editor platform allows users to design, build, and launch websites.
+- weblate
+    - Weblate is a libre web-based translation tool with tight version control integration. It provides two user interfaces, propagation of translations across components, quality checks and automatic linking to source files.
+- webpack
+    - Webpack is a free and open-source module bundler for JavaScript. It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included. Webpack takes modules with dependencies and generates static assets representing those modules.
+- webstorm
+- windows8
+- woocommerce
+    - WooCommerce is an open-source e-commerce plugin for WordPress.
+- wordpress
+- xamarin
+    - Xamarin is a Microsoft-owned San Francisco-based software company founded in May 2011 by the engineers that created Mono, Xamarin.Android and Xamarin.iOS, which are cross-platform implementations of the Common Language Infrastructure and Common Language Specifications.
+- xcode
+- xd
+- yarn
+    - Yarn is a software packaging system developed in 2016 by Facebook for the Node.js JavaScript runtime environment. An alternative to the npm package manager, Yarn was created as a collaboration of Facebook, Exponent, Google, and Tilde to solve consistency, security, and performance problems with large codebases.
+- yii
+    - Yii is an open source, object-oriented, component-based MVC PHP web application framework.
+- yunohost
+    - YunoHost is an operating system aimed at making the administration of a Linux server incredibly simple. Oddly enough, YunoHost is also a Linux distribution, based on Debian Bullseye, that includes all the tools you need to: Administer a server with a user-friend web-based interface.
+- zend
+    - Zend, formerly Zend Technologies, is a Minneapolis, Minnesota-based software company. The company's products, which include Zend Studio, assist software developers with developing, deploying, and managing PHP-based web applications.
+- zig
+    - Zig is an imperative, general-purpose, statically typed, compiled system programming language designed by Andrew Kelley. The language is designed for "robustness, optimality and maintainability", supporting compile-time generics, reflection and evaluation, cross-compilation and manual memory management.

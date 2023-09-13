@@ -1,0 +1,87 @@
+# Libraries
+
+- `pandas`
+    - first you want to load the data, for that you require pandas
+    - it converts the csv file you have into data frames
+- `matplotlib`, `seaborn`, `plotly`
+    - these are for visualizing the data you have
+- `numpy`
+    - when you want to convert your data into more compact usable for
+    - like numpy array which is faster than the normal list of python
+- `scipy`
+    - when you want to perform some scientific calculations on the data
+    - like calculating the ode, fft, integration and differentiation
+- `scikit-learn`
+    - this library contains list of algorithms used in machine learning
+    - like classification, regression, etc
+- `tensorflow`
+    - if you want to make some neural networks, then you will need tensorflow
+- `keras`
+    - its api to interact with tensorflow, you need to use keras, which is module inside
+    tensorflow.
+
+Theses are basically all the libraries you will need for machine learning.
+
+- **PyTorch** is an open source machine learning framework based on the Torch library,
+    - used for applications such as
+        - computer vision and
+        - natural language processing,
+        - primarily developed by Meta AI.
+        - `pip install pytorch`
+- **TensorFlow** is a free and open-source software library
+    - for machine learning
+    - and artificial intelligence.
+    - It can be used across a range of tasks but has a
+        - particular focus on training and inference of deep neural networks
+    - `pip install tensorflow`
+- **OpenCV** is a library of programming functions mainly aimed at real-time computer vision.
+    - `pip install opencv-python`
+- **NumPy** is a library for the Python programming language,
+    - adding support for large, multi-dimensional arrays and matrices,
+    - along with a large collection of high-level mathematical functions to operate on these arrays.
+    - `pip install numpy`
+- **SciPy** is a free and open-source Python library used for scientific computing and technical computing.
+    - SciPy contains modules for
+        - optimization,
+        - linear algebra,
+        - integration,
+        - interpolation,
+        - special functions,
+        - FFT,
+        - signal and
+        - image processing,
+        - ODE solvers and
+        - other tasks common in science and engineering.
+    - `pip install scipy`
+- **Keras** is an open-source software library that provides a Python interface
+    - for artificial neural networks.
+    - Keras acts as an interface for the TensorFlow library.
+    - Up until version 2.3, Keras supported multiple backends, including
+        - TensorFlow,
+        - Microsoft Cognitive Toolkit,
+        - Theano, and
+        - PlaidML
+- **Scikit-learn** is a free software machine learning library for the Python programming language.
+    - It features various
+        - classification,
+        - regression and
+        - clustering algorithms including
+            - support-vector machines,
+            - random forests,
+            - gradient boosting,
+            - k-means and
+            - DBSCAN,
+    - and is designed to interoperate with the Python numerical and scientific libraries
+        - NumPy and SciPy.
+- **Matplotlib** is a plotting library for the Python programming language
+    - and its numerical mathematics extension NumPy.
+    - It provides an object-oriented API for embedding plots into applications
+        - using general-purpose GUI toolkits like
+            - Tkinter,
+            - wxPython,
+            - Qt, or
+            - GTK.
+- **pandas** is a software library written for the Python programming language
+    - for data manipulation and analysis.
+    - In particular, it offers data structures and operations for manipulating
+        - numerical tables and time series.

@@ -1,0 +1,117 @@
+# Resources
+
+- Computer Architecture
+    - <https://en.wikipedia.org/wiki/Computer_architecture>
+- Computer Organization, Microarchitecture
+    - <https://en.wikipedia.org/wiki/Microarchitecture>
+- System Design
+    - <https://en.wikipedia.org/wiki/Systems_design>
+- Processor
+    - <https://en.wikipedia.org/wiki/Processor_(computing)>
+    - Models
+    - Architecture
+    - Instruction set architectures
+        - Types
+        - Instruction sets
+            - UISA: User Instruction Set Architecture
+            - <https://en.wikipedia.org/wiki/Instruction_set_architecture>
+            - <https://en.wikipedia.org/wiki/Comparison_of_instruction_set_architectures>
+            - Complex instruction set computer CISC
+                - <https://en.wikipedia.org/wiki/Complex_instruction_set_computer>
+            - Reduced instruction set computer RISC
+                - <https://en.wikipedia.org/wiki/Reduced_instruction_set_computer>
+    - Execution
+        - Instruction Pipelining
+        - Hazards
+        - Out-of-order
+        - Speculative
+    - Parallelism
+        - Level
+            - Bit (Bit-serial, Word)
+            - Instruction
+            - Pipelining(Scalar, Superscalar)
+            - Task (Thread, Process)
+            - Data (Vector)
+            - Memory
+            - Distributed
+        - Multithreading
+            - Temporal
+            - Simultaneous
+            - Speculative
+            - Preemptive
+            - Cooperative
+        - Flynn's taxonomy
+            - SISD <https://en.wikipedia.org/wiki/Single_instruction,_single_data>
+            - SIMD <https://en.wikipedia.org/wiki/Single_instruction,_multiple_data>
+            - MISD <https://en.wikipedia.org/wiki/Multiple_instruction,_single_data>
+            - MIMD <https://en.wikipedia.org/wiki/Multiple_instruction,_multiple_data>
+    - Processor Performance
+        - Transistor Count
+        - Instructions per Cycle IPC
+        - Cycles per Instructions CPI
+        - Instructions per second IPC
+        - Floating-point operations per second FLOPS
+        - Transactions per second TPS
+        - Synaptic updates per second SUPS
+        - Performance per watt PPW
+        - Cache performance metrics
+        - Computer performance by orders of magnitude - <https://en.wikipedia.org/wiki/Computer_performance_by_orders_of_magnitude>
+    - Types
+        - [Central processing unit](https://en.wikipedia.org/wiki/Central_processing_unit) (CPU)
+        - [Graphics processing unit](https://en.wikipedia.org/wiki/Graphics_processing_unit "Graphics processing unit") (GPU)
+            - [GPGPU](https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units "General-purpose computing on graphics processing units")
+        - [Vector](https://en.wikipedia.org/wiki/Vector_processor "Vector processor")
+        - [Barrel](https://en.wikipedia.org/wiki/Barrel_processor "Barrel processor")
+        - [Stream](https://en.wikipedia.org/wiki/Stream_processing "Stream processing")
+        - [Tile processor](https://en.wikipedia.org/wiki/Tile_processor "Tile processor")
+        - [Coprocessor](https://en.wikipedia.org/wiki/Coprocessor "Coprocessor")
+        - [PAL](https://en.wikipedia.org/wiki/Programmable_Array_Logic "Programmable Array Logic")
+        - [ASIC](https://en.wikipedia.org/wiki/Application-specific_integrated_circuit "Application-specific integrated circuit")
+        - [FPGA](https://en.wikipedia.org/wiki/Field-programmable_gate_array "Field-programmable gate array")
+        - [FPOA](https://en.wikipedia.org/wiki/Field-programmable_object_array "Field-programmable object array")
+        - [CPLD](https://en.wikipedia.org/wiki/Complex_programmable_logic_device "Complex programmable logic device")
+        - [Multi-chip module](https://en.wikipedia.org/wiki/Multi-chip_module "Multi-chip module") (MCM)
+        - [System in a package](https://en.wikipedia.org/wiki/System_in_a_package "System in a package") (SiP)
+        - [Package on a package](https://en.wikipedia.org/wiki/Package_on_a_package "Package on a package") (PoP)
+    - [Word size](https://en.wikipedia.org/wiki/Word_(computer_architecture) "Word (computer architecture)")
+        - [1-bit](https://en.wikipedia.org/wiki/1-bit_computing "1-bit computing")
+        - [4-bit](https://en.wikipedia.org/wiki/4-bit_computing "4-bit computing")
+        - [8-bit](https://en.wikipedia.org/wiki/8-bit_computing "8-bit computing")
+        - [12-bit](https://en.wikipedia.org/wiki/12-bit_computing "12-bit computing")
+        - [15-bit](https://en.wikipedia.org/wiki/Apollo_Guidance_Computer "Apollo Guidance Computer")
+        - [16-bit](https://en.wikipedia.org/wiki/16-bit_computing "16-bit computing")
+        - [24-bit](https://en.wikipedia.org/wiki/24-bit_computing "24-bit computing")
+        - [32-bit](https://en.wikipedia.org/wiki/32-bit_computing "32-bit computing")
+        - [48-bit](https://en.wikipedia.org/wiki/48-bit_computing "48-bit computing")
+        - [64-bit](https://en.wikipedia.org/wiki/64-bit_computing "64-bit computing")
+        - [128-bit](https://en.wikipedia.org/wiki/128-bit_computing "128-bit computing")
+        - [256-bit](https://en.wikipedia.org/wiki/256-bit_computing "256-bit computing")
+        - [512-bit](https://en.wikipedia.org/wiki/512-bit_computing "512-bit computing")
+        - [bit slicing](https://en.wikipedia.org/wiki/Bit_slicing "Bit slicing")
+        - [others](https://en.wikipedia.org/wiki/Word_(computer_architecture)#Table_of_word_sizes "Word (computer architecture)")
+            - [variable](https://en.wikipedia.org/wiki/Word_(computer_architecture)#Variable-word_architectures "Word (computer architecture)")
+    - Core count
+        - [Single-core](https://en.wikipedia.org/wiki/Single-core "Single-core")
+        - [Multi-core](https://en.wikipedia.org/wiki/Multi-core_processor "Multi-core processor")
+        - [Manycore](https://en.wikipedia.org/wiki/Manycore_processor "Manycore processor")
+        - [Heterogeneous architecture](https://en.wikipedia.org/wiki/Heterogeneous_computing "Heterogeneous computing")
+    - Components
+        - [Core](https://en.wikipedia.org/wiki/Central_processing_unit "Central processing unit")
+        - [Cache](https://en.wikipedia.org/wiki/Cache_(computing) "Cache (computing)")
+            - [CPU cache](https://en.wikipedia.org/wiki/CPU_cache "CPU cache")
+            - [Scratchpad memory](https://en.wikipedia.org/wiki/Scratchpad_memory "Scratchpad memory")
+            - [Data cache](https://en.wikipedia.org/wiki/Data_cache "Data cache")
+            - [Instruction cache](https://en.wikipedia.org/wiki/Instruction_cache "Instruction cache")
+            - [replacement policies](https://en.wikipedia.org/wiki/Cache_replacement_policies "Cache replacement policies")
+            - [coherence](https://en.wikipedia.org/wiki/Cache_coherence "Cache coherence")
+        - [Bus](https://en.wikipedia.org/wiki/Bus_(computing) "Bus (computing)")
+        - [Clock rate](https://en.wikipedia.org/wiki/Clock_rate "Clock rate")
+        - [Clock signal](https://en.wikipedia.org/wiki/Clock_signal)
+    - [Power management](https://en.wikipedia.org/wiki/Power_management "Power management")
+        - [PMU](https://en.wikipedia.org/wiki/Power_Management_Unit "Power Management Unit")
+        - [APM](https://en.wikipedia.org/wiki/Advanced_Power_Management "Advanced Power Management")
+        - [ACPI](https://en.wikipedia.org/wiki/ACPI "ACPI")
+        - [Dynamic frequency scaling](https://en.wikipedia.org/wiki/Dynamic_frequency_scaling "Dynamic frequency scaling")
+        - [Dynamic voltage scaling](https://en.wikipedia.org/wiki/Dynamic_voltage_scaling "Dynamic voltage scaling")
+        - [Clock gating](https://en.wikipedia.org/wiki/Clock_gating "Clock gating")
+        - [Performance per watt](https://en.wikipedia.org/wiki/Performance_per_watt "Performance per watt") (PPW)

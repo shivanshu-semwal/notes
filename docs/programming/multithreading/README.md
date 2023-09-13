@@ -1,0 +1,21 @@
+# Multithreading
+
+- <https://en.wikipedia.org/wiki/Thread_(computing)>
+- Mutual Exclusion <https://en.wikipedia.org/wiki/Mutual_exclusion>
+    - Software Solutions
+        - [Dekker's algorithm](https://en.wikipedia.org/wiki/Dekker%27s_algorithm "Dekker's algorithm")
+        - [Peterson's algorithm](https://en.wikipedia.org/wiki/Peterson%27s_algorithm "Peterson's algorithm")
+        - [Lamport's bakery algorithm](https://en.wikipedia.org/wiki/Lamport%27s_bakery_algorithm "Lamport's bakery algorithm")
+        - [Szymański's algorithm](https://en.wikipedia.org/wiki/Szyma%C5%84ski%27s_algorithm "Szymański's algorithm")
+        - Taubenfeld's black-white bakery algorithm
+        - [Maekawa's algorithm](https://en.wikipedia.org/wiki/Maekawa%27s_algorithm "Maekawa's algorithm")
+    - Types of Mutual Exclusion devices, based on the solutions
+        - [Locks](https://en.wikipedia.org/wiki/Lock_(computer_science) "Lock (computer science)") (mutexes)
+        - [Readers--writer locks](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock "Readers--writer lock")
+        - [Recursive locks](https://en.wikipedia.org/wiki/Reentrant_mutex "Reentrant mutex")
+        - [Semaphores](https://en.wikipedia.org/wiki/Semaphore_(programming) "Semaphore (programming)")
+        - [Monitors](https://en.wikipedia.org/wiki/Monitor_(synchronization) "Monitor (synchronization)")
+        - [Message passing](https://en.wikipedia.org/wiki/Message_passing "Message passing")
+        - [Tuple space](https://en.wikipedia.org/wiki/Tuple_space "Tuple space")
+- <https://en.wikipedia.org/wiki/Concurrency_control>
+- <https://en.wikipedia.org/wiki/Critical_section>
