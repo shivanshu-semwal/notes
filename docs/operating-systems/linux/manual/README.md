@@ -15,6 +15,5 @@
 - [Network Management](network-management.md)
 - [Text Files Manipulation](text-file-manipulation.md)
 - [System Information](system-info.md)
-- [Shells](shell.md)
+- [Shells](../shells/README.md)
 - [Directory Structure](directory-structure.md)
-

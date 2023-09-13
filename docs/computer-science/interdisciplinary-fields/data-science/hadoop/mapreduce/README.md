@@ -178,7 +178,7 @@ hadoop fs -cat [output-folder]/[filename]
 
 ### Example
 
-- for [`WordCount`](./examples/WordCount) program (clone this repo to try it, make sure you are in the `WordCount` directory while executing these commands)
+- for [`WordCount`](./examples/WordCount.md) program (clone this repo to try it, make sure you are in the `WordCount` directory while executing these commands)
 
 ```sh
 H_CLASSPATH=$(hadoop classpath)

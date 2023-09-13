@@ -7,3 +7,4 @@
 - <https://pycom.io/>
 - <https://docs.python-guide.org/>
 - <https://python.libhunt.com/>
+- <https://www.youtube.com/watch?v=XGF3Qu4dUqk>
