@@ -14,7 +14,7 @@
     - it is a build system
     - help to manage dependencies for the scala project
 
-## hello world
+## Hello World
 
 ```scala
 object HelloWorld extends App {
@@ -27,12 +27,12 @@ object HelloWorld extends App {
 - run it with `scala HelloWorld`
 - `scala -e` for interactive mode, and scripting
 
-## var and val
+## `var` and `val`
 
 - `var` for variables whose values will be changed - `mutable`
 - `val` for variable whose value will not be changed - `immutable`
 
-## objects
+## Objects
 
 - object have states and behavior
 - instance of a class
@@ -45,7 +45,7 @@ object obj-name{
 }
 ```
 
-## methods
+## Methods
 
 - behavior
 
@@ -62,14 +62,14 @@ def printHello(){
 }
 ```
 
-## field
+## Field
 
 ```scala
 val name = "Shivanshi"
 var age = 11
 ```
 
-## initialize variables
+## Initialize Variables
 
 ```scala
 var varname = values
@@ -77,7 +77,7 @@ var varname:Type = value
 varname: Type = value
 ```
 
-## conditionals
+## Conditionals
 
 ```scala
 object demo{
@@ -88,7 +88,7 @@ object demo{
 }
 ```
 
-## loops
+## Loops
 
 - while loop is supported
 
@@ -165,7 +165,7 @@ for references
 AnyRef -> ... -> Null
 ```
 
-## difference b/w `null` `Null` `Nothing` `Unit` `Nil` `None`
+## Difference b/w `null` `Null` `Nothing` `Unit` `Nil` `None`
 
 - `null` - literal, a value
 - `Null` - a subtype of all reference types
@@ -188,7 +188,7 @@ AnyRef -> ... -> Null
 
 - `Unit` - `void` empty return type
 
-## types of functions
+## Types of Functions
 
 ### `first order`
 
@@ -229,7 +229,7 @@ e.g.
 - with two parameter `var mul = (x: Int, y: Int) => x*y`
 - with zero parameter `var userVal = () => { 345 }`, `println(userVal())`
 
-## closures
+## Closures
 
 - a function, whose return value depends on the value of one or more variables declared outside this function.
 - variable declares outside the function is called - **free variable**
@@ -301,7 +301,7 @@ def doChore(chore: String): String = chore match {
 }
 ```
 
-## different types of for loops
+## Different Types Of For Loops
 
 - with single range
 

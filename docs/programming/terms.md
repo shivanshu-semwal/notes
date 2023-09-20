@@ -1,4 +1,4 @@
-# Terms related to Programming Languages
+# Key Terms
 
 ## Interpreter and Compiler
 

@@ -1,6 +1,6 @@
 # OOP in Scala
 
-## classes
+## Classes
 
 ```scala
 class Point(xc: Int, yc: Int) {
@@ -51,14 +51,16 @@ object Demo {
 }
 ```
 
-## objects
+## Objects
 
-- `Singleton Objects`
+### `Singleton Objects`
+
 - A singleton is a class that can have only one instance, i.e., Object.
 - You create singleton using the keyword object instead of class keyword.
 - Since you can't instantiate a singleton object, you can't pass parameters to the primary constructor.
+- it is a design pattern where you make constructor private
 
-e.g.
+e.g. here `Demo` is a singleton object
 
 ```scala
 class Point(val xc: Int, val yc: Int) {
@@ -82,9 +84,7 @@ object Demo {
 }
 ```
 
-here `Demo` is a singleton object.
-
-## access modifiers
+## Access Modifiers
 
 ### private
 
@@ -140,7 +140,7 @@ package society {
 - `friends` will be accessible to any class within the enclosing package society.
 - `secrets` will be accessible only on the implicit object within instance methods (this).
 
-## traits
+## Traits
 
 - like interfaces in java
 - encapsulate methods and field definition

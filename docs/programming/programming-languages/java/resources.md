@@ -1,9 +1,20 @@
 # Resources
 
+## Documentaiton
+
+- <https://www.oracle.com/java/>
 - <https://docs.oracle.com/en/java/>
 - <https://docs.oracle.com/javase/tutorial/>
+
+## Tutorials
+
 - <https://www.javacodegeeks.com/core-java-tutorials>
 - <https://www.infoworld.com/category/java/>
-- Official Website - <https://www.oracle.com/java/>
+
+## Articles
+
 - <https://en.wikipedia.org/wiki/Java_(programming_language)>
-- Wikibook - <https://en.wikibooks.org/wiki/Java_Programming>
+
+## Books
+
+- <https://en.wikibooks.org/wiki/Java_Programming>

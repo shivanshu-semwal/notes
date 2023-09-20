@@ -1,4 +1,132 @@
-# Classification of Programming Languages
+# Classification
+
+## List
+
+- <https://en.wikipedia.org/wiki/List_of_programming_languages_by_type>
+
+- Array languages
+    - These language generalize operation on scalars to apply transparently to vector, matrices and higher dimensional arrays.
+    - `Julia`, using broadcasting.
+    - `R`
+- Agent-oriented programming languages
+    - Agent-oriented programming allows the developer to build, extend and use software agents, which are abstractions of objects that can message other agents.
+    - `Clojure`
+    - `F#`
+- Aspect-oriented programming languages
+- Assembly languages
+    - instructions appear in a form understandable by humans, although there may not be a one-to-one mapping between an individual statement and an individual instruction.
+- Authoring languages
+- Concatenative programming languages
+- Constraint programming languages
+- Command-line interface languages
+    - also called batch languages or job control languages.
+    - `sh`
+- Compiled languages
+    - typically processed by compilers
+    - `c`
+- Concurrent languages
+    - Message passing languages provide language constructs for concurrency. The predominant paradigm for concurrency in mainstream languages such as Java is shared memory concurrency. Concurrent languages that make use of message passing have generally been inspired by process calculi such as communicating sequential processes (CSP) or the π-calculus.
+    - `java`
+    - `haskell`
+- Curly-bracket languages
+    - statement blocks using the curly bracket or brace characters `{` and `}`
+- Dataflow languages
+- Data-oriented languages
+    - `sql`
+- Decision table languages
+    - express the logic of a computation without describing its control flow in detail
+- Declarative languages
+- Embeddable languages
+- Educational programming languages
+    - `pascal`
+    - `racket`
+- Esoteric languages
+    - `brainfuck`
+- Extension languages
+- Fourth-generation languages
+    - high-level languages built around database systems
+    - `sql`
+- Functional languages
+    - define programs and subroutines as mathematical functions and treat them as first-class
+    - `lisp`
+    - `haskell`
+- Hardware description languages
+    - `verlog`
+- Imperative languages
+    - `c`
+- Interactive mode languages
+    - Have REPL
+    - `python`
+- Interpreted languages
+- Iterative languages
+    - use generators
+    - `C++`
+    - `python`
+- Languages by memory management type
+    - Garbage collected languages
+        - `java`
+    - Languages with manual memory management
+        - `c`
+    - Languages with partial manual memory management
+        - `eC`
+    - Languages with optional manual memory management
+        - `rust`
+- List-based languages – LISPs
+- Little languages
+    - serve a specialized problem domain
+    - `awk`
+- Logic-based languages
+    - specify a set of attributes that a solution must-have, rather than a set of steps to obtain a solution.
+    - `prolog`
+- Machine languages
+- Macro languages
+- Metaprogramming languages
+    - writing of programs that write or manipulate other programs, including themselves, as their data or that do part of the work that is otherwise done at run time during compile time.
+    - `c++`
+    - `lisp`
+- Multiparadigm languages
+- Numerical analysis
+- Non-English-based languages
+- Object-oriented class-based languages
+    - Class-based object-oriented programming languages support objects defined by their class. Class definitions include member data. Message passing is a key concept, if not the main concept, in object-oriented languages.
+    - Polymorphic functions parameterized by the class of some of their arguments are typically called methods. In languages with single dispatch, classes typically also include method definitions. In languages with multiple dispatch, methods are defined by generic functions. There are exceptions where single dispatch methods are generic functions.
+    - Multiple dispatch
+        - `lisp`
+    - Single dispatch
+        - `C++`
+        - `Java`
+- Object-oriented prototype-based languages
+    - distinction between classes and instances has been removed
+    - `ECMAScript`
+- Off-side rule languages
+    - denote blocks of code by their indentation
+    - `python`
+- Procedural languages
+    - languages are based on the concept of the unit and scope (the data viewing range) of an executable code statement. A procedural program is composed of one or more units or modules, either user coded or provided in a code library; each module is composed of one or more procedures, also called a function, routine, subroutine, or method, depending on the language.
+    - `c`
+- Query languages
+- Reflective languages
+    - let programs examine and possibly modify their high-level structure at runtime or compile-time.
+    - `java`
+    - `lisp`
+- Rule-based languages
+    - instantiate rules when activated by conditions in a set of data
+- Scripting languages
+    - designed to automate frequently used tasks that usually involve calling or passing commands to external programs
+- Stack-based languages
+- Synchronous languages
+    - optimized for programming reactive systems, systems that are often interrupted and must respond quickly.
+- Shading languages
+    - graphics programming language adapted to programming shader effects
+- Syntax-handling languages
+    - assist with generating lexical analyzers and parsers for context-free grammars
+    - `yaac`
+    - `lex`
+- System languages
+- Transformation languages
+- Visual languages
+- Wirth languages
+- XML-based languages
 
 ## Basis of paradigms
 
