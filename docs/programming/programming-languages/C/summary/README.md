@@ -245,24 +245,3 @@ When array are passed to functions they get decayed to pointers.
 ### Pointer to Structure
 
 - `p->name` is same as `(*p).name` but not as `*p.name` which is `*(p.name)`
-
-### Sequence Points in C
-
-- a point in the execution of a C program where it is sure that, all side effects of previous
-  evalutions are performed, and no side effects from the subsquent evaluations have yet been
-  performed.
-
-e.g.
-
-```c
-int f1(){printf("made"); return 1;}
-int f2(){printf("easy"); return 1;}
-int main(){
-    int p = f1() + f2();  // either f1() or f2() can be executed first
-    // so output may be 'easymade' or ' madeeasy'
-    return 0;
-}
-```
-
-Operators like `+` , `-`, `/`, `*`, `&`, `|` ... does not have any predefined standard for
-evaluation for its operands.
