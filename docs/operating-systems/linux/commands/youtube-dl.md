@@ -45,3 +45,6 @@
 - normal
     - video download `yt-dlp -f 'bestvideo[height<=720]+bestaudio' [url]`
     - audio download `yt-dlp -f bestaudio [url]`
+
+- download data about playlist in json format
+    - `youtube-dl --flat-playlist --dump-json https://www.youtube.com/playlist?list=<insertplaylistid> > output.json`

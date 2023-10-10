@@ -18,3 +18,19 @@
 
 - xournal
 - xournal++
+
+## `poppler-utils`
+
+- `pdfattach`
+- `pdfdetach`
+- `pdffonts`
+- `pdfimages`
+- `pdfinfo`
+- `pdfseparate`
+- `pdfsig`
+- `pdftocairo`
+- `pdftohtml`
+- `pdftoppm`
+- `pdftops`
+- `pdftotext`
+- `pdfunite`
