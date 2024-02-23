@@ -46,3 +46,25 @@
 
 - search form where a package is - `apt-cache policy package-name`
 - `Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).`
+    - this means that you put the key file in a generic location and now it can be used for multiple repo
+    - put it in `/usr/share/keyrings`, export the key with `apt-key export [key-id]`, `key-id` is the last eight digit of key in
+      `apt-key list` output
+
+## Add package key > repository > install it
+
+```bash
+# cat mykey.gpg | gpg --dearmor > /etc/apt/trusted.gpg.d/mykey.gpg
+# --dearmor means change to binary format
+# this is a example of how to put the key keyrings dir
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo gpg --dearmor -o /usr/share/keyrings/yarn.gpg
+
+# now you have to create a source file for the repo
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/yarn.gpg] https://dl.yarnpkg.com/debian/ stable main" |
+    sudo tee /etc/apt/sources.list.d/yarn.list
+
+# now update the repo index
+sudo apt update
+
+# install the software
+sudo apt install yarn
+```
