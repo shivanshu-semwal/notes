@@ -1,12 +1,18 @@
 # Gnome
 
-## In-build setting application
+## History
 
-We can change many essential settings from gnome-settings. It exposes some major customization options.
-
-## Using Gnome Tweaks
-
-Gnome Tweaks some advance customization features for gnome but not all.
+- Gnome 1
+    - introduced because kde used qt proprietary toolkit
+    - same as traditional desktop environment
+- Gnome 2
+    - used Metacity as window manager (Gnome 2.2)
+    - it has a fork called MATE desktop environment, because of some changes in gnome 3
+- Gnome 3
+    - not followed tradition desktop metaphor
+    - mutter as window manager
+- Gnome 40
+    - current version
 
 ## Using `dconf-editor`
 
@@ -21,11 +27,6 @@ Having all of the keys in a single compact binary format also avoids the intense
 ## Using gsettings
 
 Gsettings is High-level API for application settings.
-
-## Tricks
-
-- How to force themes. E.g. opening libre office in gtk themes - `GTK_THEME=Adwaita:light libreoffice --writer`
-- Where to find themes and icons ? - on (gnome-looks](<https://www.gnome-look.org>)
 
 ## Keyboard Shortcuts
 
@@ -69,3 +70,7 @@ gnome-session-quit
 # OR 
 gnome-session-save --force-logout
 ```
+
+## References
+
+- <https://www.gnome-look.org>
