@@ -10,16 +10,16 @@
 
 ## Programming Methodology
 
-- Data Segimets in memory
-    - Text(Code) Segiment - contains code of the compiled program
+- Data Segments in memory
+    - Text(Code) Segments - contains code of the compiled program
         - it i sread only to prevent modification of the program
-        - when a function is put onto stack, it is copied form the code segiment to the stack segiment
-    - Initialized Data Segiment
-        - initialized data segimetn stores global, static,constant and teh variable with extern keyword the are initialized beforehand.
+        - when a function is put onto stack, it is copied form the code Segments to the stack Segments
+    - Initialized Data Segments
+        - initialized data Segments stores global, static,constant and teh variable with extern keyword the are initialized beforehand.
         - can be classified into
             - read-only area
             - read-write area
-    - Uninitialized data segiment(bss)
+    - Uninitialized data Segments(bss)
         - data is initialized to 0 before the programs starts executing
         - contains all global and static variables that are not initialized or inititalized to 0
     - Heap
@@ -36,7 +36,7 @@
         - binding are resolved at the time of execution of a program
     - Dynamic scoping - used in Lisp
         - used mostly in interpreted languages
-        - binding dependes on the flow of control at the run time and the order in which functions
+        - binding depends on the flow of control at the run time and the order in which functions
           are called, refers to the closest active binding.
 
 - C variables
@@ -46,65 +46,21 @@
 
 ### Precedence and associativity of operators
 
-`()`, `[]`, `->`, `.`, `++`, `--`
-LtoR
-Postfix
-
-`!`, `~`, `++`, `--`, `+`, `-`, `*`, `&`, `sizeof`
-RtoL
-Prefix, Unary, Pointers
-
-`*`, `/`, `%`
-LtoR
-Multiplicative
-
-`+`, `-`
-LtoR
-Additive
-
-`<<`, `>>`
-LtoR
-Shift
-
-`<`, `>`, `<=`, `>=`
-LtoR
-Relational
-
-`==`, `!=`
-LtoR
-Equality
-
-`&`
-LtoR
-Bitwise AND
-
-`^`
-LtoR
-Bitwise XOR
-
-`|`
-LtoR
-Bitwise OR
-
-`&&`
-LtoR
-Logical AND
-
-`||`
-LtoR
-Logical OR
-
-`?:`
-RtoL
-Conditional
-
-`=`, `+=`, `-=`, `/=`, `%=`, `*=`, `^=`, `|=`, `<<=`, `>>=` , `&=`
-RtoL
-Assignment
-
-`,`
-LtoR
-Comma
+- `()`, `[]`, `->`, `.`, `++`, `--` LtoR Postfix
+- `!`, `~`, `++`, `--`, `+`, `-`, `*`, `&`, `sizeof` RtoL Prefix, Unary, Pointers
+- `*`, `/`, `%` LtoR Multiplicative
+- `+`, `-` LtoR Additive
+- `<<`, `>>` LtoR Shift
+- `<`, `>`, `<=`, `>=` LtoR Relational
+- `==`, `!=` LtoR Equality
+- `&` LtoR Bitwise AND
+- `^` LtoR Bitwise XOR
+- `|` LtoR Bitwise OR
+- `&&` LtoR Logical AND 
+- `||` LtoR Logical OR 
+- `?:` RtoL Conditional 
+- `=`, `+=`, `-=`, `/=`, `%=`, `*=`, `^=`, `|=`, `<<=`, `>>=` , `&=` RtoL Assignment 
+- `,` LtoR Comma
 
 ### LValue 0 stands for left value
 

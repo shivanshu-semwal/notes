@@ -13,3 +13,7 @@
 ## Collection
 
 - <https://github.com/oz123/awesome-c>
+
+## Pointers
+
+- decipher c pointers - <https://cdecl.org/>
