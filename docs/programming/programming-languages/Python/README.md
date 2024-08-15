@@ -16,16 +16,17 @@ Python is a versatile programming language used in various domains.
 - Game Development, not used that much in professional game development
     - Libraries: `Pygame`, `Panda3D`
 - Networking and Security
-   - Libraries: `Scapy`, `Paramiko`
-   - Example: Writing tools for network monitoring, penetration testing, and automating security tasks. Python can be used to automate SSH connections, analyze network packets, or create custom security tools.
+    - Libraries: `Scapy`, `Paramiko`
+    - Example: Writing tools for network monitoring, penetration testing, and automating security tasks. Python can be used to automate SSH connections, analyze network packets, or create custom security tools.
 - Embedded Systems
-   - Tools: `MicroPython`, `CircuitPython`
-   - Example: Programming microcontrollers and small hardware devices. Python is used to control hardware like LEDs, sensors, and motors in IoT devices.
+    - Tools: `MicroPython`, `CircuitPython`
+    - Example: Programming microcontrollers and small hardware devices. Python is used to control hardware like LEDs, sensors, and motors in IoT devices.
 - Artificial Intelligence (AI) and Deep Learning
-   - Libraries: `Keras`, `PyTorch`, `OpenAI Gym`
+    - Libraries: `Keras`, `PyTorch`, `OpenAI Gym`
 -  DevOps and Cloud Computing
-   - Tools: `Ansible`, `Boto3`
+    - Tools: `Ansible`, `Boto3`
 
 Here are some repos you can visit to see python in action
 
 - Youtube Downloader - <https://github.com/ytdl-org/youtube-dl>
+- Caliber - a ebook manager - <https://github.com/kovidgoyal/calibre>

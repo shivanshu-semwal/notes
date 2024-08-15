@@ -65,3 +65,4 @@ Rust is a systems programming language known for its performance, safety, and co
     - Examples: Libraries, frameworks, and developer tools.
     - Details: Rust is often chosen for open-source projects due to its strong community and focus on safety and performance. The Rust ecosystem has a rich collection of libraries and tools that are actively maintained and developed, such as Clippy (a linter for Rust code) and Cargo (Rust’s package manager and build system).
 
+- Alacritty - a terminal emulator - <https://github.com/alacritty/alacritty>
