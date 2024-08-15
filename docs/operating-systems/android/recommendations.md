@@ -29,3 +29,17 @@
 - Tor Borwser
 - Orbot
 - Firefox
+
+## Remote Control
+
+- termux
+    - <https://wiki.termux.com/wiki/Termux-services>
+        - ssh
+    - <https://wiki.termux.com/wiki/Remote_Access>
+    - <https://wiki.termux.com/wiki/Termux-setup-storage>
+    - <https://android.stackexchange.com/questions/214463/how-to-ssh-into-android-which-is-a-hotspot>
+    - <https://android.stackexchange.com/questions/208972/can-any-computer-connect-to-a-ssh-server-running-on-an-android-phone-connected-t>
+    - <https://www.youtube.com/watch?v=nltk2GuvEBY>
+    - <https://wiki.termux.com/wiki/Termux:API>
+- ssh
+    - <https://unix.stackexchange.com/questions/148956/how-do-i-work-out-which-port-to-log-in-on-with-ssh>

@@ -37,8 +37,7 @@
     - `https`
     - `smtp` - 25
     - `ftp` - 21
-- even though your intention is to reach `google.com` you
-  are visiting DNS firsts and then getting IP address of google.com and then visiting the google home page.
+- even though your intention is to reach `google.com` you are visiting DNS firsts and then getting IP address of google.com and then visiting the google home page.
 - This is actually overhead which is also called DNS overhead.
 
 - $2^32$ ip address possible if we use 32-bit number

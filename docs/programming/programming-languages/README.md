@@ -9,13 +9,7 @@
 - [julia](julia/README.md)
 - [ruby](ruby/README.md)
 - [rust](rust/README.md)
-
-## Task Oriented
-
 - [R](r/README.md)
-
-## Web Development
-
 - [php](php/README.md)
 - [javascript](javascript/README.md)
 

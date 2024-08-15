@@ -1,1 +1,0 @@
-- <https://en.wikipedia.org/wiki/Field-programmable_gate_array>

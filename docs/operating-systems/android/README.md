@@ -5,4 +5,4 @@ and other open-source software, designed primarily for touchscreen mobile device
 
 ## Resources
 
-- <https://en.wikipedia.org/wiki/Android_(operating_system>)
+- <https://en.wikipedia.org/wiki/Android_(operating_system)>
