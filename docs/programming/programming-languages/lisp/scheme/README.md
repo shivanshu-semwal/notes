@@ -2,7 +2,7 @@
 
 ## Standardization
 
-### **RRS – 1975 (Original Report)**
+### RRS – 1975 (Original Report)
 
 - **Year**: 1975
 - **Purpose**: This was the initial version of the Scheme language, created by **Gerald Jay Sussman** and **Guy L. Steele** at MIT. It was focused on developing a minimalistic dialect of Lisp with first-class functions and lexical scoping.
@@ -11,7 +11,7 @@
     - The introduction of **closures** (functions with their environment).
     - First-class continuation (via `call/cc`).
 
-### **R2RS – 1986 (Revised Report)**
+### R2RS – 1986 (Revised Report)
 
 - **Year**: 1986
 - **Purpose**: The second revision of the Scheme report added more formalization to the language specification.
@@ -20,7 +20,7 @@
     - **First-class continuations**: Via the `call-with-current-continuation` (`call/cc`) function.
     - Introduced **numeric tower** (integer, rational, real, and complex numbers).
 
-### **R3RS – 1986 (Third Revised Report)**
+### R3RS – 1986 (Third Revised Report)
 
 - **Year**: 1986
 - **Purpose**: Further refinements and formalization of the language, with additional features.
@@ -28,7 +28,7 @@
     - Continuation-based I/O.
     - Introduction of the **macro system**, initially based on simple pattern matching.
 
-### **R4RS – 1991 (Fourth Revised Report)**
+### R4RS – 1991 (Fourth Revised Report)
 
 - **Year**: 1991
 - **Purpose**: Major standardization push, aimed at unifying different Scheme implementations under a consistent specification.
@@ -38,7 +38,7 @@
     - **Portability**: The focus on making Scheme more portable across implementations.
     - Expanded the numeric tower, and introduced more precise handling of numerical operations.
 
-### **R5RS – 1998 (Fifth Revised Report)**
+### R5RS – 1998 (Fifth Revised Report)
 
 - **Year**: 1998
 - **Purpose**: One of the most influential versions of Scheme, widely adopted by implementations and users. It became the de facto standard for years.
@@ -49,7 +49,7 @@
     - Limited to **core features**, leading to high portability across implementations.
     - Finalized and formalized the **macro system** using `syntax-rules`.
 
-### **R6RS – 2007 (Sixth Revised Report)**
+### R6RS – 2007 (Sixth Revised Report)
 
 - <https://www.r6rs.org/>
 - **Year**: 2007
@@ -66,7 +66,7 @@
     - Some in the Scheme community felt R6RS was too complex, leading to debates. Many felt it deviated from Scheme's original minimalist principles.
     - As a result, several implementations remained at R5RS.
 
-### **R7RS – 2013 (Seventh Revised Report)**
+### R7RS – 2013 (Seventh Revised Report)
 
 - <https://r7rs.org/>
 - **Year**: 2013
@@ -83,7 +83,7 @@
 
 ### Other Standards and Extensions
 
-#### **IEEE Scheme (IEEE 1178-1990)**
+#### IEEE Scheme (IEEE 1178-1990)
 
 - **Year**: 1990
 - **Purpose**: The IEEE standard for Scheme, based mostly on **R4RS**, aimed at making Scheme an official standardized language for portability.
@@ -95,7 +95,7 @@
 
 Here is a list of notable **Scheme** implementations, both historical and current, each with different goals and focuses:
 
-### **GNU Guile**
+### GNU Guile
 
 - **Purpose**: Embeddable extension language for GNU software.
 - **Standard**: Supports R5RS, R6RS, and partial R7RS.
@@ -104,7 +104,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
     - <https://www.gnu.org/software/guile/learn/>
     - <https://www.gnu.org/software/guile/>
 
-### **Chez Scheme**
+### Chez Scheme
 
 - **Purpose**: High-performance Scheme implementation.
 - **Standard**: Supports R6RS, R7RS.
@@ -115,7 +115,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
     - <https://www.scheme.com/csug7/>
     - <https://github.com/guenchi/json>
 
-### **MIT Scheme**
+### MIT Scheme
 
 - **Purpose**: Educational, used in the "Structure and Interpretation of Computer Programs" (SICP) course.
 - **Standard**: R5RS with extensions.
@@ -123,7 +123,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 - **Resources**
     - <https://www.gnu.org/software/mit-scheme/>
 
-### **Racket**
+### Racket
 
 - **Purpose**: Evolved from Scheme into a language creation toolkit.
 - **Standard**: R5RS, R6RS, but has diverged significantly.
@@ -131,7 +131,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 - **Resources**
     - <https://en.wikipedia.org/wiki/Racket_(programming_language)>
 
-### **Chicken Scheme**
+### Chicken Scheme
 
 - **Purpose**: Scheme-to-C compiler with a focus on portability and ease of embedding.
 - **Standard**: R5RS, R7RS.
@@ -139,7 +139,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 - **Resources**
     - <https://call-cc.org/>
 
-### **Gambit**
+### Gambit
 
 - **Purpose**: Scheme implementation focused on portability and performance.
 - **Standard**: R5RS, R6RS.
@@ -147,7 +147,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 - **Resources**
     - <https://gambitscheme.org/>
 
-### **Bigloo**
+### Bigloo
 
 - **Purpose**: Scheme compiler aimed at developing efficient and compact programs.
 - **Standard**: R5RS, R6RS.
@@ -155,7 +155,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 - **Resources**
     - <https://www-sop.inria.fr/mimosa/fp/Bigloo/>
 
-### **Scheme48**
+### Scheme48
 
 - **Purpose**: A simple, lightweight Scheme, aimed at being a clean and modular implementation.
 - **Standard**: R5RS.
@@ -163,7 +163,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 - **Resources**
     - <https://s48.org/>
 
-### **Kawa**
+### Kawa
 
 - **Purpose**: A Scheme implementation that compiles to Java bytecode.
 - **Standard**: R5RS, R6RS.
@@ -171,7 +171,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 - **Resources**
     - <https://www.gnu.org/software/kawa/>
 
-### **Scm**
+### Scm
 
 - **Purpose**: Small and simple Scheme interpreter.
 - **Standard**: R5RS.
@@ -180,7 +180,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
     - <https://en.wikipedia.org/wiki/SCM_(Scheme_implementation)>
     - <https://directory.fsf.org/wiki/Scm>
 
-### **Chibi-Scheme**
+### Chibi-Scheme
 
 - **Purpose**: Lightweight Scheme implementation designed to be embeddable.
 - **Standard**: R7RS (small).
@@ -188,7 +188,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 - **Resources**
     - <https://github.com/ashinn/chibi-scheme>
 
-### **Larceny**
+### Larceny
 
 - **Purpose**: Performance-focused Scheme compiler and interpreter.
 - **Standard**: R5RS, R6RS.
@@ -196,43 +196,43 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 
 ## Lesser-Known and Historical Scheme Implementations
 
-### **S7**
+### S7
 
 - **Purpose**: Lightweight embeddable Scheme interpreter used in audio programming.
 - **Standard**: Minimal.
 - **Notable Features**: Used in music and sound synthesis software.
 
-### **SigScheme**
+### SigScheme
 
 - **Purpose**: Lightweight Scheme interpreter for embedded systems.
 - **Standard**: R5RS.
 - **Notable Features**: Small memory footprint, used in systems like the **Gauche Scheme**.
 
-### **Stalin**
+### Stalin
 
 - **Purpose**: Aggressively optimizing Scheme compiler.
 - **Standard**: R5RS.
 - **Notable Features**: Focus on generating highly optimized code but has long compilation times.
 
-### **Ypsilon**
+### Ypsilon
 
 - **Purpose**: Scheme with a focus on concurrency and low-latency garbage collection.
 - **Standard**: R6RS.
 - **Notable Features**: Good for real-time and concurrent applications.
 
-### **SISC**
+### SISC
 
 - **Purpose**: Java-based Scheme interpreter, designed to be complete and compliant with R5RS.
 - **Standard**: R5RS.
 - **Notable Features**: Runs on JVM, supports tail recursion.
 
-### **TinyScheme**
+### TinyScheme
 
 - **Purpose**: A lightweight Scheme interpreter aimed at embedding.
 - **Standard**: R5RS.
 - **Notable Features**: Small size, ease of embedding into applications.
 
-### **Vicare**
+### Vicare
 
 - **Purpose**: A fork of Ikarus Scheme with a focus on R6RS.
 - **Standard**: R6RS.
@@ -240,7 +240,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 - **Resources**
     - <https://larcenists.org/>
 
-### **Ikarus**
+### Ikarus
 
 - **Purpose**: A highly optimized Scheme compiler.
 - **Standard**: R6RS.
@@ -248,7 +248,7 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 - **Resources**
     - <https://conservatory.scheme.org/ikarus/>
 
-## **lisp-js**
+## lisp-js
 
 - **Resources**
     - <https://lips.js.org/#demo>
@@ -258,25 +258,25 @@ Here is a list of notable **Scheme** implementations, both historical and curren
 
 These may no longer be actively developed, but were once significant:
 
-### **T Scheme**
+### T Scheme
 
 - **Purpose**: Based on Scheme, but aimed to support object-oriented programming.
 - **Standard**: Custom extensions.
 - **Notable Features**: One of the early influential Scheme implementations.
 
-### **RScheme**
+### RScheme
 
 - **Purpose**: Scheme implementation with object-oriented extensions.
 - **Standard**: R5RS.
 - **Notable Features**: Used in real-time systems.
 
-### **VSCM**
+### VSCM
 
 - **Purpose**: Experimental Scheme interpreter and compiler.
 - **Standard**: R5RS.
 - **Notable Features**: Focus on experimentation with Scheme concepts.
 
-### **Pixie Scheme**
+### Pixie Scheme
 
 - **Purpose**: Small Scheme interpreter written in Java.
 - **Standard**: R4RS.

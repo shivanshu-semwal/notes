@@ -9,3 +9,5 @@
     - intended to be a launcher for a major lisp environment that just works.
 - Books on common lisp
     - <https://lisp-lang.org/books/>
+- https://cliki.net/
+    - Common lisp wiki
