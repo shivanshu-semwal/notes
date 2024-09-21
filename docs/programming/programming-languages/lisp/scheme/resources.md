@@ -1,10 +1,12 @@
 # Resources
 
-- <https://www.scheme.org/schemers/>
-- <https://curlie.org/Computers/Programming/Languages/Lisp/Scheme>
-- <https://en.wikipedia.org/wiki/Scheme_(programming_language)>
-- <https://en.wikipedia.org/wiki/SLIB>
-
-## Online Code Runner
-
-- <https://try.scheme.org/>
+- <https://www.scheme.org/>
+    - Online Compiler - <https://try.scheme.org/>
+    - Standards - <https://standards.scheme.org/>
+- Books on scheme
+    - <https://books.scheme.org/>
+    - <https://en.wikipedia.org/wiki/Scheme_(programming_language)>
+- SLIB
+    - library for scheme
+    - <https://en.wikipedia.org/wiki/SLIB>
+    - <http://cvs.savannah.gnu.org/viewvc/slib/slib/>
