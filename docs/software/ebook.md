@@ -1,6 +1,0 @@
-# Ebooks
-
-## Readers
-
-- calibre
-- Foliate
