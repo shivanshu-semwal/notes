@@ -2,7 +2,7 @@
 
 ## Resources
 
-- https://github.com/o-oconnell/minixfromscratch
+- <https://github.com/o-oconnell/minixfromscratch>
 
 ## Rough History
 

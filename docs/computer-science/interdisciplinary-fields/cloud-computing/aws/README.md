@@ -47,7 +47,7 @@
 - A web service that provides secure
 - Quickly boot into a new system
 - Pay as you use
-- Crash / failure resistent
+- Crash / failure resistant
 
 ## Instance purchase options
 

@@ -3,16 +3,16 @@
 ## History
 
 - Gnome 1
-  - introduced because kde used qt proprietary toolkit
-  - same as traditional desktop environment
+    - introduced because kde used qt proprietary toolkit
+    - same as traditional desktop environment
 - Gnome 2
-  - used Metacity as window manager (Gnome 2.2)
-  - it has a fork called MATE desktop environment, because of some changes in gnome 3
+    - used Metacity as window manager (Gnome 2.2)
+    - it has a fork called MATE desktop environment, because of some changes in gnome 3
 - Gnome 3
-  - not followed tradition desktop metaphor
-  - mutter as window manager
+    - not followed tradition desktop metaphor
+    - mutter as window manager
 - Gnome 40
-  - current version
+    - current version
 
 ## Using `dconf-editor`
 

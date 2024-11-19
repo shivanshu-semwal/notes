@@ -2,9 +2,9 @@
 
 ## find
 
-- `/findthis` - will find the occurences of `findthis`
-- `n` - will take you to the next occurence
-- `b` - will take you to the previous occurence
+- `/findthis` - will find the occurrences of `findthis`
+- `n` - will take you to the next occurrence
+- `b` - will take you to the previous occurrence
 
 ## replace
 

@@ -595,6 +595,7 @@ The organization and design of overall structure of a system is specified in arc
 
 - COCOMO - Boehm
 - Based on ACT (Annual change traffic)
+
 $$
 ACT = \frac{KLOC_{added}+KLOC_{deleted}}{KLOC_{total}}
 $$

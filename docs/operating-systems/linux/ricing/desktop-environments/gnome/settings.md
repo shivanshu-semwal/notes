@@ -44,7 +44,7 @@ gsettings list-schemas | grep ^org.gnome | grep key
 gsettings list-recursively org.gnome.desktop.wm.keybindings
 ```
 
-````sh
+```txt
 org.gnome.desktop.wm.keybindings activate-window-menu ['<Alt>space']
 
 org.gnome.desktop.wm.keybindings always-on-top @as []

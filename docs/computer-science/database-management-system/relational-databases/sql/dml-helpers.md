@@ -1,4 +1,4 @@
-# Data Malipulation Language Helpers
+# Data Manipulation Language Helpers
 
 ## `WHERE` Clause
 
