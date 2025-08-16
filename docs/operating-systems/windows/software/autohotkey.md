@@ -4,18 +4,18 @@
 
 - always on top
 
-```
+```ahk
 ^SPACE+T::  Winset, Alwaysontop, , A
 ```
 
 - run some application
 
-```
+```ahk
 ;F9::Run "C:\Users\Shivanshu\Desktop\Command Prompt"
 ;F5::Run "C:\Users\Shivanshu\AppData\Local\hyper\Hyper"
 ```
 
-```
+```ahk
 ;-caption
 ;^\::
 ;WinSet, Style, -0XC00000, A
@@ -23,7 +23,7 @@
 ;
 ```
 
-```
+```ahk
 ;-caption
 ;^/::
 ;WinSet, Style, +0XC00000, A
@@ -33,7 +33,7 @@
 
 - open command prompt in current directory
 
-```
+```ahk
 F9::opencmdhere()
 ; Press Win + C to open Command Prompt in the current directory.
 

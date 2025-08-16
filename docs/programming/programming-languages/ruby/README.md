@@ -60,4 +60,4 @@ Ruby is a dynamic, high-level programming language known for its simplicity and 
     - Examples: Building modular applications, developing and consuming web services.
     - Details: Ruby on Rails is used to develop APIs and microservices, allowing for modular and scalable application architectures. It’s often chosen for creating backend services that interact with frontend applications or other microservices.
 
-Ruby’s versatility, combined with the power of Ruby on Rails, makes it a popular choice for web development, automation, and a variety of other applications where productivity and developer happiness are prioritized. Its ability to rapidly build and iterate on applications has made it a favorite among startups, educators, and developers who value clean, maintainable code.
+Ruby's versatility, combined with the power of Ruby on Rails, makes it a popular choice for web development, automation, and a variety of other applications where productivity and developer happiness are prioritized. Its ability to rapidly build and iterate on applications has made it a favorite among startups, educators, and developers who value clean, maintainable code.

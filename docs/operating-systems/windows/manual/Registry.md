@@ -1,6 +1,4 @@
----
-title: Registry
----
+# Registry
 
 The Windows Registry is a __hierarchical database__ that stores __low-level
 settings__ for the Microsoft Windows operating system and for applications that
