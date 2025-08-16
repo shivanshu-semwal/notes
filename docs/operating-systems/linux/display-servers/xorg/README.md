@@ -1,5 +1,7 @@
 # Xorg Display Server
 
+- <https://wiki.archlinux.org/title/Xorg>
+
 ## Clipboard
 
 Xorg offeres two clipboard:

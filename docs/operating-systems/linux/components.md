@@ -1,4 +1,4 @@
-# Compnents
+# Components
 
 > Components of a GNU Linux Operating System
 
