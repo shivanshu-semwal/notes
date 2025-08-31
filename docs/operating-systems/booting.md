@@ -38,3 +38,8 @@
 - <https://en.wikipedia.org/wiki/EFI_system_partition>
 - <https://en.wikipedia.org/wiki/BIOS_boot_partition>
 - <https://en.wikipedia.org/wiki//boot/>
+
+## Repairing Bootloaders
+
+- <https://www.supergrubdisk.org/>
+- <https://www.supergrubdisk.org/>

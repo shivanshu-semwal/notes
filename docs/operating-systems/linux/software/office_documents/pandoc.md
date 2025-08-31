@@ -13,7 +13,7 @@
 - you can add options as `-theme` flags or you can add them in the front matter
 - front matter is added to the head of the document and is like this
 
-```
+```yaml
 ---
 title: pandoc-help
 author: totoro
@@ -71,7 +71,7 @@ pandoc README.md -o readme.pdf --toc \
 
 - default styles
 
-```
+```xml
   <style>
     $styles.html()$
   </style>
