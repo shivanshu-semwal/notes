@@ -1,4 +1,5 @@
 site_name: Notes
+site_url: https://shivanshu-semwal.github.io/notes/
 theme:
   name: material
   custom_dir: theme
