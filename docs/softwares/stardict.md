@@ -1,11 +1,8 @@
-# dictionary
+# StarDict
 
 - there are many dictionaries on linux
 - so dictionaries program interact with data files, which store
   words and their meanings
-
-## StarDict
-
 - data files have extension `.dz`
 - `sdcv` is a console version of StarDict program
 

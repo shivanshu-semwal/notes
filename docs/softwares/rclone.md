@@ -1,6 +1,7 @@
 # rclone
 
-- swiss army of cloud technologies
+> Swiss army of cloud technologies
+
 - <https://rclone.org/commands/>
 - `rclone config`
 
@@ -12,6 +13,6 @@
 - `rclone copy notes remote:notes` - Copy files from source to dest, skipping identical files.
 - `rclone bisync` - Perform bidirectional synchronization between two paths.
 
-## google drive
+## Cloud drives
 
 - <https://rclone.org/drive/>
