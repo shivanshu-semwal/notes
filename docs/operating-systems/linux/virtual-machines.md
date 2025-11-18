@@ -14,8 +14,6 @@ Here is a list of some, (note that some of there allow use to view VM generated 
   can use **KVM** when it creates virtual machines.
 - <https://en.wikipedia.org/wiki/QEMU>
 
-
-
 ### virsh
 
 ### GNOME Boxed

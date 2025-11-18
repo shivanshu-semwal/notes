@@ -1,4 +1,8 @@
-# pactl
+# Sound on Linux
+
+## PulseAudio
+
+### pactl 
 
 - `pacmd list-sinks`
 - `pacmixer`

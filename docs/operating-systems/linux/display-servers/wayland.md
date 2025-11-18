@@ -1,2 +1,0 @@
-# Wayland Display Server
-

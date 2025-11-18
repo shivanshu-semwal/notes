@@ -30,6 +30,7 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.indexes
+    - navigation.footer
 # repo_url: https://github.com/shivanshu-semwal/notes
 # edit_uri:
 copyright: Copyright Shivanshu Semwal

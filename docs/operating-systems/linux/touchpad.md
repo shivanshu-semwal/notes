@@ -1,8 +1,6 @@
----
-title: touchpad
----
+# Touchpad
 
-# Setting up touchpad in linux
+## Setting up touchpad in X.org display manager
 
 - check if you use `xinput`
     - `xinput` or `xinput list` - this will show the devices connected to your device

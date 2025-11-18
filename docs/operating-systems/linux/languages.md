@@ -1,8 +1,6 @@
----
-title: Hindi in linux
----
+# Languages on Linux
 
-## hindi layout
+## Hindi
 
 - Bolnagri : `gkbd-keyboard-display -l $'in\tbolnagri'`
 - Thin kagpa : `gkbd-keyboard-display -l $'in\thin-kagapa'`
@@ -17,7 +15,7 @@ Try
 Then use `setxkbmap` to test until it work as you want.
 Then you can use `localectl set-x11-keymap ...`
 
-## how to type characters
+### how to type characters
 
 > `alt` = right alt
 > `x` -> to half any consonant

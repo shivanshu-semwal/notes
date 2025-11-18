@@ -22,13 +22,13 @@ Here is how linux starts:
 - once the boot loader program is detected it's loaded into memory and the
   bios give control of the system to it
 
-## mbr - master boot record
+## MBR - master boot record
 
 - responsible for loading and executing the grub boot loader
 - the mbr is located ar the 1st sector of the bootable disk which is typically
   `/dev/hsa` `/dev/sda` depending on your hardware.
 
-## grub
+## GRUB
 
 - grub is bootloader and lets you to select the os you want to run
 - configuration file in, `/etc/grub.conf` or `/boot/grub/grub.conf`
