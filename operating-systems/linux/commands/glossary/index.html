@@ -1,0 +1,8829 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://shivanshu-semwal.github.io/notes/operating-systems/linux/commands/glossary/">
+      
+      
+        <link rel="prev" href="../../virtual-machines/">
+      
+      
+        <link rel="next" href="../disk-fs-management/disk-management/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Commands Glossary - Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#commands-glossary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  <img src="../../../../assets/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Commands Glossary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="Switch to system theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Operating systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../softwares/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Softwares
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../tools/search-engines/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  <img src="../../../../assets/favicon.ico" alt="logo">
+
+    </a>
+    Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operating systems
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operating systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../booting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Booting and Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../android/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Android
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../android/recommendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recommended Apps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../booting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Booting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../distros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Languages on Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sound/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sound on Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../touchpad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Touchpad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../virtual-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Machine on linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11" id="__nav_2_4_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_2" id="__nav_2_4_11_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk fs management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Disk fs management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-fs-management/disk-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_3" id="__nav_2_4_11_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File directory management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    File directory management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-directory-management/directory-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directory Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-directory-management/file-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-directory-management/finding-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finding Files on System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_4" id="__nav_2_4_11_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File permissions ownership
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    File permissions ownership
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-permissions-ownership/group-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Groups Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-permissions-ownership/sudo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    sudo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-permissions-ownership/user-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../manual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_11_5" id="__nav_2_4_11_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Manual
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manual/getting-help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_6" id="__nav_2_4_11_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Networking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/network-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_7" id="__nav_2_4_11_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Process management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Process management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../process-management/process-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Process Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_8" id="__nav_2_4_11_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shell customization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Shell customization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell-customization/dircolors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dircolors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shell-customization/tmux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tmux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_9" id="__nav_2_4_11_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System information
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System information
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-information/date-time-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Date Time Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-information/device-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-information/libinput/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    libinput
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-information/locale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    locale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-information/system-info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Information
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_10" id="__nav_2_4_11_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System monitoring performance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System monitoring performance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-monitoring-performance/memory-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memory Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_11" id="__nav_2_4_11_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Textfu
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Textfu
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../textfu/fold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../textfu/text-file-manipulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text Files Manipulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../textfu/xargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    xargs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../customizations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customizations
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_12" id="__nav_2_4_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customizations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/ascii_art/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ASCII Art
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/desktop_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desktop files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/fonts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fonts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_12_5" id="__nav_2_4_12_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desktop environments
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_12_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desktop environments
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12_5_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../customizations/desktop-environments/gnome/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gnome
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_12_5_1" id="__nav_2_4_12_5_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_4_12_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gnome
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/desktop-environments/gnome/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setings in Gnome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../customizations/desktop-environments/kde/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kde
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_12_5_2" id="__nav_2_4_12_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_4_12_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kde
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/desktop-environments/kde/dolphin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dolphin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/desktop-environments/kde/kf5-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    kf5-config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/desktop-environments/kde/sddm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    sddm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../customizations/themes/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Themes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_12_6" id="__nav_2_4_12_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_12_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Themes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/themes/gtk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gtk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/themes/switch-light-dark-themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch between light dark themes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_12_7" id="__nav_2_4_12_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Window managers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_12_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Window managers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/window-managers/i3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    i3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../customizations/window-managers/picom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    picom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../display-servers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Display servers
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Display servers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../package-managers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package managers
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_14" id="__nav_2_4_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Package managers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package-managers/AUR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AUR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package-managers/brew/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    brew
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package-managers/debian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package-managers/pacman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pacman
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package-managers/rpm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RPM Package Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../package-managers/snap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    snap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_15" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../shells/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shells
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_15" id="__nav_2_4_15_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Shells
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shells/colors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colors on Terminals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shells/shell-prompt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shells/terminals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_15_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_15_5" id="__nav_2_4_15_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_15_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_15_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    List
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shells/list/bash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bash Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shells/list/fish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fish Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shells/list/zsh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zsh Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_15_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../shells/scripting/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scripting
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_15_6" id="__nav_2_4_15_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_15_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_15_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scripting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shells/scripting/cookbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shell Scripting Cookbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shells/scripting/shell-syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shell Syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_15_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../shells/shell-build-in/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shell build in
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_15_7" id="__nav_2_4_15_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_15_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_15_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Shell build in
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shells/shell-build-in/echo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    echo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_16" id="__nav_2_4_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systemd
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systemd
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systemd/bluetoothctl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bluetooth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systemd/loginctl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    loginctl
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../macos/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Macos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../windows/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Windows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/powershell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Powershell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../windows/manual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6_3" id="__nav_2_6_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Manual
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/manual/Registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/manual/dir-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directory Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/manual/history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    History of windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/manual/windows-7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/manual/wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Window Sub-system for linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_3_7" id="__nav_2_6_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilities
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Utilities
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/manual/utilities/diskpart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diskpart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../windows/software/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6_4" id="__nav_2_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/software/autohotkey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    autohotkey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/software/launcher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launchers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/software/package_managers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package Mangers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/software/sysinternals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sysinternals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/software/terminals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../windows/software/tool_kit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toolkit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../softwares/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Softwares
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Softwares
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/adb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android Debugger - adb
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/bundle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bundle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/ffmpeg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ffmpeg
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/imagemagik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    imagemagik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/inkscape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    inkscape
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/libreoffice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    libreoffice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/mpv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mpv
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/pandoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pandoc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/rclone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rclone
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/stardict/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StarDict
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ssh
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ssh
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/ssh/scp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scp - secure copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/ssh/ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ssh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../softwares/ssh/ssh_man/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH - Secure Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/search-engines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Search Engines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../tools/latex/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Latex
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Latex
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/latex/bibliographies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bibliographies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/latex/label-and-references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Labels and References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social media
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Social media
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/social-media/blogging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blogging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/social-media/fediverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fediverse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../tools/vim/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vim
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vim
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My stuff
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    My stuff
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/vim/my-stuff/clipboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copying to clipboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/vim/my-stuff/external-command/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/vim/my-stuff/find-replace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    find and replace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/vim/my-stuff/line_number/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Line Numbers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/vim/my-stuff/macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    macros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/vim/my-stuff/renaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bulk renaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tools/vim/my-stuff/spell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spell Check
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="commands-glossary">Commands Glossary</h1>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accept</td>
+<td>Accept or Reject jobs to a destination, such as a printer.</td>
+</tr>
+<tr>
+<td>access</td>
+<td>Check a user's RWX permission for a file.</td>
+</tr>
+<tr>
+<td>aclocal</td>
+<td>GNU autoconf too</td>
+</tr>
+<tr>
+<td>aconnect</td>
+<td>ALSA sequencer connection manager.</td>
+</tr>
+<tr>
+<td>acpi</td>
+<td>Show information about the Advanced Configuration and Power Interface.</td>
+</tr>
+<tr>
+<td>acpi_available</td>
+<td>Check if ACPI functionality exists on the system.</td>
+</tr>
+<tr>
+<td>acpid</td>
+<td>Informs user-space programs about ACPI events.</td>
+</tr>
+<tr>
+<td>addr2line</td>
+<td>Used to convert addresses into file names and line numbers.</td>
+</tr>
+<tr>
+<td>addresses</td>
+<td>Formats for internet mail addresses.</td>
+</tr>
+<tr>
+<td>agetty</td>
+<td>An alternative Linux Getty</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>Create an alias for Linux commands</td>
+</tr>
+<tr>
+<td>alsactl</td>
+<td>Access advanced controls for ALSA soundcard driver.</td>
+</tr>
+<tr>
+<td>amidi</td>
+<td>Perform read/write operation for ALSA RawMIDI ports.</td>
+</tr>
+<tr>
+<td>amixer</td>
+<td>Access CLI-based mixer for ALSA soundcard driver.</td>
+</tr>
+<tr>
+<td>anacron</td>
+<td>Used to run commands periodically.</td>
+</tr>
+<tr>
+<td>aplay</td>
+<td>Sound recorder and player for CLI.</td>
+</tr>
+<tr>
+<td>aplaymidi</td>
+<td>CLI utility used to play MIDI files.</td>
+</tr>
+<tr>
+<td>apm</td>
+<td>Show Advanced Power Management (APM) hardware info on older systems.</td>
+</tr>
+<tr>
+<td>apmd</td>
+<td>Used to handle events reported by APM BIOS drivers.</td>
+</tr>
+<tr>
+<td>apropos</td>
+<td>Shows the list of all man pages containing a specific keyword</td>
+</tr>
+<tr>
+<td>apt</td>
+<td>Advanced Package Tool, a package management system for Debian and derivatives.</td>
+</tr>
+<tr>
+<td>apt-get</td>
+<td>Command-line utility to install/remove/update packages based on APT system.</td>
+</tr>
+<tr>
+<td>aptitude</td>
+<td>Another utility to add/remove/upgrade packages based on the APT system.</td>
+</tr>
+<tr>
+<td>ar</td>
+<td>A utility to create/modify/extract from archives.</td>
+</tr>
+<tr>
+<td>arch</td>
+<td>Display print machine hardware name.</td>
+</tr>
+<tr>
+<td>arecord</td>
+<td>Just like aplay, it's a sound recorder and player for ALSA soundcard driver.</td>
+</tr>
+<tr>
+<td>arecordmidi</td>
+<td>Record standard MIDI files.</td>
+</tr>
+<tr>
+<td>arp</td>
+<td>Used to make changes to the system's ARP cache</td>
+</tr>
+<tr>
+<td>as</td>
+<td>A portable GNU assembler.</td>
+</tr>
+<tr>
+<td>aspell</td>
+<td>An interactive spell checker utility.</td>
+</tr>
+<tr>
+<td>at</td>
+<td>Used to schedule command execution at specified date &amp; time, reading commands from an input file.</td>
+</tr>
+<tr>
+<td>atd</td>
+<td>Used to execute jobs queued by the at command.</td>
+</tr>
+<tr>
+<td>atq</td>
+<td>List a user's pending jobs for the at command.</td>
+</tr>
+<tr>
+<td>atrm</td>
+<td>Delete jobs queued by the at command.</td>
+</tr>
+<tr>
+<td>audiosend</td>
+<td>Used to send an audio recording as an email.</td>
+</tr>
+<tr>
+<td>aumix</td>
+<td>An audio mixer utility.</td>
+</tr>
+<tr>
+<td>autoconf</td>
+<td>Generate configuration scripts from a TEMPLATE-FILE and send the output to standard output.</td>
+</tr>
+<tr>
+<td>autoheader</td>
+<td>Create a template header for configure.</td>
+</tr>
+<tr>
+<td>automake</td>
+<td>Creates GNU standards-compliant Makefiles from template files</td>
+</tr>
+<tr>
+<td>autoreconf</td>
+<td>Update generated configuration files.</td>
+</tr>
+<tr>
+<td>autoscan</td>
+<td>Generate a preliminary configure.in</td>
+</tr>
+<tr>
+<td>autoupdate</td>
+<td>Update a configure.in file to newer autoconf.</td>
+</tr>
+<tr>
+<td>awk</td>
+<td>Used to find and replace text in a file(s).</td>
+</tr>
+<tr>
+<td>badblocks</td>
+<td>Search a disk partition for bad sectors.</td>
+</tr>
+<tr>
+<td>banner</td>
+<td>Used to print characters as a poster.</td>
+</tr>
+<tr>
+<td>basename</td>
+<td>Used to display filenames with directoy or suffix.</td>
+</tr>
+<tr>
+<td>bash</td>
+<td>GNU Bourne-Again Shell.</td>
+</tr>
+<tr>
+<td>batch</td>
+<td>Used to run commands entered on a standard input.</td>
+</tr>
+<tr>
+<td>bc</td>
+<td>Access the GNU bc calculator utility.</td>
+</tr>
+<tr>
+<td>bg</td>
+<td>Send processes to the background.</td>
+</tr>
+<tr>
+<td>biff</td>
+<td>Notify about incoming mail and sender's name on a system running comsat server.</td>
+</tr>
+<tr>
+<td>bind</td>
+<td>Used to attach a name to a socket.</td>
+</tr>
+<tr>
+<td>bison</td>
+<td>A GNU parser generator, compatible with yacc.</td>
+</tr>
+<tr>
+<td>break</td>
+<td>Used to exit from a loop (eg: for, while, select).</td>
+</tr>
+<tr>
+<td>builtin</td>
+<td>Used to run shell builtin commands, make custom functions for commands extending their functionality.</td>
+</tr>
+<tr>
+<td>bzcmp</td>
+<td>Used to call the cmp program for bzip2 compressed files.</td>
+</tr>
+<tr>
+<td>bzdiff</td>
+<td>Used to call the diff program for bzip2 compressed files.</td>
+</tr>
+<tr>
+<td>bzgrep</td>
+<td>Used to call grep for bzip2 compressed files.</td>
+</tr>
+<tr>
+<td>bzip2</td>
+<td>A block-sorting file compressor used to shrink given files.</td>
+</tr>
+<tr>
+<td>bzless</td>
+<td>Used to apply 'less' (show info one page at a time) to bzip2 compressed files.</td>
+</tr>
+<tr>
+<td>bzmore</td>
+<td>Used to apply 'more' (an inferior version of less) to bzip2 compressed files.</td>
+</tr>
+<tr>
+<td>cal</td>
+<td>Show calendar.</td>
+</tr>
+<tr>
+<td>cardctl</td>
+<td>Used to control PCMCIA sockets and select configuration schemes.</td>
+</tr>
+<tr>
+<td>cardmgr</td>
+<td>Keeps an eye on the added/removes sockets for PCMCIA devices.</td>
+</tr>
+<tr>
+<td>case</td>
+<td>Execute a command conditionally by matching a pattern.</td>
+</tr>
+<tr>
+<td>cat</td>
+<td>Used to concatenate files and print them on the screen.</td>
+</tr>
+<tr>
+<td>cc</td>
+<td>GNU C and C++ compiler.</td>
+</tr>
+<tr>
+<td>cd</td>
+<td>Used to change directory.</td>
+</tr>
+<tr>
+<td>cdda2wav</td>
+<td>Used to rip a CD-ROM and make WAV file.</td>
+</tr>
+<tr>
+<td>cdparanoia</td>
+<td>Record audio from CD more reliably using data-verification algorithms.</td>
+</tr>
+<tr>
+<td>cdrdao</td>
+<td>Used to write all the content specified to a file to a CD all at once.</td>
+</tr>
+<tr>
+<td>cdrecord</td>
+<td>Used to record data or audio compact discs.</td>
+</tr>
+<tr>
+<td>cfdisk</td>
+<td>Show or change the disk partition table.</td>
+</tr>
+<tr>
+<td>chage</td>
+<td>Used to change user password information.</td>
+</tr>
+<tr>
+<td>chattr</td>
+<td>Used to change file attributes.</td>
+</tr>
+<tr>
+<td>chdir</td>
+<td>Used to change active working directory.</td>
+</tr>
+<tr>
+<td>chfn</td>
+<td>Used to change real user name and information.</td>
+</tr>
+<tr>
+<td>chgrp</td>
+<td>Used to change group ownership for file.</td>
+</tr>
+<tr>
+<td>chkconfig</td>
+<td>Manage execution of runlevel services.</td>
+</tr>
+<tr>
+<td>chmod</td>
+<td>Change access permission for a file(s).</td>
+</tr>
+<tr>
+<td>chown</td>
+<td>Change the owner or group for a file.</td>
+</tr>
+<tr>
+<td>chpasswd</td>
+<td>Update password in a batch.</td>
+</tr>
+<tr>
+<td>chroot</td>
+<td>Run a command with root privileges.</td>
+</tr>
+<tr>
+<td>chrt</td>
+<td>Alter process attributed in real-time.</td>
+</tr>
+<tr>
+<td>chsh</td>
+<td>Switch login shell.</td>
+</tr>
+<tr>
+<td>chvt</td>
+<td>Change foreground virtual terminal.</td>
+</tr>
+<tr>
+<td>cksum</td>
+<td>Perform a CRC checksum for files.</td>
+</tr>
+<tr>
+<td>clear</td>
+<td>Used to clear the terminal window.</td>
+</tr>
+<tr>
+<td>cmp</td>
+<td>Compare two files (byte by byte).</td>
+</tr>
+<tr>
+<td>col</td>
+<td>Filter reverse (and half-reverse) line feeds from the input.</td>
+</tr>
+<tr>
+<td>colcrt</td>
+<td>Filter nroff output for CRT previewing.</td>
+</tr>
+<tr>
+<td>colrm</td>
+<td>Remove columns from the lines of a file.</td>
+</tr>
+<tr>
+<td>column</td>
+<td>A utility that formats its input into columns.</td>
+</tr>
+<tr>
+<td>comm</td>
+<td>Used to compare two sorted files line by line.</td>
+</tr>
+<tr>
+<td>command</td>
+<td>Used to execute a command with arguments ignoring shell function named command.</td>
+</tr>
+<tr>
+<td>compress</td>
+<td>Used to compress one or more file(s) and replacing the originals ones.</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>Resume the next iteration of a loop.</td>
+</tr>
+<tr>
+<td>cp</td>
+<td>Copy contents of one file to another.</td>
+</tr>
+<tr>
+<td>cpio</td>
+<td>Copy files from and to archives.</td>
+</tr>
+<tr>
+<td>cpp</td>
+<td>GNU C language processor.</td>
+</tr>
+<tr>
+<td>cron</td>
+<td>A daemon to execute scheduled commands.</td>
+</tr>
+<tr>
+<td>crond</td>
+<td>Same work as cron.</td>
+</tr>
+<tr>
+<td>crontab</td>
+<td>Manage crontab files (containing schedules commands) for users.</td>
+</tr>
+<tr>
+<td>csplit</td>
+<td>Split a file into sections on the basis of context lines.</td>
+</tr>
+<tr>
+<td>ctags</td>
+<td>Make a list of functions and macro names defined in a programming source file.</td>
+</tr>
+<tr>
+<td>cupsd</td>
+<td>A scheduler for CUPS.</td>
+</tr>
+<tr>
+<td>curl</td>
+<td>Used to transfer data from or to a server using supported protocols.</td>
+</tr>
+<tr>
+<td>cut</td>
+<td>Used to remove sections from each line of a file(s).</td>
+</tr>
+<tr>
+<td>cvs</td>
+<td>Concurrent Versions System. Used to track file versions, allow storage/retrieval of previous versions, and enables multiple users to work on the same file.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Show system date and time.</td>
+</tr>
+<tr>
+<td>dc</td>
+<td>Desk calculator utility.</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>Used to convert and copy a file, create disk clone, write disk headers, etc.</td>
+</tr>
+<tr>
+<td>ddrescue</td>
+<td>Used to recover data from a crashed partition.</td>
+</tr>
+<tr>
+<td>deallocvt</td>
+<td>Deallocates kernel memory for unused virtual consoles.</td>
+</tr>
+<tr>
+<td>debugfs</td>
+<td>File system debugger for ext2/ext3/ext4</td>
+</tr>
+<tr>
+<td>declare</td>
+<td>Used to declare variables and assign attributes.</td>
+</tr>
+<tr>
+<td>depmod</td>
+<td>Generate modules.dep and map files.</td>
+</tr>
+<tr>
+<td>devdump</td>
+<td>Interactively displays the contents of device or file system ISO.</td>
+</tr>
+<tr>
+<td>df</td>
+<td>Show disk usage.</td>
+</tr>
+<tr>
+<td>diff</td>
+<td>Used to compare files line by line.</td>
+</tr>
+<tr>
+<td>diff3</td>
+<td>Compare three files line by line.</td>
+</tr>
+<tr>
+<td>dig</td>
+<td>Domain Information Groper, a DNS lookup utility.</td>
+</tr>
+<tr>
+<td>dir</td>
+<td>List the contents of a directory.</td>
+</tr>
+<tr>
+<td>dircolors</td>
+<td>Set colors for 'ls' by altering the LS_COLORS environment variable.</td>
+</tr>
+<tr>
+<td>dirname</td>
+<td>Display pathname after removing the last slash and characters thereafter.</td>
+</tr>
+<tr>
+<td>dirs</td>
+<td>Show the list of remembered directories.</td>
+</tr>
+<tr>
+<td>disable</td>
+<td>Restrict access to a printer.</td>
+</tr>
+<tr>
+<td>dlpsh</td>
+<td>Interactive Desktop Link Protocol (DLP) shell for PalmOS.</td>
+</tr>
+<tr>
+<td>dmesg</td>
+<td>Examine and control the kernel ring buffer.</td>
+</tr>
+<tr>
+<td>dnsdomainname</td>
+<td>Show the DNS domain name of the system.</td>
+</tr>
+<tr>
+<td>dnssec-keygen</td>
+<td>Generate encrypted Secure DNS keys for a given domain name.</td>
+</tr>
+<tr>
+<td>dnssec-makekeyset</td>
+<td>Produce domain key set from one or more DNS security keys generated by dnssec-keygen.</td>
+</tr>
+<tr>
+<td>dnssec-signkey</td>
+<td>Sign a secure DNS keyset with key signatures specified in the list of key-identifiers.</td>
+</tr>
+<tr>
+<td>dnssec-signzone</td>
+<td>Sign a secure DNS zonefile with the signatures in the specified list of key-identifiers.</td>
+</tr>
+<tr>
+<td>doexec</td>
+<td>Used to run an executable with an arbitrary argv list provided.</td>
+</tr>
+<tr>
+<td>domainname</td>
+<td>Show or set the name of current NIS (Network Information Services) domain.</td>
+</tr>
+<tr>
+<td>dosfsck</td>
+<td>Check and repair MS-DOS file systems.</td>
+</tr>
+<tr>
+<td>du</td>
+<td>Show disk usage summary for a file(s).</td>
+</tr>
+<tr>
+<td>dump</td>
+<td>Backup utility for ext2/ext3 file systems.</td>
+</tr>
+<tr>
+<td>dumpe2fs</td>
+<td>Dump ext2/ext3/ext4 file systems.</td>
+</tr>
+<tr>
+<td>dumpkeys</td>
+<td>Show information about the keyboard driver's current translation tables.</td>
+</tr>
+<tr>
+<td>e2fsck</td>
+<td>Used to check ext2/ext3/ext4 file systems.</td>
+</tr>
+<tr>
+<td>e2image</td>
+<td>Store important ext2/ext3/ext4 filesystem metadata to a file.</td>
+</tr>
+<tr>
+<td>e2label</td>
+<td>Show or change the label on an ext2/ext3/ext4 filesystem.</td>
+</tr>
+<tr>
+<td>echo</td>
+<td>Send input string(s) to standard output i.e. display text on the screen.</td>
+</tr>
+<tr>
+<td>ed</td>
+<td>GNU Ed - a line-oriented text editor.</td>
+</tr>
+<tr>
+<td>edquota</td>
+<td>Used to edit filesystem quotas using a text editor, such as vi.</td>
+</tr>
+<tr>
+<td>egrep</td>
+<td>Search and display text matching a pattern.</td>
+</tr>
+<tr>
+<td>eject</td>
+<td>Eject removable media.</td>
+</tr>
+<tr>
+<td>elvtune</td>
+<td>Used to set latency in the elevator algorithm used to schedule I/O activities for specified block devices.</td>
+</tr>
+<tr>
+<td>emacs</td>
+<td>Emacs text editor command line utility.</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>Used to enable/disable shell builtin commands.</td>
+</tr>
+<tr>
+<td>env</td>
+<td>Run a command in a modified environment. Show/set/delete environment variables.</td>
+</tr>
+<tr>
+<td>envsubst</td>
+<td>Substitute environment variable values in shell format strings.</td>
+</tr>
+<tr>
+<td>esd</td>
+<td>Start the Enlightenment Sound Daemon (EsounD or esd). Enables multiple applications to access the same audio device simultaneously.</td>
+</tr>
+<tr>
+<td>esd-config</td>
+<td>Manage EsounD configuration.</td>
+</tr>
+<tr>
+<td>esdcat</td>
+<td>Use EsounD to send audio data from a specified file.</td>
+</tr>
+<tr>
+<td>esdctl</td>
+<td>EsounD control program.</td>
+</tr>
+<tr>
+<td>esddsp</td>
+<td>Used to reroute non-esd audio data to esd and control all the audio using esd.</td>
+</tr>
+<tr>
+<td>esdmon</td>
+<td>Used to copy the sound being sent to a device. Also, send it to a secondary device.</td>
+</tr>
+<tr>
+<td>esdplay</td>
+<td>Use EsounD system to play a file.</td>
+</tr>
+<tr>
+<td>esdrec</td>
+<td>Use EsounD to record audio to a specified file.</td>
+</tr>
+<tr>
+<td>esdsample</td>
+<td>Sample audio using esd.</td>
+</tr>
+<tr>
+<td>etags</td>
+<td>Used to create a list of functions and macros from a programming source file. These etags are used by emacs. For vi, use ctags.</td>
+</tr>
+<tr>
+<td>ethtool</td>
+<td>Used to query and control network driver and hardware settings.</td>
+</tr>
+<tr>
+<td>eval</td>
+<td>Used to evaluate multiple commands or arguments are once.</td>
+</tr>
+<tr>
+<td>ex</td>
+<td>Interactive command</td>
+</tr>
+<tr>
+<td>exec</td>
+<td>An interactive line-based text editor.</td>
+</tr>
+<tr>
+<td>exit</td>
+<td>Exit from the terminal.</td>
+</tr>
+<tr>
+<td>expand</td>
+<td>Convert tabs into spaces in a given file and show the output.</td>
+</tr>
+<tr>
+<td>expect</td>
+<td>An extension to the Tcl script, it's used to automate interaction with other applications based on their expected output.</td>
+</tr>
+<tr>
+<td>export</td>
+<td>Used to set an environment variable.</td>
+</tr>
+<tr>
+<td>expr</td>
+<td>Evaluate expressions and display them on standard output.</td>
+</tr>
+<tr>
+<td>factor</td>
+<td>Display prime factors of specified integer numbers.</td>
+</tr>
+<tr>
+<td>false</td>
+<td>Do nothing, unsuccessfully. Exit with a status code indicating failure.</td>
+</tr>
+<tr>
+<td>fc-cache</td>
+<td>Make font information cache after scanning the directories.</td>
+</tr>
+<tr>
+<td>fc-list</td>
+<td>Show the list of available fonts.</td>
+</tr>
+<tr>
+<td>fdformat</td>
+<td>Do a low-level format on a floppy disk.</td>
+</tr>
+<tr>
+<td>fdisk</td>
+<td>Make changes to the disk partition table.</td>
+</tr>
+<tr>
+<td>fetchmail</td>
+<td>Fetch mail from mail servers and forward it to the local mail delivery system.</td>
+</tr>
+<tr>
+<td>fg</td>
+<td>Used to send a job to the foreground.</td>
+</tr>
+<tr>
+<td>fgconsole</td>
+<td>Display the number of the current virtual console.</td>
+</tr>
+<tr>
+<td>fgrep</td>
+<td>Display lines from a file(s) that match a specified string. A variant of grep.</td>
+</tr>
+<tr>
+<td>file</td>
+<td>Determine file type for a file.</td>
+</tr>
+<tr>
+<td>find</td>
+<td>Do a file search in a directory hierarchy.</td>
+</tr>
+<tr>
+<td>finger</td>
+<td>Display user data including the information listed in <code>.plan</code> and <code>.project</code> in each user's home directory.</td>
+</tr>
+<tr>
+<td>fingerd</td>
+<td>Provides a network interface for the finger program.</td>
+</tr>
+<tr>
+<td>flex</td>
+<td>Generate programs that perform pattern-matching on text.</td>
+</tr>
+<tr>
+<td>fmt</td>
+<td>Used to convert text to a specified width by filling lines and removing new lines, displaying the output.</td>
+</tr>
+<tr>
+<td>fold</td>
+<td>Wrap input line to fit in a specified width.</td>
+</tr>
+<tr>
+<td>for</td>
+<td>Expand words and run commands for each one in the resultant list.</td>
+</tr>
+<tr>
+<td>formail</td>
+<td>Used to filter standard input into mailbox format.</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Used to format disks.</td>
+</tr>
+<tr>
+<td>free</td>
+<td>Show free and used system memory.</td>
+</tr>
+<tr>
+<td>fsck</td>
+<td>Check and repair a Linux file system</td>
+</tr>
+<tr>
+<td>ftp</td>
+<td>File transfer protocol user interface.</td>
+</tr>
+<tr>
+<td>ftpd</td>
+<td>FTP server process.</td>
+</tr>
+<tr>
+<td>function</td>
+<td>Used to define function macros.</td>
+</tr>
+<tr>
+<td>fuser</td>
+<td>Find and kill a process accessing a file.</td>
+</tr>
+<tr>
+<td>g++</td>
+<td>Run the g++ compiler.</td>
+</tr>
+<tr>
+<td>gawk</td>
+<td>Used for pattern scanning and language processing. A GNU implementation of AWK language.</td>
+</tr>
+<tr>
+<td>gcc</td>
+<td>A C and C++ compiler by GNU.</td>
+</tr>
+<tr>
+<td>gdb</td>
+<td>A utility to debug programs and know about where it crashes.</td>
+</tr>
+<tr>
+<td>getent</td>
+<td>Shows entries from Name Service Switch Libraries for specified keys.</td>
+</tr>
+<tr>
+<td>getkeycodes</td>
+<td>Displays the kernel scancode-to-keycode mapping table.</td>
+</tr>
+<tr>
+<td>getopts</td>
+<td>A utility to parse positional parameters.</td>
+</tr>
+<tr>
+<td>gpasswd</td>
+<td>Allows an administrator to change group passwords.</td>
+</tr>
+<tr>
+<td>gpg</td>
+<td>Enables encryption and signing services as per the OpenPGP standard.</td>
+</tr>
+<tr>
+<td>gpgsplit</td>
+<td>Used to split an OpenPGP message into packets.</td>
+</tr>
+<tr>
+<td>gpgv</td>
+<td>Used to verify OpenPGP signatures.</td>
+</tr>
+<tr>
+<td>gpm</td>
+<td>It enables cut and paste functionality and a mouse server for the Linux console.</td>
+</tr>
+<tr>
+<td>gprof</td>
+<td>Shows call graph profile data.</td>
+</tr>
+<tr>
+<td>grep</td>
+<td>Searches input files for a given pattern and displays the relevant lines.</td>
+</tr>
+<tr>
+<td>groff</td>
+<td>Serves as the front-end of the groff document formatting system.</td>
+</tr>
+<tr>
+<td>groffer</td>
+<td>Displays groff files and man pages.</td>
+</tr>
+<tr>
+<td>groupadd</td>
+<td>Used to add a new user group.</td>
+</tr>
+<tr>
+<td>groupdel</td>
+<td>Used to remove a user group.</td>
+</tr>
+<tr>
+<td>groupmod</td>
+<td>Used to modify a group definition.</td>
+</tr>
+<tr>
+<td>groups</td>
+<td>Show the group(s) to which a user belongs.</td>
+</tr>
+<tr>
+<td>grpck</td>
+<td>Verifies the integrity of group files.</td>
+</tr>
+<tr>
+<td>grpconv</td>
+<td>Creates a gshadow file from a group or an already existing gshadow.</td>
+</tr>
+<tr>
+<td>gs</td>
+<td>Invokes Ghostscript, and interpreter and previewer for Adobe's PostScript and PDF languages.</td>
+</tr>
+<tr>
+<td>gunzip</td>
+<td>A utility to compress/expand files.</td>
+</tr>
+<tr>
+<td>gzexe</td>
+<td>Used compress executable files in place and have them automatically uncompress and run at a later stage.</td>
+</tr>
+<tr>
+<td>gzip</td>
+<td>Same as gzip.</td>
+</tr>
+<tr>
+<td>halt</td>
+<td>Command used to half the machine.</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>Shows the path for the commands executed in the shell.</td>
+</tr>
+<tr>
+<td>hdparm</td>
+<td>Show/configure parameters for SATA/IDE devices.</td>
+</tr>
+<tr>
+<td>head</td>
+<td>Shows first 10 lines from each specified file.</td>
+</tr>
+<tr>
+<td>help</td>
+<td>Display's help for a built-in command.</td>
+</tr>
+<tr>
+<td>hexdump</td>
+<td>Shows specified file output in hexadecimal, octal, decimal, or ASCII format.</td>
+</tr>
+<tr>
+<td>history</td>
+<td>Shows the command history.</td>
+</tr>
+<tr>
+<td>host</td>
+<td>A utility to perform DNS lookups.</td>
+</tr>
+<tr>
+<td>hostid</td>
+<td>Shows host's numeric ID in hexadecimal format.</td>
+</tr>
+<tr>
+<td>hostname</td>
+<td>Display/set the hostname of the system.</td>
+</tr>
+<tr>
+<td>htdigest</td>
+<td>Manage the user authentication file used by the Apache web server.</td>
+</tr>
+<tr>
+<td>htop</td>
+<td>An interactive process viewer for the command line.</td>
+</tr>
+<tr>
+<td>hwclock</td>
+<td>Show or configure the system's hardware clock.</td>
+</tr>
+<tr>
+<td>iconv</td>
+<td>Convert text file from one encoding to another.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Show user and group information for a specified user.</td>
+</tr>
+<tr>
+<td>if</td>
+<td>Execute a command conditionally.</td>
+</tr>
+<tr>
+<td>ifconfig</td>
+<td>Used to configure network interfaces.</td>
+</tr>
+<tr>
+<td>ifdown</td>
+<td>Stops a network interface.</td>
+</tr>
+<tr>
+<td>ifup</td>
+<td>Starts a network interface.</td>
+</tr>
+<tr>
+<td>imapd</td>
+<td>An IMAP (Interactive Mail Access Protocol) server daemon.</td>
+</tr>
+<tr>
+<td>import</td>
+<td>Capture an X server screen and saves it as an image.</td>
+</tr>
+<tr>
+<td>inetd</td>
+<td>Extended internet services daemon, it starts the programs that provide internet services.</td>
+</tr>
+<tr>
+<td>info</td>
+<td>Used to read the documentation in Info format.</td>
+</tr>
+<tr>
+<td>init</td>
+<td>Systemd system and service manager.</td>
+</tr>
+<tr>
+<td>insmod</td>
+<td>A program that inserts a module into the Linux kernel.</td>
+</tr>
+<tr>
+<td>install</td>
+<td>Used to copy files to specified locations and set attributions during the install process.</td>
+</tr>
+<tr>
+<td>iostat</td>
+<td>Shows statistics for CPU, I/O devices, partitions, network filesystems.</td>
+</tr>
+<tr>
+<td>ip</td>
+<td>Display/manipulate routing, devices, policy, routing and tunnels.</td>
+</tr>
+<tr>
+<td>ipcrm</td>
+<td>Used to remove System V interprocess communication (IPC) objects and associated data structures.</td>
+</tr>
+<tr>
+<td>ipcs</td>
+<td>Show information on IPC facilities for which calling process has read access.</td>
+</tr>
+<tr>
+<td>iptables</td>
+<td>Administration tool for IPv4 packet filtering and NAT.</td>
+</tr>
+<tr>
+<td>iptables-restore</td>
+<td>Used to restore IP tables from data specified in the input or a file.</td>
+</tr>
+<tr>
+<td>iptables-save</td>
+<td>Used to dump IP table contents to standard output.</td>
+</tr>
+<tr>
+<td>isodump</td>
+<td>A utility that shows the content iso9660 images to verify the integrity of directory contents.</td>
+</tr>
+<tr>
+<td>isoinfo</td>
+<td>A utility to perform directory like listings of iso9660 images.</td>
+</tr>
+<tr>
+<td>isosize</td>
+<td>Show the length of an iso9660 filesystem contained in a specified file.</td>
+</tr>
+<tr>
+<td>isovfy</td>
+<td>Verifies the integrity of an iso9660 image.</td>
+</tr>
+<tr>
+<td>ispell</td>
+<td>A CLI-based spell-check utility.</td>
+</tr>
+<tr>
+<td>jobs</td>
+<td>Show the list of active jobs and their status.</td>
+</tr>
+<tr>
+<td>join</td>
+<td>For each pair of input lines, join them using a command field and display on standard output.</td>
+</tr>
+<tr>
+<td>kbd_mode</td>
+<td>Set a keyboard mode. Without arguments, shows the current keyboard mode.</td>
+</tr>
+<tr>
+<td>kbdrate</td>
+<td>Reset keyboard repeat rate and delay time.</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>Send a kill (termination) signal to one more processes.</td>
+</tr>
+<tr>
+<td>killall</td>
+<td>Kills a process(es) running a specified command.</td>
+</tr>
+<tr>
+<td>killall5</td>
+<td>A SystemV killall command. Kills all the processes excluding the ones which it depends on.</td>
+</tr>
+<tr>
+<td>klogd</td>
+<td>Control and prioritize the kernel messages to be displayed on the console, and log them through syslogd.</td>
+</tr>
+<tr>
+<td>kudzu</td>
+<td>Used to detect new and enhanced hardware by comparing it with existing database. Only for RHEL and derivates.</td>
+</tr>
+<tr>
+<td>last</td>
+<td>Shows a list of recent logins on the system by fetching data from <code>/var/log/wtmp</code> file.</td>
+</tr>
+<tr>
+<td>lastb</td>
+<td>Shows the list of bad login attempts by fetching data from <code>/var/log/btmp</code> file.</td>
+</tr>
+<tr>
+<td>lastlog</td>
+<td>Displays information about the most recent login of all users or a specified user.</td>
+</tr>
+<tr>
+<td>ld</td>
+<td>The Unix linker, it combines archives and object files. It then puts them into one output file, resolving external references.</td>
+</tr>
+<tr>
+<td>ldconfig</td>
+<td>Configure dynamic linker run-time bindings.</td>
+</tr>
+<tr>
+<td>ldd</td>
+<td>Shows shared object dependencies.</td>
+</tr>
+<tr>
+<td>less</td>
+<td>Displays contents of a file one page at a time. It's advanced than <code>more</code> command.</td>
+</tr>
+<tr>
+<td>lesskey</td>
+<td>Used to specify key bindings for less command.</td>
+</tr>
+<tr>
+<td>let</td>
+<td>Used to perform integer artithmetic on shell variables.</td>
+</tr>
+<tr>
+<td>lftp</td>
+<td>An FTP utility with extra features.</td>
+</tr>
+<tr>
+<td>lftpget</td>
+<td>Uses lftop to retrieve HTTP, FTP, and other protocol URLs supported by lftp.</td>
+</tr>
+<tr>
+<td>link</td>
+<td>Create links between two files. Similar to ln command.</td>
+</tr>
+<tr>
+<td>ln</td>
+<td>Create links between files. Links can be hard (two names for the same file) or soft (a shortcut of the first file).</td>
+</tr>
+<tr>
+<td>loadkeys</td>
+<td>Load keyboard translation tables.</td>
+</tr>
+<tr>
+<td>local</td>
+<td>Used to create function variables.</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>Shows information about current or all locales.</td>
+</tr>
+<tr>
+<td>locate</td>
+<td>Used to find files by their name.</td>
+</tr>
+<tr>
+<td>lockfile</td>
+<td>Create semaphore file(s) which can be used to limit access to a file.</td>
+</tr>
+<tr>
+<td>logger</td>
+<td>Make entries in the system log.</td>
+</tr>
+<tr>
+<td>login</td>
+<td>Create a new session on the system.</td>
+</tr>
+<tr>
+<td>logname</td>
+<td>Shows the login name of the current user.</td>
+</tr>
+<tr>
+<td>logout</td>
+<td>Performs the logout operation by making changes to the utmp and wtmp files.</td>
+</tr>
+<tr>
+<td>logrotate</td>
+<td>Used for automatic rotation, compression, removal, and mailing of system log files.</td>
+</tr>
+<tr>
+<td>look</td>
+<td>Shows any lines in a file containing a given string in the beginning.</td>
+</tr>
+<tr>
+<td>losetup</td>
+<td>Set up and control loop devices.</td>
+</tr>
+<tr>
+<td>lpadmin</td>
+<td>Used to configure printer and class queues provided by CUPS (Common UNIX Printing System).</td>
+</tr>
+<tr>
+<td>lpc</td>
+<td>Line printer control program, it provides limited control over CUPS printer and class queues.</td>
+</tr>
+<tr>
+<td>lpinfo</td>
+<td>Shows the list of avaiable devices and drivers known to the CUPS server.</td>
+</tr>
+<tr>
+<td>lpmove</td>
+<td>Move on or more printing jobs to a new destination.</td>
+</tr>
+<tr>
+<td>lpq</td>
+<td>Shows current print queue status for a specified printer.</td>
+</tr>
+<tr>
+<td>lpr</td>
+<td>Used to submit files for printing.</td>
+</tr>
+<tr>
+<td>lprint</td>
+<td>Used to print a file.</td>
+</tr>
+<tr>
+<td>lprintd</td>
+<td>Used to abort a print job.</td>
+</tr>
+<tr>
+<td>lprintq</td>
+<td>List the print queue.</td>
+</tr>
+<tr>
+<td>lprm</td>
+<td>Cancel print jobs.</td>
+</tr>
+<tr>
+<td>lpstat</td>
+<td>Displays status information about current classes, jobs, and printers.</td>
+</tr>
+<tr>
+<td>ls</td>
+<td>Shows the list of files in the current directory.</td>
+</tr>
+<tr>
+<td>lsattr</td>
+<td>Shows file attributes on a Linux ext2 file system.</td>
+</tr>
+<tr>
+<td>lsblk</td>
+<td>Lists information about all available or the specified block devices.</td>
+</tr>
+<tr>
+<td>lsmod</td>
+<td>Show the status of modules in the Linux kernel.</td>
+</tr>
+<tr>
+<td>lsof</td>
+<td>List open files.</td>
+</tr>
+<tr>
+<td>lspci</td>
+<td>List all PCI devices.</td>
+</tr>
+<tr>
+<td>lsusb</td>
+<td>List USB devices.</td>
+</tr>
+<tr>
+<td>m4</td>
+<td>Macro processor.</td>
+</tr>
+<tr>
+<td>mail</td>
+<td>Utility to compose, receive, send, forward, and reply to emails.</td>
+</tr>
+<tr>
+<td>mailq</td>
+<td>Shows to list all emails queued for delivery (sendmail queue).</td>
+</tr>
+<tr>
+<td>mailstats</td>
+<td>Shows current mail statistics.</td>
+</tr>
+<tr>
+<td>mailto</td>
+<td>Used to send mail with multimedia content in MIME format.</td>
+</tr>
+<tr>
+<td>make</td>
+<td>Utility to maintain groups of programs, recompile them if needed.</td>
+</tr>
+<tr>
+<td>makedbm</td>
+<td>Creates an NIS (Network Information Services) database map.</td>
+</tr>
+<tr>
+<td>makemap</td>
+<td>Creates database maps used by the keyed map lookups in sendmail.</td>
+</tr>
+<tr>
+<td>man</td>
+<td>Shows manual pages for Linux commands.</td>
+</tr>
+<tr>
+<td>manpath</td>
+<td>Determine search path for manual pages.</td>
+</tr>
+<tr>
+<td>mattrib</td>
+<td>Used to change MS-DOS file attribute flags.</td>
+</tr>
+<tr>
+<td>mbadblocks</td>
+<td>Checks MD-DOS filesystems for bad blocks.</td>
+</tr>
+<tr>
+<td>mcat</td>
+<td>Dump raw disk image.</td>
+</tr>
+<tr>
+<td>mcd</td>
+<td>Used to change MS-DOS directory.</td>
+</tr>
+<tr>
+<td>mcopy</td>
+<td>Used to copy MS-DOS files from or to Unix.</td>
+</tr>
+<tr>
+<td>md5sum</td>
+<td>Used to check MD5 checksum for a file.</td>
+</tr>
+<tr>
+<td>mdel, mdeltree</td>
+<td>Used to delete MS-DOS file. mdeltree recursively deletes MS-DOS directory and its contents.</td>
+</tr>
+<tr>
+<td>mdir</td>
+<td>Used to display an MS-DOS directory.</td>
+</tr>
+<tr>
+<td>mdu</td>
+<td>Used to display the amount of space occupied by an MS-DOS directory.</td>
+</tr>
+<tr>
+<td>merge</td>
+<td>Three-way file merge. Includes all changes from file2 and file3 to file1.</td>
+</tr>
+<tr>
+<td>mesg</td>
+<td>Allow/disallow osends to sedn write messages to your terminal.</td>
+</tr>
+<tr>
+<td>metamail</td>
+<td>For sending and showing rich text or multimedia email using MIME typing metadata.</td>
+</tr>
+<tr>
+<td>metasend</td>
+<td>An interface for sending non-text mail.</td>
+</tr>
+<tr>
+<td>mformat</td>
+<td>Used to add an MS-DOS filesystem to a low-level formatted floppy disk.</td>
+</tr>
+<tr>
+<td>mimencode</td>
+<td>Translate to/from MIME multimedia mail encoding formats.</td>
+</tr>
+<tr>
+<td>minfo</td>
+<td>Display parameters of an MS-DOS filesystem.</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td>Used to create directories.</td>
+</tr>
+<tr>
+<td>mkdosfs</td>
+<td>Used to create an MS-DOS filesystem under Linux.</td>
+</tr>
+<tr>
+<td>mke2fs</td>
+<td>Used create an ext2/ext3/ext4 filesystem.</td>
+</tr>
+<tr>
+<td>mkfifo</td>
+<td>Used to create named pipes (FIFOs) with the given names.</td>
+</tr>
+<tr>
+<td>mkfs</td>
+<td>Used to build a Linux filesystem on a hard disk partition.</td>
+</tr>
+<tr>
+<td>mkfs.ext3</td>
+<td>Same as mke2fs, create an ext3 Linux filesystem.</td>
+</tr>
+<tr>
+<td>mkisofs</td>
+<td>Used to create an ISO9660/JOLIET/HFS hybrid filesystem.</td>
+</tr>
+<tr>
+<td>mklost+found</td>
+<td>Create a lost+found directory on a mounted ext2 filesystem.</td>
+</tr>
+<tr>
+<td>mkmanifest</td>
+<td>Makes a list of file names and their DOS 8.3 equivalent.</td>
+</tr>
+<tr>
+<td>mknod</td>
+<td>Create a FIFO, block (buffered) special file, character (unbuffered) special file with the specified name.</td>
+</tr>
+<tr>
+<td>mkraid</td>
+<td>Used to setup RAID device arrays.</td>
+</tr>
+<tr>
+<td>mkswap</td>
+<td>Set up a Linux swap area.</td>
+</tr>
+<tr>
+<td>mktemp</td>
+<td>Create a temporary file or directory.</td>
+</tr>
+<tr>
+<td>mlabel</td>
+<td>Make an MD-DOS volume label.</td>
+</tr>
+<tr>
+<td>mmd</td>
+<td>Make an MS-DOS subdirectory.</td>
+</tr>
+<tr>
+<td>mmount</td>
+<td>Mount an MS-DOS disk.</td>
+</tr>
+<tr>
+<td>mmove</td>
+<td>Move or rename an MS-DOS file or subdirectory.</td>
+</tr>
+<tr>
+<td>mmv</td>
+<td>Mass move and rename files.</td>
+</tr>
+<tr>
+<td>modinfo</td>
+<td>Show information about a Linux kernel module.</td>
+</tr>
+<tr>
+<td>modprobe</td>
+<td>Add or remove modules from the Linux kernel.</td>
+</tr>
+<tr>
+<td>more</td>
+<td>Display content of a file page-by-page.</td>
+</tr>
+<tr>
+<td>most</td>
+<td>Browse or page through a text file.</td>
+</tr>
+<tr>
+<td>mount</td>
+<td>Mount a filesystem.</td>
+</tr>
+<tr>
+<td>mountd</td>
+<td>NFS mount daemon.</td>
+</tr>
+<tr>
+<td>mpartition</td>
+<td>Partition an MS-DOS disk.</td>
+</tr>
+<tr>
+<td>mpg123</td>
+<td>Command-line mp3 player.</td>
+</tr>
+<tr>
+<td>mpg321</td>
+<td>Similar to mpg123.</td>
+</tr>
+<tr>
+<td>mrd</td>
+<td>Remove an MS-DOS subdirectory.</td>
+</tr>
+<tr>
+<td>mren</td>
+<td>Rename an existing MS-DOS file.</td>
+</tr>
+<tr>
+<td>mshowfat</td>
+<td>Show FTA clusters allocated to a file.</td>
+</tr>
+<tr>
+<td>mt</td>
+<td>Control magnetic tape drive operation.</td>
+</tr>
+<tr>
+<td>mtools</td>
+<td>Utilities to access MS-DOS disks.</td>
+</tr>
+<tr>
+<td>mtoolstest</td>
+<td>Tests and displays the mtools configuration files.</td>
+</tr>
+<tr>
+<td>mtr</td>
+<td>A network diagnostic tool.</td>
+</tr>
+<tr>
+<td>mtype</td>
+<td>Display contents of an MS-DOS file.</td>
+</tr>
+<tr>
+<td>mv</td>
+<td>Move/rename files or directories.</td>
+</tr>
+<tr>
+<td>mzip</td>
+<td>Change protection mode and eject disk on Zip/Jaz drive.</td>
+</tr>
+<tr>
+<td>named</td>
+<td>Internet domain name server.</td>
+</tr>
+<tr>
+<td>namei</td>
+<td>Follow a pathname until a terminal point is found.</td>
+</tr>
+<tr>
+<td>nameif</td>
+<td>Name network interfaces based on MAC addresses.</td>
+</tr>
+<tr>
+<td>nc</td>
+<td>Netcat utility. Arbitrary TCP and UDP connections and listens.</td>
+</tr>
+<tr>
+<td>netstat</td>
+<td>Show network information.</td>
+</tr>
+<tr>
+<td>newaliases</td>
+<td>Rebuilds mail alias database.</td>
+</tr>
+<tr>
+<td>newgrp</td>
+<td>Log-in to a new group.</td>
+</tr>
+<tr>
+<td>newusers</td>
+<td>Update/create new users in batch.</td>
+</tr>
+<tr>
+<td>nfsd</td>
+<td>Special filesystem for controlling Linux NFS server.</td>
+</tr>
+<tr>
+<td>nfsstat</td>
+<td>List NFS statistics.</td>
+</tr>
+<tr>
+<td>nice</td>
+<td>Run a program with modified scheduling priority.</td>
+</tr>
+<tr>
+<td>nl</td>
+<td>Show numbered line while displaying the contents of a file.</td>
+</tr>
+<tr>
+<td>nm</td>
+<td>List symbols from object files.</td>
+</tr>
+<tr>
+<td>nohup</td>
+<td>Run a command immune to hangups.</td>
+</tr>
+<tr>
+<td>notify-send</td>
+<td>A program to send desktop notifications.</td>
+</tr>
+<tr>
+<td>nslookup</td>
+<td>Used performs DNS queries. Read this article for more info.</td>
+</tr>
+<tr>
+<td>nsupdate</td>
+<td>Dynamic DNS update utility.</td>
+</tr>
+<tr>
+<td>objcopy</td>
+<td>Copy and translate object files.</td>
+</tr>
+<tr>
+<td>objdump</td>
+<td>Display information from object files.</td>
+</tr>
+<tr>
+<td>od</td>
+<td>Dump files in octal and other formats.</td>
+</tr>
+<tr>
+<td>op</td>
+<td>Operator access, allows system administrators to grant users access to certain root operations that require superuser privileges.</td>
+</tr>
+<tr>
+<td>open</td>
+<td>Open a file using its default application.</td>
+</tr>
+<tr>
+<td>openvt</td>
+<td>Start a program on a new virtual terminal (VT).</td>
+</tr>
+<tr>
+<td>passwd</td>
+<td>Change user password.</td>
+</tr>
+<tr>
+<td>paste</td>
+<td>Merge lines of files. Write to standard output, TAB-separated lines consisting of sqentially correspnding lines from each file.</td>
+</tr>
+<tr>
+<td>patch</td>
+<td>Apply a patchfile (containing differences listing by diff program) to an original file.</td>
+</tr>
+<tr>
+<td>pathchk</td>
+<td>Check if file names are valid or portable.</td>
+</tr>
+<tr>
+<td>perl</td>
+<td>Perl 5 language interpreter.</td>
+</tr>
+<tr>
+<td>pgrep</td>
+<td>List process IDs matching the specified criteria among all the running processes.</td>
+</tr>
+<tr>
+<td>pidof</td>
+<td>Find process ID of a running program.</td>
+</tr>
+<tr>
+<td>ping</td>
+<td>Send ICMP ECHO_REQUEST to network hosts.</td>
+</tr>
+<tr>
+<td>pinky</td>
+<td>Lightweight finger.</td>
+</tr>
+<tr>
+<td>pkill</td>
+<td>Send kill signal to processes based on name and other attributes.</td>
+</tr>
+<tr>
+<td>pmap</td>
+<td>Report memory map of a process.</td>
+</tr>
+<tr>
+<td>popd</td>
+<td>Removes directory on the head of the directory stack and takes you to the new directory on the head.</td>
+</tr>
+<tr>
+<td>portmap</td>
+<td>Converts RPC program numbers to IP port numbers.</td>
+</tr>
+<tr>
+<td>poweroff</td>
+<td>Shuts down the machine.</td>
+</tr>
+<tr>
+<td>pppd</td>
+<td>Point-to-point protocol daemon.</td>
+</tr>
+<tr>
+<td>pr</td>
+<td>Convert (column or paginate) text files for printing.</td>
+</tr>
+<tr>
+<td>praliases</td>
+<td>Prints the current system mail aliases.</td>
+</tr>
+<tr>
+<td>printcap</td>
+<td>Printer capability database.</td>
+</tr>
+<tr>
+<td>printenv</td>
+<td>Show values of all or specified environment variables.</td>
+</tr>
+<tr>
+<td>printf</td>
+<td>Show arguments formatted according to a specified format.</td>
+</tr>
+<tr>
+<td>ps</td>
+<td>Report a snapshot of the current processes.</td>
+</tr>
+<tr>
+<td>ptx</td>
+<td>Produce a permuted index of file contents.</td>
+</tr>
+<tr>
+<td>pushd</td>
+<td>Appends a given directory name to the head of the stack and then cd to the given directory.</td>
+</tr>
+<tr>
+<td>pv</td>
+<td>Monitor progress of data through a pipe.</td>
+</tr>
+<tr>
+<td>pwck</td>
+<td>Verify integrity of password files.</td>
+</tr>
+<tr>
+<td>pwconv</td>
+<td>Creates shadow from passwd and an optionally existing shadow.</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>Show current directory.</td>
+</tr>
+<tr>
+<td>python</td>
+<td></td>
+</tr>
+<tr>
+<td>quota</td>
+<td>Shows disk usage, and space limits for a user or group. Without arguments, only shows user quotas.</td>
+</tr>
+<tr>
+<td>quotacheck</td>
+<td>Used to scan a file system for disk usage.</td>
+</tr>
+<tr>
+<td>quotactl</td>
+<td>Make changes to disk quotas.</td>
+</tr>
+<tr>
+<td>quotaoff</td>
+<td>Enable enforcement of filesystem quotas.</td>
+</tr>
+<tr>
+<td>quotaon</td>
+<td>Disable enforcement of filesystem quotas.</td>
+</tr>
+<tr>
+<td>quotastats</td>
+<td>Shows the report of quota system statistics gathered from the kernel.</td>
+</tr>
+<tr>
+<td>raidstart</td>
+<td>Start/stop RAID devices.</td>
+</tr>
+<tr>
+<td>ram</td>
+<td>RAM disk device used to access the RAM disk in raw mode.</td>
+</tr>
+<tr>
+<td>ramsize</td>
+<td>Show usage information for the RAM disk.</td>
+</tr>
+<tr>
+<td>ranlib</td>
+<td>Generate index to the contents of an archive and store it in the archive.</td>
+</tr>
+<tr>
+<td>rar</td>
+<td>Create and manage RAR file in Linux.</td>
+</tr>
+<tr>
+<td>rarpd</td>
+<td>Respond to Reverse Address Resoultion Protocol (RARP) requests.</td>
+</tr>
+<tr>
+<td>rcp</td>
+<td>Remote copy command to copy files between remote computers.</td>
+</tr>
+<tr>
+<td>rdate</td>
+<td>Set system date and time by fetching information from a remote machine.</td>
+</tr>
+<tr>
+<td>rdev</td>
+<td>Set or query RAM disk size, image root device, or video mode.</td>
+</tr>
+<tr>
+<td>rdist</td>
+<td>Remote file distribution client, maintains identical file copies over multiple hosts.</td>
+</tr>
+<tr>
+<td>rdistd</td>
+<td>Start the rdist server.</td>
+</tr>
+<tr>
+<td>read</td>
+<td>Read from a file descriptor.</td>
+</tr>
+<tr>
+<td>readarray</td>
+<td>Read lines from a file into an array variable.</td>
+</tr>
+<tr>
+<td>readcd</td>
+<td>Read/write compact disks.</td>
+</tr>
+<tr>
+<td>readelf</td>
+<td>Shows information about ELF (Executable and Linkable fomrat) files.</td>
+</tr>
+<tr>
+<td>readlink</td>
+<td>Display value of a symbolic link or canonical file name.</td>
+</tr>
+<tr>
+<td>readonly</td>
+<td>Mark functions and variables as read-only.</td>
+</tr>
+<tr>
+<td>reboot</td>
+<td>Restart the machine.</td>
+</tr>
+<tr>
+<td>reject</td>
+<td>Accept/reject print jobs sent to a specified destination.</td>
+</tr>
+<tr>
+<td>remsync</td>
+<td>Synchronize remote files over email.</td>
+</tr>
+<tr>
+<td>rename</td>
+<td>Rename one or more files.</td>
+</tr>
+<tr>
+<td>renice</td>
+<td>Change priority of active processes.</td>
+</tr>
+<tr>
+<td>repquota</td>
+<td>Report disk usage and quotas for a specified filesystem.</td>
+</tr>
+<tr>
+<td>reset</td>
+<td>Reinitialize the terminal.</td>
+</tr>
+<tr>
+<td>resize2fs</td>
+<td>Used to resize ext2/ext3/ext4 file systems.</td>
+</tr>
+<tr>
+<td>restore</td>
+<td>Restore files from a backup created using dump.</td>
+</tr>
+<tr>
+<td>return</td>
+<td>Exit a shell function.</td>
+</tr>
+<tr>
+<td>rev</td>
+<td>Show contents of a file, reversing the order of characters in every line.</td>
+</tr>
+<tr>
+<td>rexec</td>
+<td>Remote execution client for exec server.</td>
+</tr>
+<tr>
+<td>rexecd</td>
+<td>Remote execution server.</td>
+</tr>
+<tr>
+<td>richtext</td>
+<td>View "richtext" on an ACSII terminal.</td>
+</tr>
+<tr>
+<td>rlogin</td>
+<td>Used to connect a local host system with a remote host.</td>
+</tr>
+<tr>
+<td>rlogind</td>
+<td>Acts as the server for rlogin. It facilitates remote login, and authentication based on privileged port numbers from trusted hosts.</td>
+</tr>
+<tr>
+<td>rm</td>
+<td>Removes specified files and directories (not by default).</td>
+</tr>
+<tr>
+<td>rmail</td>
+<td>Handle remote mail received via uucp.</td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td>Used to remove empty directories.</td>
+</tr>
+<tr>
+<td>rmmod</td>
+<td>A program to remove modules from Linux kernel.</td>
+</tr>
+<tr>
+<td>rndc</td>
+<td>Name server control utility. Send command to a BIND DNS server over a TCP connection.</td>
+</tr>
+<tr>
+<td>rootflags</td>
+<td>Show/set flags for the kernel image.</td>
+</tr>
+<tr>
+<td>route</td>
+<td>Show/change IP routing table.</td>
+</tr>
+<tr>
+<td>routed</td>
+<td>A daemon, invoked at boot time, to manage internet routing tables.</td>
+</tr>
+<tr>
+<td>rpcgen</td>
+<td>An RPC protocol compiler. Parse a file written in the RPC language.</td>
+</tr>
+<tr>
+<td>rpcinfo</td>
+<td>Shows RPC information. Makes an RPC call to an RPC server and reports the findings.</td>
+</tr>
+<tr>
+<td>rpm</td>
+<td>A package manager for linux distributions. Originally developed for RedHat Linux.</td>
+</tr>
+<tr>
+<td>rsh</td>
+<td>Remote shell. Connects to a specified host and executes commands.</td>
+</tr>
+<tr>
+<td>rshd</td>
+<td>A daemon that acts as a server for rsh and rcp commands.</td>
+</tr>
+<tr>
+<td>rsync</td>
+<td>A versitile to for copying files remotely and locally.</td>
+</tr>
+<tr>
+<td>runlevel</td>
+<td>Shows previous and current SysV runlevel.</td>
+</tr>
+<tr>
+<td>rup</td>
+<td>Remote status display. Shows current system status for all or specified hosts on the local network.</td>
+</tr>
+<tr>
+<td>ruptime</td>
+<td>Shows uptime and login details of the machines on the local network.</td>
+</tr>
+<tr>
+<td>rusers</td>
+<td>Shows the list of the users logged-in to the host or on all machines on the local network.</td>
+</tr>
+<tr>
+<td>rusersd</td>
+<td>The rsuerd daemon acts as a server that responds to the queries from rsuers command.</td>
+</tr>
+<tr>
+<td>rwall</td>
+<td>Sends messages to all users on the local network.</td>
+</tr>
+<tr>
+<td>rwho</td>
+<td>Reports who is logged-in to the hosts on the local network.</td>
+</tr>
+<tr>
+<td>rwhod</td>
+<td>Acts as a server for rwho and ruptime commands.</td>
+</tr>
+<tr>
+<td>sane-find-scanner</td>
+<td>Find SCSI and USB scanner and determine their device files.</td>
+</tr>
+<tr>
+<td>scanadf</td>
+<td>Retrieve multiple images from a scanner equipped with an automatic document feeder (ADF).</td>
+</tr>
+<tr>
+<td>scanimage</td>
+<td>Read images from image aquistion devices (scanner or camera) and display on standard output in PNM (Portable aNyMap) format.</td>
+</tr>
+<tr>
+<td>scp</td>
+<td>Copy files between hosts on a network securely using SSH.</td>
+</tr>
+<tr>
+<td>screen</td>
+<td>A window manager that enables multiple pseudo-terminals with the help of ANSI/VT100 terminal emulation.</td>
+</tr>
+<tr>
+<td>script</td>
+<td>Used to make a typescript of everything displayed on the screen during a terminal session.</td>
+</tr>
+<tr>
+<td>sdiff</td>
+<td>Shows two files side-by-side and highlights the differences.</td>
+</tr>
+<tr>
+<td>sed</td>
+<td>Stream editor for filtering and transforming text (from a file or a pipe input).</td>
+</tr>
+<tr>
+<td>select</td>
+<td>Synchronous I/O multiplexing.</td>
+</tr>
+<tr>
+<td>sendmail</td>
+<td>It's a mail router or an MTA (Mail Transfer Agent). sendmail support can send a mail to one or more recepients using necessary protocols.</td>
+</tr>
+<tr>
+<td>sensors</td>
+<td>Shows the current readings of all sensor chips.</td>
+</tr>
+<tr>
+<td>seq</td>
+<td>Displays an incremental sequence of numbers from first to last.</td>
+</tr>
+<tr>
+<td>set</td>
+<td>Used to manipulate shell variables and functions.</td>
+</tr>
+<tr>
+<td>setfdprm</td>
+<td>Sets floppy disk parameters as provided by the user.</td>
+</tr>
+<tr>
+<td>setkeycodes</td>
+<td>Load kernel scancode-to-keycode mapping table entries.</td>
+</tr>
+<tr>
+<td>setleds</td>
+<td>Show/change LED light settings of the keyboard.</td>
+</tr>
+<tr>
+<td>setmetamode</td>
+<td>Define keyboard meta key handling. Without arguments, shows current meta key mode.</td>
+</tr>
+<tr>
+<td>setquota</td>
+<td>Set disk quotas for users and groups.</td>
+</tr>
+<tr>
+<td>setsid</td>
+<td>Run a program in a new session.</td>
+</tr>
+<tr>
+<td>setterm</td>
+<td>Set terminal attributes.</td>
+</tr>
+<tr>
+<td>sftp</td>
+<td>Secure File Transfer program.</td>
+</tr>
+<tr>
+<td>sh</td>
+<td>Command interpreter (shell) utility.</td>
+</tr>
+<tr>
+<td>sha1sum</td>
+<td>Compute and check 160-bit SHA1 checksum to verify file integrity.</td>
+</tr>
+<tr>
+<td>shift</td>
+<td>Shift positional parameters.</td>
+</tr>
+<tr>
+<td>shopt</td>
+<td>Shell options.</td>
+</tr>
+<tr>
+<td>showkey</td>
+<td>Examines codes sent by the keyboard displays them in printable form.</td>
+</tr>
+<tr>
+<td>showmount</td>
+<td>Shows information about NFS server mount on the host.</td>
+</tr>
+<tr>
+<td>shred</td>
+<td>Overwrite a file to hide its content (optionally delete it), making it harder to recover it.</td>
+</tr>
+<tr>
+<td>shutdown</td>
+<td>Power-off the machine.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>Lists section size and the total size of a specified file.</td>
+</tr>
+<tr>
+<td>skill</td>
+<td>Send a signal to processes.</td>
+</tr>
+<tr>
+<td>slabtop</td>
+<td>Show kernel slab cache information in real-time.</td>
+</tr>
+<tr>
+<td>slattach</td>
+<td>Attack a network interface to a serial line.</td>
+</tr>
+<tr>
+<td>sleep</td>
+<td>Suspend execution for a specified amount of time (in seconds).</td>
+</tr>
+<tr>
+<td>slocate</td>
+<td>Display matches by searching filename databases. Takes ownership and file permission into consideration.</td>
+</tr>
+<tr>
+<td>snice</td>
+<td>Reset priority for processes.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>Sort lines of text files.</td>
+</tr>
+<tr>
+<td>source</td>
+<td>Run commands from a specified file.</td>
+</tr>
+<tr>
+<td>split</td>
+<td>Split a file into pieces of fixed size.</td>
+</tr>
+<tr>
+<td>ss</td>
+<td>Display socket statistics, similar to netstat.</td>
+</tr>
+<tr>
+<td>ssh</td>
+<td>An SSH client for logging in to a remote machine. It provides encrypted communication between the hosts.</td>
+</tr>
+<tr>
+<td>ssh-add</td>
+<td>Adds private key identities to the authentication agent.</td>
+</tr>
+<tr>
+<td>ssh-agent</td>
+<td>It holds private keys used for public key authentication.</td>
+</tr>
+<tr>
+<td>ssh-keygen</td>
+<td>It generates, manages, converts authentication keys for ssh.</td>
+</tr>
+<tr>
+<td>ssh-keyscan</td>
+<td>Gather ssh public keys.</td>
+</tr>
+<tr>
+<td>sshd</td>
+<td>Server for the ssh program.</td>
+</tr>
+<tr>
+<td>stat</td>
+<td>Display file or filesystem status.</td>
+</tr>
+<tr>
+<td>statd</td>
+<td>A daemon that listens for reboot notifications from other hosts, and manages the list of hosts to be notified when the local system reboots.</td>
+</tr>
+<tr>
+<td>strace</td>
+<td>Trace system calls and signals.</td>
+</tr>
+<tr>
+<td>strfile</td>
+<td>Create a random access file for storing strings.</td>
+</tr>
+<tr>
+<td>strings</td>
+<td>Search a specified file and prints any printable strings with at least four characters and followed by an unprintable character.</td>
+</tr>
+<tr>
+<td>strip</td>
+<td>Discard symbols from object files.</td>
+</tr>
+<tr>
+<td>stty</td>
+<td>Change and print terminal line settings.</td>
+</tr>
+<tr>
+<td>su</td>
+<td>Change user ID or become superuser.</td>
+</tr>
+<tr>
+<td>sudo</td>
+<td>Execute a command as superuser.</td>
+</tr>
+<tr>
+<td>sum</td>
+<td>Checksum and count the block in a file.</td>
+</tr>
+<tr>
+<td>suspend</td>
+<td>Suspend the execution of the current shell.</td>
+</tr>
+<tr>
+<td>swapoff</td>
+<td>Disable devices for paging and swapping.</td>
+</tr>
+<tr>
+<td>swapon</td>
+<td>Enable devices for paging and swapping.</td>
+</tr>
+<tr>
+<td>symlink</td>
+<td>Create a symbolic link to a file.</td>
+</tr>
+<tr>
+<td>sync</td>
+<td>Synchronize cached writes to persistent storage.</td>
+</tr>
+<tr>
+<td>sysctl</td>
+<td>Configure kernel parameters at runtime.</td>
+</tr>
+<tr>
+<td>sysklogd</td>
+<td>Linux system logging utilities. Provides syslogd and klogd functionalities.</td>
+</tr>
+<tr>
+<td>syslogd</td>
+<td>Read and log system messages to the system console and log files.</td>
+</tr>
+<tr>
+<td>tac</td>
+<td>Concatenate and print files in reverse order. Opposite of cat command.</td>
+</tr>
+<tr>
+<td>tail</td>
+<td>Show the last 10 lines of each specified file(s).</td>
+</tr>
+<tr>
+<td>tailf</td>
+<td>Follow the growth of a log file. (Deprecated command)</td>
+</tr>
+<tr>
+<td>talk</td>
+<td>A two-way screen-oriented communication utility that allows two user to exchange messages simulateneously.</td>
+</tr>
+<tr>
+<td>talkd</td>
+<td>A remote user communication server for <code>talk</code>.</td>
+</tr>
+<tr>
+<td>tar</td>
+<td>GNU version of the tar archiving utility. Used to store and extract multiple files from a single archive.</td>
+</tr>
+<tr>
+<td>taskset</td>
+<td>Set/retrieve a process's CPU affinity.</td>
+</tr>
+<tr>
+<td>tcpd</td>
+<td>Access control utility for internet services.</td>
+</tr>
+<tr>
+<td>tcpdump</td>
+<td>Dump traffic on network. Displays a description of the contents of packets on a network interface that match the boolean expression.</td>
+</tr>
+<tr>
+<td>tcpslice</td>
+<td>Extract pieces of tcpdump files or merge them.</td>
+</tr>
+<tr>
+<td>tee</td>
+<td>Read from standard input and write to standard output and files.</td>
+</tr>
+<tr>
+<td>telinit</td>
+<td>Change SysV runlevel.</td>
+</tr>
+<tr>
+<td>telnet</td>
+<td>Telnet protocol user interface. Used to interact with another host using telnet.</td>
+</tr>
+<tr>
+<td>telnetd</td>
+<td>A server for the telnet protocol.</td>
+</tr>
+<tr>
+<td>test</td>
+<td>Check file type and compare values.</td>
+</tr>
+<tr>
+<td>tftp</td>
+<td>User interface to the internet TFTP (Trivial File Transfer Protocol).</td>
+</tr>
+<tr>
+<td>tftpd</td>
+<td>TFTP server.</td>
+</tr>
+<tr>
+<td>time</td>
+<td>Run programs and summarize system resource usage.</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>Execute a command with a time limit.</td>
+</tr>
+<tr>
+<td>times</td>
+<td>Shows accumulated user and system times for the shell and it's child processes.</td>
+</tr>
+<tr>
+<td>tload</td>
+<td>Shows a graph of the current system load average to the specified tty.</td>
+</tr>
+<tr>
+<td>tmpwatch</td>
+<td>Recursively remove files and directories which haven't been accessed for the specified period of time.</td>
+</tr>
+<tr>
+<td>top</td>
+<td>Displays real-time view of processes running on the system.</td>
+</tr>
+<tr>
+<td>touch</td>
+<td>Change file access and modification times.</td>
+</tr>
+<tr>
+<td>tput</td>
+<td>Modify terminal-dependent capabilities, color, etc.</td>
+</tr>
+<tr>
+<td>tr</td>
+<td>Translate, squeeze, or delete characters from standard input and display on standard output.</td>
+</tr>
+<tr>
+<td>tracepath</td>
+<td>Traces path to a network host discovering MTU (Maximum Transmission Unit) along this path.</td>
+</tr>
+<tr>
+<td>traceroute</td>
+<td>Traces the route taken by the packets to reach the network host.</td>
+</tr>
+<tr>
+<td>trap</td>
+<td>Trap function responds to hardware signals. It defines and creates handlers to run when the shell receives signals.</td>
+</tr>
+<tr>
+<td>troff</td>
+<td>The troff processor of the groff text formatting system.</td>
+</tr>
+<tr>
+<td>TRUE</td>
+<td>Exit with a status code indicating success.</td>
+</tr>
+<tr>
+<td>tset</td>
+<td>Initialize terminal.</td>
+</tr>
+<tr>
+<td>tsort</td>
+<td>Perform topological sort.</td>
+</tr>
+<tr>
+<td>tty</td>
+<td>Display the filename of the terminal connected to standard input.</td>
+</tr>
+<tr>
+<td>tune2fs</td>
+<td>Adjust tunable filesystem parameters on ext2/ext3/ext4 filesystems.</td>
+</tr>
+<tr>
+<td>tunelp</td>
+<td>Set various parameters for the line printer devices.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Write a description for a command type.</td>
+</tr>
+<tr>
+<td>ul</td>
+<td>Underline text.</td>
+</tr>
+<tr>
+<td>ulimit</td>
+<td>Get and set user limits for the calling process.</td>
+</tr>
+<tr>
+<td>umask</td>
+<td>Set file mode creation mask.</td>
+</tr>
+<tr>
+<td>umount</td>
+<td>Unmount specified file systems.</td>
+</tr>
+<tr>
+<td>unalias</td>
+<td>Remove alias definitions for specified alias names.</td>
+</tr>
+<tr>
+<td>uname</td>
+<td>Show system information.</td>
+</tr>
+<tr>
+<td>uncompress</td>
+<td>Uncompress the files compressed with the compress command.</td>
+</tr>
+<tr>
+<td>unexpand</td>
+<td>Convert spaces to tabs for a specified file.</td>
+</tr>
+<tr>
+<td>unicode_start</td>
+<td>Put keyboard and console in Unicode mode.</td>
+</tr>
+<tr>
+<td>unicode_stop</td>
+<td>Revert keyboard and console from Unicode mode.</td>
+</tr>
+<tr>
+<td>uniq</td>
+<td>Report or omit repeating lines.</td>
+</tr>
+<tr>
+<td>units</td>
+<td>Convert units from one scalar to another.</td>
+</tr>
+<tr>
+<td>unrar</td>
+<td>Extract files from a RAR archive.</td>
+</tr>
+<tr>
+<td>unset</td>
+<td>Remove variable or function names.</td>
+</tr>
+<tr>
+<td>unshar</td>
+<td>Unpack shell archive scripts.</td>
+</tr>
+<tr>
+<td>until</td>
+<td>Execute command until a given condition is true.</td>
+</tr>
+<tr>
+<td>uptime</td>
+<td>Tell how long the system has been running.</td>
+</tr>
+<tr>
+<td>useradd</td>
+<td>Create a new user or update default user information.</td>
+</tr>
+<tr>
+<td>userdel</td>
+<td>Delete a user account and related files.</td>
+</tr>
+<tr>
+<td>usermod</td>
+<td>Modify a user account.</td>
+</tr>
+<tr>
+<td>users</td>
+<td>Show the list of active users on the machine.</td>
+</tr>
+<tr>
+<td>usleep</td>
+<td>Suspend execution for microsecond intervals.</td>
+</tr>
+<tr>
+<td>uudecode</td>
+<td>Decode a binary file.</td>
+</tr>
+<tr>
+<td>uuencode</td>
+<td>Encode a binary file.</td>
+</tr>
+<tr>
+<td>uuidgen</td>
+<td>Created a new UUID (Universally Unique Identifier) table.</td>
+</tr>
+<tr>
+<td>vdir</td>
+<td>Same as <code>ls -l -b</code>. Verbosely list directory contents.</td>
+</tr>
+<tr>
+<td>vi</td>
+<td>A text editor utility.</td>
+</tr>
+<tr>
+<td>vidmode</td>
+<td>Set the video mode for a kernel image. Displays current mode value without arguments. Alternative: rdev -v</td>
+</tr>
+<tr>
+<td>vim</td>
+<td>Vi Improved, a text-based editor which is a successor to vi.</td>
+</tr>
+<tr>
+<td>vmstat</td>
+<td>Shows information about processes, memory, paging, block IO, traps, disks, and CPU activity.</td>
+</tr>
+<tr>
+<td>volname</td>
+<td>Returns volume name for a device formatted with an ISO-9660 filesystem. For example, CD-ROM.</td>
+</tr>
+<tr>
+<td>w</td>
+<td>Show who is logged-on and what they're doing.</td>
+</tr>
+<tr>
+<td>wait</td>
+<td>Waits for a specified process ID(s) to terminate and returns the termination status.</td>
+</tr>
+<tr>
+<td>wall</td>
+<td>Display a message on the terminals all the users who are currently logged-in.</td>
+</tr>
+<tr>
+<td>warnquota</td>
+<td>Send mail to the users who've exceeded their disk quota soft limit.</td>
+</tr>
+<tr>
+<td>watch</td>
+<td>Runs commands repeatedly until interrupted and shows their output and errors.</td>
+</tr>
+<tr>
+<td>wc</td>
+<td>Print newline, word, and byte count for each of the specified files.</td>
+</tr>
+<tr>
+<td>wget</td>
+<td>A non-interactive file download utility.</td>
+</tr>
+<tr>
+<td>whatis</td>
+<td>Display one line manual page descriptions.</td>
+</tr>
+<tr>
+<td>whereis</td>
+<td>Locate the binary, source, and man page files for a command.</td>
+</tr>
+<tr>
+<td>which</td>
+<td>For a given command, lists the pathnames for the files which would be executed when the command runs.</td>
+</tr>
+<tr>
+<td>while</td>
+<td>Conditionally execute commands (while loop).</td>
+</tr>
+<tr>
+<td>who</td>
+<td>Shows who is logged on.</td>
+</tr>
+<tr>
+<td>whoami</td>
+<td>Displays the username tied to the current effective user ID.</td>
+</tr>
+<tr>
+<td>whois</td>
+<td>Looks for an object in a WHOIS database</td>
+</tr>
+<tr>
+<td>write</td>
+<td>Display a message on other user's terminal.</td>
+</tr>
+<tr>
+<td>xargs</td>
+<td>Runs a command using initial arguments and then reads remaining arguments from standard input.</td>
+</tr>
+<tr>
+<td>xdg-open</td>
+<td>Used to open a file or URL in an application preferred by the user.</td>
+</tr>
+<tr>
+<td>xinetd</td>
+<td>Extended internet services daemon. Works similar to inetd.</td>
+</tr>
+<tr>
+<td>xz</td>
+<td>Compress/ Decompress .xz and .lzma files.</td>
+</tr>
+<tr>
+<td>yacc</td>
+<td>Yet Another Compiler Compiler, a GNU Project parser generator.</td>
+</tr>
+<tr>
+<td>yes</td>
+<td>Repeatedly output a line with a specified string(s) until killed.</td>
+</tr>
+<tr>
+<td>ypbind</td>
+<td>A daemon that helps client processes to connect to an NIS server.</td>
+</tr>
+<tr>
+<td>ypcat</td>
+<td>Shows the NIS map (or database) for the specified MapName parameter.</td>
+</tr>
+<tr>
+<td>ypinit</td>
+<td>Sets up NIS maps on an NIS server.</td>
+</tr>
+<tr>
+<td>ypmatch</td>
+<td>Shows values for specified keys from an NIS map.</td>
+</tr>
+<tr>
+<td>yppasswd</td>
+<td>Change NIS login password.</td>
+</tr>
+<tr>
+<td>yppasswdd</td>
+<td>Acts as a server for the yppasswd command. Receives and executes requests.</td>
+</tr>
+<tr>
+<td>yppoll</td>
+<td>Shows the ID number or version of NIS map currently used on the NIS server.</td>
+</tr>
+<tr>
+<td>yppush</td>
+<td>Forces slave NIS servers to copy updated NIS maps.</td>
+</tr>
+<tr>
+<td>ypserv</td>
+<td>A daemon activated at system startup. It looks for information in local NIS maps.</td>
+</tr>
+<tr>
+<td>ypset</td>
+<td>Point a client (running ypbind) to a specifc server (running ypserv).</td>
+</tr>
+<tr>
+<td>yptest</td>
+<td>Calls various functions to check the configuration of NIS services.</td>
+</tr>
+<tr>
+<td>ypwhich</td>
+<td>Shows the hostname for NIS server or master server for a given map.</td>
+</tr>
+<tr>
+<td>ypxfr</td>
+<td>Transfers NIS server map from server to a local host.</td>
+</tr>
+<tr>
+<td>zcat</td>
+<td>Used to compress/uncompress files. Similar to gzip</td>
+</tr>
+<tr>
+<td>zcmp</td>
+<td>Compare compressed files.</td>
+</tr>
+<tr>
+<td>zdiff</td>
+<td>Compare compressed files line by line.</td>
+</tr>
+<tr>
+<td>zdump</td>
+<td>Displays time for the timezone mentioned.</td>
+</tr>
+<tr>
+<td>zforce</td>
+<td>Adds .gz extension to all gzipped files.</td>
+</tr>
+<tr>
+<td>zgrep</td>
+<td>Performs grep on compressed files.</td>
+</tr>
+<tr>
+<td>zic</td>
+<td>Creates time conversion information files using the specified input files.</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>A file compression and packaging utility.</td>
+</tr>
+<tr>
+<td>zless</td>
+<td>Displays information of a compressed file (using less command) on the terminal one screen at a time.</td>
+</tr>
+<tr>
+<td>zmore</td>
+<td>Displays output of a compressed file (using more command) on the terminal one page at a time.</td>
+</tr>
+<tr>
+<td>znew</td>
+<td>Recompress .z files to .gz. files.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../virtual-machines/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Virtual Machine on linux">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Virtual Machine on linux
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../disk-fs-management/disk-management/" class="md-footer__link md-footer__link--next" aria-label="Next: Disk Management">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Disk Management
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright Shivanshu Semwal
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.footer"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../assets/javascript/mathjax.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,7331 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://shivanshu-semwal.github.io/notes/operating-systems/linux/commands/file-directory-management/directory-structure/">
+      
+      
+        <link rel="prev" href="../../disk-fs-management/disk-management/">
+      
+      
+        <link rel="next" href="../file-management/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Directory Structure - Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#directory-structure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Notes" class="md-header__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  <img src="../../../../../assets/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Directory Structure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber"  aria-label="Switch to system theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Operating systems
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../softwares/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Softwares
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../tools/search-engines/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Notes" class="md-nav__button md-logo" aria-label="Notes" data-md-component="logo">
+      
+  <img src="../../../../../assets/favicon.ico" alt="logo">
+
+    </a>
+    Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operating systems
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operating systems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../booting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Booting and Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../android/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Android
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../android/recommendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recommended Apps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../booting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Booting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Components
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../distros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../languages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Languages on Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sound/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sound on Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../touchpad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Touchpad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../virtual-machines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Machine on linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11" id="__nav_2_4_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Commands
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_2" id="__nav_2_4_11_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk fs management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Disk fs management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../disk-fs-management/disk-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disk Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_3" id="__nav_2_4_11_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File directory management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    File directory management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directory Structure
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directory Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unix-system-resources-usr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unix System Resources /usr
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unix System Resources /usr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binary Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usrbin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        usr/bin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usrsbin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/sbin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usrlibexec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/libexec
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Libraries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usrlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/lib
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usrlib32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/lib32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usrlibx32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/libx32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usrlib64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/lib64
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-files-usrinclude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header Files /usr/include
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-files-usrshare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Files /usr/share
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locally-managed-resources-usrlocal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locally Managed Resources /usr/local
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-files-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Files /etc
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-directories-home-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Directories /home /root
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Directories /home /root">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normal-users-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normal Users /home
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-user-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root User /root
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boot-information-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boot Information /boot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-directories-dev-proc-sys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Directories /dev /proc /sys
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual Directories /dev /proc /sys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devices-dev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Devices /dev
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-sys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System /sys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processes-proc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processes /proc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-data-var" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Data /var
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporary-files-tmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporary Files /tmp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporary-filesystem-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporary Filesystem /run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting-devices-media-mnt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mounting Devices /media /mnt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mounting Devices /media /mnt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /media
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mnt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /mnt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-party-software-opt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Third Party Software /opt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services-data-srv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services Data /srv
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovery-lostfound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery /lost+found
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finding-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finding Files on System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_4" id="__nav_2_4_11_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    File permissions ownership
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    File permissions ownership
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../file-permissions-ownership/group-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Groups Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../file-permissions-ownership/sudo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    sudo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../file-permissions-ownership/user-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../manual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_11_5" id="__nav_2_4_11_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Manual
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manual/getting-help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_6" id="__nav_2_4_11_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Networking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Networking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../networking/network-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_7" id="__nav_2_4_11_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Process management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Process management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../process-management/process-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Process Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_8" id="__nav_2_4_11_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shell customization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Shell customization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shell-customization/dircolors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    dircolors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shell-customization/tmux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    tmux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_9" id="__nav_2_4_11_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System information
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System information
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-information/date-time-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Date Time Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-information/device-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Device Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-information/libinput/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    libinput
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-information/locale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    locale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-information/system-info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Information
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_10" id="__nav_2_4_11_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System monitoring performance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    System monitoring performance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-monitoring-performance/memory-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memory Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_11_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_11_11" id="__nav_2_4_11_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Textfu
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_11_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_11_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Textfu
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../textfu/fold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../textfu/text-file-manipulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text Files Manipulation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../textfu/xargs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    xargs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../customizations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customizations
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_12" id="__nav_2_4_12_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customizations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/ascii_art/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ASCII Art
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/desktop_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desktop files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/fonts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fonts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_12_5" id="__nav_2_4_12_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Desktop environments
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_12_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Desktop environments
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12_5_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../customizations/desktop-environments/gnome/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gnome
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_12_5_1" id="__nav_2_4_12_5_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_4_12_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gnome
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/desktop-environments/gnome/settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setings in Gnome
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../customizations/desktop-environments/kde/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kde
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_12_5_2" id="__nav_2_4_12_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="5" aria-labelledby="__nav_2_4_12_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kde
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/desktop-environments/kde/dolphin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dolphin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/desktop-environments/kde/kf5-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    kf5-config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/desktop-environments/kde/sddm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    sddm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../customizations/themes/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Themes
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_12_6" id="__nav_2_4_12_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_12_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Themes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/themes/gtk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gtk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/themes/switch-light-dark-themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch between light dark themes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_12_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_12_7" id="__nav_2_4_12_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Window managers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_12_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_12_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Window managers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/window-managers/i3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    i3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../customizations/window-managers/picom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    picom
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../display-servers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Display servers
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Display servers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../package-managers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package managers
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_14" id="__nav_2_4_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Package managers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package-managers/AUR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AUR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package-managers/brew/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    brew
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package-managers/debian/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    debian
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package-managers/pacman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pacman
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package-managers/rpm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RPM Package Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../package-managers/snap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    snap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_15" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../shells/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shells
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_15" id="__nav_2_4_15_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Shells
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shells/colors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Colors on Terminals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shells/shell-prompt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shells/terminals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_15_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_15_5" id="__nav_2_4_15_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_15_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_15_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    List
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shells/list/bash/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bash Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shells/list/fish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fish Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shells/list/zsh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zsh Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_15_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../shells/scripting/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scripting
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_15_6" id="__nav_2_4_15_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_15_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_15_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scripting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shells/scripting/cookbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shell Scripting Cookbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shells/scripting/shell-syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shell Syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_15_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../shells/shell-build-in/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shell build in
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4_15_7" id="__nav_2_4_15_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_4_15_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_15_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Shell build in
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../shells/shell-build-in/echo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    echo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4_16" id="__nav_2_4_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systemd
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Systemd
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systemd/bluetoothctl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bluetooth
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systemd/loginctl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    loginctl
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../macos/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macos
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Macos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../windows/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Windows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/powershell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Powershell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../windows/manual/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manual
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6_3" id="__nav_2_6_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Manual
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/manual/Registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Registry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/manual/dir-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directory Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/manual/history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    History of windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/manual/windows-7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/manual/wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Window Sub-system for linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_3_7" id="__nav_2_6_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Utilities
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_6_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Utilities
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/manual/utilities/diskpart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diskpart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../windows/software/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6_4" id="__nav_2_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/software/autohotkey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    autohotkey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/software/launcher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Launchers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/software/package_managers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Package Mangers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/software/sysinternals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sysinternals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/software/terminals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminals
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../windows/software/tool_kit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toolkit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../softwares/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Softwares
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Softwares
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/adb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Android Debugger - adb
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/bundle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bundle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/ffmpeg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ffmpeg
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/imagemagik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    imagemagik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/inkscape/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    inkscape
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/libreoffice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    libreoffice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/mpv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    mpv
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/pandoc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pandoc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/rclone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    rclone
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/stardict/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    StarDict
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ssh
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ssh
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/ssh/scp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    scp - secure copy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/ssh/ssh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ssh
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../softwares/ssh/ssh_man/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSH - Secure Shell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/search-engines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Search Engines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../tools/latex/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Latex
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Latex
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/latex/bibliographies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bibliographies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/latex/label-and-references/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Labels and References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social media
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Social media
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/social-media/blogging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blogging
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/social-media/fediverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    fediverse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../tools/vim/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vim
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vim
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4_2" id="__nav_4_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My stuff
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    My stuff
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/vim/my-stuff/clipboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Copying to clipboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/vim/my-stuff/external-command/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    External commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/vim/my-stuff/find-replace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    find and replace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/vim/my-stuff/line_number/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Line Numbers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/vim/my-stuff/macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    macros
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/vim/my-stuff/renaming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    bulk renaming
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tools/vim/my-stuff/spell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spell Check
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unix-system-resources-usr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unix System Resources /usr
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unix System Resources /usr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binary Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usrbin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        usr/bin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usrsbin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/sbin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usrlibexec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/libexec
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Libraries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usrlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/lib
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usrlib32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/lib32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usrlibx32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/libx32
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usrlib64" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /usr/lib64
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#header-files-usrinclude" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header Files /usr/include
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-files-usrshare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Files /usr/share
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locally-managed-resources-usrlocal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locally Managed Resources /usr/local
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-files-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Files /etc
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-directories-home-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Directories /home /root
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="User Directories /home /root">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normal-users-home" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normal Users /home
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#root-user-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Root User /root
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boot-information-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boot Information /boot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-directories-dev-proc-sys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Virtual Directories /dev /proc /sys
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Virtual Directories /dev /proc /sys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devices-dev" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Devices /dev
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-sys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System /sys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processes-proc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processes /proc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-data-var" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variable Data /var
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporary-files-tmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporary Files /tmp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temporary-filesystem-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temporary Filesystem /run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mounting-devices-media-mnt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mounting Devices /media /mnt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mounting Devices /media /mnt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#media" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /media
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mnt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /mnt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#third-party-software-opt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Third Party Software /opt
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#services-data-srv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services Data /srv
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recovery-lostfound" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recovery /lost+found
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="directory-structure">Directory Structure</h1>
+<h2 id="unix-system-resources-usr">Unix System Resources <code>/usr</code></h2>
+<h3 id="binary-files">Binary Files</h3>
+<h4 id="usrbin"><code>usr/bin</code></h4>
+<ul>
+<li>contains binaries and executables that are essential to the entire os</li>
+<li>run these form the command line</li>
+<li><code>ls</code>, <code>gzip</code>, <code>curl</code></li>
+</ul>
+<h4 id="usrsbin"><code>/usr/sbin</code></h4>
+<ul>
+<li>contain system binaries that can only be run by the root (super) user</li>
+<li><code>mount</code> <code>deluser</code></li>
+</ul>
+<h4 id="usrlibexec"><code>/usr/libexec</code></h4>
+<ul>
+<li>The <code>libexec</code> directory on Unix-like systems, including Linux, is a standard directory used for storing system-specific, architecture-dependent executable files that are meant to be used internally by other programs or system services.</li>
+</ul>
+<h3 id="libraries">Libraries</h3>
+<h4 id="usrlib"><code>/usr/lib</code></h4>
+<ul>
+<li>contains shared libraries (also called shared objects <code>.so</code>)</li>
+</ul>
+<h4 id="usrlib32"><code>/usr/lib32</code></h4>
+<ul>
+<li>contains 32 bit shared library files</li>
+</ul>
+<h4 id="usrlibx32"><code>/usr/libx32</code></h4>
+<ul>
+<li>The x32 ABI is a hybrid of 64-bit and 32-bit ABIs, designed to take advantage of the larger register set of 64-bit processors while using 32-bit pointers to reduce memory consumption.</li>
+<li>The <code>libx32</code> directory contains libraries compiled specifically for this ABI.</li>
+</ul>
+<h4 id="usrlib64"><code>/usr/lib64</code></h4>
+<ul>
+<li>contains 64 bit shared libraries files</li>
+</ul>
+<h3 id="header-files-usrinclude">Header Files <code>/usr/include</code></h3>
+<ul>
+<li>contains header files for standard c and c++ libraries</li>
+<li>contain header files for system</li>
+<li>also development libraries installed have their header files here</li>
+</ul>
+<h3 id="shared-files-usrshare">Shared Files <code>/usr/share</code></h3>
+<p>The <code>/usr/share</code> directory is another important system directory on Linux and Unix-like operating systems. It contains architecture-independent (meaning not specific to a particular CPU architecture) data that is shared across different systems. This data is typically read-only and includes files that are not executables or libraries but are used by applications for various purposes.</p>
+<p>Here are some key points about the <code>/usr/share</code> directory:</p>
+<ul>
+<li>
+<p>Shared Data: The primary purpose of <code>/usr/share</code> is to store data that can be shared among multiple users and applications. This data may include documentation, images, icons, wallpapers, sound files, themes, fonts, and more.</p>
+</li>
+<li>
+<p>Application Resources: Many applications store their shared resources in the <code>/usr/share</code> directory. This allows multiple applications to use the same data, reducing duplication and saving disk space.</p>
+</li>
+<li>
+<p>System-Wide Configuration: Some system-wide configuration files may also be placed in <code>/usr/share.</code> However, it's important to note that configuration files that might be modified by users or administrators are usually stored in other directories like <code>/etc</code> or <code>/usr/local/etc.</code></p>
+</li>
+<li>
+<p>Architecture-Independent: The contents of <code>/usr/share</code> are architecture-independent, meaning they are the same across systems with different CPU architectures.</p>
+</li>
+<li>
+<p>Subdirectories: The <code>/usr/share</code> directory is organized into various subdirectories, each containing specific types of data. For example:</p>
+<ul>
+<li><code>/usr/share/doc</code>: Contains documentation files for various installed packages.</li>
+<li><code>/usr/share/icons</code>: Holds icon sets used by desktop environments.</li>
+<li><code>/usr/share/fonts</code>: Stores fonts available for the system.</li>
+<li><code>/usr/share/sounds</code>: Contains sound files used by applications or the system.</li>
+<li><code>/usr/share/application</code>: Contains desktop entry files used by applications or the system.</li>
+<li><code>/usr/share/man</code>: Contains manual entry files used by applications or the system.</li>
+</ul>
+</li>
+<li>
+<p>Read-Only: By convention, the data in <code>/usr/share</code> is read-only, meaning it should not be modified by users or applications.</p>
+</li>
+</ul>
+<h3 id="locally-managed-resources-usrlocal">Locally Managed Resources <code>/usr/local</code></h3>
+<p>Nearly same copy of <code>/usr</code> so that the locally build and installed software don't conflict
+with the one installed by the system package manager.</p>
+<h2 id="configuration-files-etc">Configuration Files <code>/etc</code></h2>
+<ul>
+<li>
+<p>Configuration Files: The primary purpose of the <code>/etc</code> directory is to store configuration files for various system components and applications. These files control the behavior and settings of the operating system, services, daemons, and installed software.</p>
+</li>
+<li>
+<p>System-wide Configuration: Most of the files in <code>/etc</code> affect the entire system and apply to all users. The configuration files stored here are typically edited and maintained by system administrators.</p>
+</li>
+<li>
+<p>Access Restrictions: Many files in <code>/etc</code> have restricted permissions, allowing only privileged users (usually the root user) to read and modify them. This is to prevent unauthorized users from tampering with critical system settings.</p>
+<ul>
+<li>Like <code>imagemagick</code> image manipulation utility have security configuration permissions here.</li>
+</ul>
+</li>
+<li>
+<p><code>/etc/passwd</code> Contains user account information.</p>
+</li>
+<li><code>/etc/group</code> Stores group information for users.</li>
+<li><code>/etc/hosts</code> Maps IP addresses to hostnames for local DNS resolution.</li>
+<li><code>/etc/hostname</code> Stores the system's hostname.</li>
+<li><code>/etc/resolv.conf</code> Configures DNS name resolution settings.</li>
+<li><code>/etc/fstab</code> Defines filesystems and their mount options.</li>
+<li><code>/etc/ssh/sshd_config</code> Configuration file for the OpenSSH server.</li>
+<li><code>/etc/sudoers</code> Configures sudo privileges for users.</li>
+</ul>
+<h2 id="user-directories-home-root">User Directories <code>/home</code> <code>/root</code></h2>
+<h3 id="normal-users-home">Normal Users <code>/home</code></h3>
+<ul>
+<li>On Linux and Unix-like operating systems, the <code>/home</code> directory is a central location where user home directories are typically stored.</li>
+<li>Each user on the system is assigned a home directory within <code>/home</code>, and it serves as the user's private workspace.</li>
+</ul>
+<p>Each user directory has following directories:</p>
+<ul>
+<li><code>.config</code> - User Configuration files, <code>$XDG_CONFIG_HOME</code></li>
+<li><code>.local</code><ul>
+<li><code>bin</code> - user binaries</li>
+<li><code>lib</code> - user library files</li>
+<li><code>libexec</code> - user binaries used by other binaries</li>
+<li><code>etc</code> - configuration</li>
+<li><code>include</code> - include files for binaries</li>
+<li><code>share</code> - Data shared across applications, <code>$XDG_DATA_HOME</code><ul>
+<li><code>application</code> - desktop entry files, override <code>/usr/share/application</code></li>
+<li><code>fonts</code> - fonts</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>.cache</code> - temporary files, <code>$XDG_CACHE_HOME</code></li>
+<li><code>.icons</code></li>
+<li><code>.themes</code></li>
+</ul>
+<h3 id="root-user-root">Root User <code>/root</code></h3>
+<ul>
+<li>On Linux and Unix-like operating systems, the <code>/root</code> directory is the home directory for the superuser or root user. The root user is the administrative user with full privileges and unrestricted access to all commands and system resources.</li>
+<li>The <code>/root</code> directory serves as the root user's private workspace, similar to how the <code>/home</code> directory is used for regular users.</li>
+</ul>
+<h2 id="boot-information-boot">Boot Information <code>/boot</code></h2>
+<ul>
+<li>files needed to boot the system</li>
+<li>like the linux kernel</li>
+</ul>
+<h2 id="virtual-directories-dev-proc-sys">Virtual Directories <code>/dev</code> <code>/proc</code> <code>/sys</code></h2>
+<h3 id="devices-dev">Devices <code>/dev</code></h3>
+<p>On Linux and Unix-like operating systems, the <code>/dev</code> directory is a special directory that contains device files. These device files serve as interfaces to access various hardware devices, pseudo-devices, and other kernel-related functionalities. Unlike regular files that store data on disk, device files provide a way to communicate with and control hardware devices and drivers.</p>
+<p>Here are some key points about the <code>/dev</code> directory:</p>
+<ul>
+<li>
+<p>Device Files: Device files are used to represent and interact with hardware devices connected to the system. They are part of the special <code>device file system</code> that allows users and applications to communicate with devices using simple read and write operations on these files.</p>
+</li>
+<li>
+<p>Types of Device Files: There are two main types of device files in the <code>/dev</code> directory:</p>
+<ul>
+<li>Character Devices: Represent devices that transfer data character-by-character, such as keyboards, mice, terminals, and serial ports. They are accessed through character device files, usually denoted by the letter <code>c</code> in the permissions listing (e.g., <code>/dev/tty</code> for a terminal device).</li>
+<li>Block Devices: Represent devices that transfer data in fixed-size blocks, such as hard drives and solid-state drives. They are accessed through block device files, typically denoted by the letter <code>b</code> in the permissions listing (e.g., <code>/dev/sda</code> for a hard drive).</li>
+</ul>
+</li>
+<li>
+<p>Pseudo-Devices: Some device files in <code>/dev</code> are pseudo-devices, which do not correspond to physical hardware but provide kernel interfaces for various functionalities. Examples include <code>/dev/null</code> (a null device that discards data), <code>/dev/zero</code> (a device that generates null bytes), and <code>/dev/random</code> (a device that generates random data).</p>
+</li>
+<li>
+<p>Device Nodes: Device files are also known as <code>device nodes.</code> Each device file has a unique major and minor number combination that identifies the corresponding device driver to which it belongs. When a program accesses a device file, the kernel routes the request to the appropriate driver based on these numbers.</p>
+</li>
+<li>
+<p>Permissions: Access to device files is controlled by permissions. Typically, only privileged users (root) or users belonging to specific groups are allowed to access certain device files, especially those that have significant control over hardware.</p>
+</li>
+<li>
+<p>Dynamically Created: Device files in <code>/dev</code> are often dynamically created and managed by the system. When devices are detected or drivers are loaded, the associated device files are automatically created.</p>
+</li>
+</ul>
+<h3 id="system-sys">System <code>/sys</code></h3>
+<ul>
+<li>On Linux systems, the <code>/sys</code> directory is a virtual filesystem that provides an interface for interacting with the kernel and accessing information about devices, drivers, and other kernel parameters. Similar to <code>/proc,</code> the files and directories within <code>/sys</code> are not actual physical files on disk but instead represent kernel objects and attributes.</li>
+<li>Device and Driver Information: The main purpose of the <code>/sys</code> directory is to expose information related to devices and drivers in the system. Each device and driver has its directory structure under <code>/sys</code>, providing details about its current state and configuration.</li>
+<li>Kernel Parameters: In addition to device and driver information, <code>/sys</code> also exposes various kernel parameters that can be read or modified to control the behavior of the kernel and its components.</li>
+<li>File Hierarchy: The <code>/sys</code> directory is organized hierarchically, with subdirectories representing different aspects of the system, such as:<ul>
+<li><code>/sys/devices</code> Contains information about devices in the system, including their drivers and connection topology.</li>
+<li><code>/sys/class</code> Provides a view of devices organized by their class, such as block devices, network devices, etc.</li>
+<li><code>/sys/module</code> Shows information about kernel modules that are currently loaded.</li>
+<li><code>/sys/fs</code> Contains filesystem-related information, such as mount points and file system features.</li>
+<li><code>/sys/kernel</code> Contains various kernel-related information and parameters.</li>
+<li>and more.</li>
+</ul>
+</li>
+<li>Read and Write Access: Some files and directories in <code>/sys</code> can be read to obtain information, while others can be written to modify kernel parameters or trigger specific actions.</li>
+<li>Debugging and Troubleshooting: <code>/sys</code> is valuable for debugging and troubleshooting purposes, as it provides insights into how devices and drivers are interacting with the kernel.</li>
+<li>Virtual Filesystem: The data exposed in <code>/sys</code> is dynamically generated by the kernel when accessed, and any changes made to its attributes are directly reflected in the kernel's behavior.</li>
+</ul>
+<h3 id="processes-proc">Processes <code>/proc</code></h3>
+<p>On Linux and Unix-like operating systems, the <code>/proc</code> directory is a virtual filesystem that provides a window into the kernel and processes running on the system. It does not represent physical files stored on disk but rather exposes information and statistics about the running system as a series of files and directories.</p>
+<p>Here are some key points about the <code>/proc</code> directory:</p>
+<ul>
+<li>Pseudofile System: The <code>/proc</code> directory is often referred to as a <code>pseudofile system</code> because the files and directories it contains do not correspond to actual files on disk. Instead, they are dynamically generated by the kernel on-the-fly when accessed and provide a real-time view of various system and process-related information.</li>
+<li>System and Process Information: Inside <code>/proc,</code> you can find various numerical directories (named after process IDs) and files that provide information about the system, such as:<ul>
+<li><code>/proc/cpuinfo</code>: Information about the CPU and its capabilities.</li>
+<li><code>/proc/meminfo</code>: Memory-related statistics, including total memory, free memory, etc.</li>
+<li><code>/proc/version</code>: Kernel version information.</li>
+<li><code>/proc/sys</code>: Contains tunable kernel parameters that control various aspects of the system's behavior.</li>
+<li><code>/proc/loadavg</code>: Current system load averages.</li>
+<li><code>/proc/uptime</code>: Uptime of the system.</li>
+<li><code>/proc/net</code>: Information about network-related statistics.</li>
+<li>and more.</li>
+</ul>
+</li>
+<li>Process Information: The <code>/proc</code> directory also contains numerical subdirectories named after process IDs (PIDs). Each PID directory contains information about a specific running process, including its command line, status, memory usage, file descriptors, and more. For example:<ul>
+<li><code>/proc/&lt;PID&gt;/status</code>: Provides status information for the process with the specified PID.</li>
+<li><code>/proc/&lt;PID&gt;/cmdline</code>: Contains the command-line arguments used to launch the process.</li>
+</ul>
+</li>
+<li>
+<p>Interface with the Kernel: The <code>/proc</code> filesystem provides an interface through which user-space programs and utilities can communicate with the kernel and access various system statistics and process information in real-time.</p>
+</li>
+<li>
+<p>Security: While <code>/proc</code> can be very useful for monitoring and understanding system behavior, it also exposes sensitive information. Access to certain files and directories in <code>/proc</code> might be restricted to prevent unauthorized access to system data.</p>
+</li>
+</ul>
+<h2 id="variable-data-var">Variable Data <code>/var</code></h2>
+<p>On Linux and Unix-like operating systems, the <code>/var</code> directory is used to store variable data—data that is expected to change frequently during the system's operation. This data is not critical for the system to function, but it is essential for various services, applications, and system logs.</p>
+<p>Here are some key points about the <code>/var</code> directory:</p>
+<ul>
+<li>Variable Data: The name <code>/var</code> stands for <code>variable,</code> as the data stored in this directory is expected to change in size and content over time. Unlike directories such as <code>/bin</code> and <code>/lib,</code> which contain essential executables and libraries, the data in <code>/var</code> is not static and can be modified during the system's runtime.</li>
+<li>System Logs <code>/var/log</code>: One of the primary uses of <code>/var</code> is to store system logs and log files generated by various services and applications. For example, system logs kept in <code>/var/log</code> include messages from the kernel, system daemons, application logs, and user-specific logs.</li>
+<li>Spool and Cache Data <code>/var/spool</code> <code>/var/cache</code>: The <code>/var/spool</code> directory is used for storing spool data related to print jobs, mail queues, and other services that use spooling. Additionally, the <code>/var/cache</code> directory contains cache data that can be regenerated or discarded without affecting the system's functionality.</li>
+<li>Temporary Files: Some temporary files generated by programs during their execution might be stored in <code>/var/tmp</code> or <code>/var/run</code> directories. These files are usually cleared upon system restart and are not intended to persist across reboots.</li>
+<li>Application Data: Various applications store variable data, such as configuration files, databases, and user-specific files, in subdirectories within <code>/var.</code></li>
+<li>State Information <code>/var/lib</code>: The <code>/var/lib</code> directory is used to store state information for applications, including runtime data and databases.</li>
+<li>User Mailboxes<code>/var/mail</code>: On some systems, user mailboxes can be found in the <code>/var/mail</code> directory.</li>
+<li>Website data <code>/var/www</code>: <code>/var/www</code> directory is a common location used on Linux and Unix-like operating systems to store website data, files, and web applications for serving content via web servers. It is the default directory where web documents and resources are kept on many web server configurations.</li>
+</ul>
+<p>It's important to note that the contents of <code>/var</code> are expected to change frequently, so it is not suitable for mounting on a read-only file system. Also, it is essential to manage log rotation and purging of logs regularly to prevent <code>/var</code> from consuming excessive disk space.</p>
+<h2 id="temporary-files-tmp">Temporary Files <code>/tmp</code></h2>
+<ul>
+<li>The <code>/tmp</code> directory on Linux and Unix-like operating systems is a location designated for temporary files. It is used to store data that is only needed temporarily and is expected to be deleted or cleared regularly, usually upon system reboot.</li>
+</ul>
+<h2 id="temporary-filesystem-run">Temporary Filesystem <code>/run</code></h2>
+<p>The <code>/run</code> directory on Linux and Unix-like operating systems is a temporary filesystem that holds temporary files and runtime data for various system services. It is typically mounted as a <code>tmpfs</code> (a memory-based filesystem) during the system's boot process, allowing it to reside in RAM and providing fast access to frequently changing data.</p>
+<p>Here are some key points about the <code>/run</code> directory:</p>
+<ul>
+<li>
+<p>Runtime Data: The primary purpose of the <code>/run</code> directory is to store runtime data that needs to be accessed or updated frequently during the system's operation. This includes data related to running services and daemons.</p>
+</li>
+<li>
+<p>/var/run Symlink: Historically, runtime data was often stored in the <code>/var/run</code> directory. However, to support the use of <code>tmpfs</code> and improve performance, many modern systems use the <code>/run</code> directory as a separate mount point or symlink it to <code>/var/run.</code></p>
+</li>
+<li>
+<p>Early Boot Process: The <code>/run</code> directory is created early during the system's boot process and is often used by various init systems and services to store their runtime data.</p>
+</li>
+<li>
+<p>Lock Files and PIDs: The <code>/run</code> directory is commonly used to store lock files (<code>*.lock</code>) that indicate the exclusiveness of certain resources and process ID (PID) files that contain the process IDs of running daemons.</p>
+</li>
+<li>
+<p>Application Sockets: Some applications use the <code>/run</code> directory to create Unix domain sockets, which are used for inter-process communication on the local system.</p>
+</li>
+<li>
+<p>Stateless Systems: On stateless systems or systems with volatile root filesystems (e.g., some embedded systems), the <code>/run</code> directory may be particularly useful since it doesn't rely on persistent storage.</p>
+</li>
+<li>
+<p>Cleaning on Boot: Like <code>/tmp,</code> the <code>/run</code> directory may be cleared upon system reboot to ensure that transient data does not persist across reboots.</p>
+</li>
+</ul>
+<p>The use of <code>/run</code> has become more prevalent to accommodate modern system designs, such as those used in containerized environments or systems with dynamic configurations. It allows for faster access to runtime data by utilizing memory instead of disk storage and is particularly useful for systems that may not have persistent storage or have limited space available.</p>
+<h2 id="mounting-devices-media-mnt">Mounting Devices <code>/media</code> <code>/mnt</code></h2>
+<h3 id="media"><code>/media</code></h3>
+<p>On Linux and Unix-like operating systems, the <code>/media</code> directory is a standard location used as a mount point for removable media devices, such as USB drives, optical discs (CDs/DVDs), external hard drives, and other storage devices. When you connect a removable media device to the system, it is automatically mounted to a subdirectory within <code>/media.</code></p>
+<p>Here are some key points about the <code>/media</code> directory:</p>
+<ul>
+<li>
+<p>Mount Point for Removable Media: The primary purpose of the <code>/media</code> directory is to serve as a convenient mount point for accessing the content of removable media devices. When a removable media device is plugged in or inserted, the system automatically mounts it under <code>/media,</code> making its contents accessible to users.</p>
+</li>
+<li>
+<p>Dynamic Mounting: The directories inside <code>/media</code> are created dynamically by the system when a removable media device is connected. Each device usually gets its own subdirectory based on the device's label or unique identifier.</p>
+</li>
+<li>
+<p>Naming Convention: The subdirectories within <code>/media</code> are typically named after the label or identifier of the connected device. For example, a USB drive with the label <code>USB_DRIVE</code> might be mounted at <code>/media/USB_DRIVE.</code></p>
+</li>
+<li>
+<p>Manual Mounting: In some cases, users may also manually mount removable media devices to <code>/media</code> or a subdirectory within it using the <code>mount</code> command. However, modern desktop environments often handle automatic mounting of removable media.</p>
+</li>
+<li>
+<p>Unmounting: When the user finishes using the removable media, they can safely unmount it from the system. On some systems, this can be done by simply ejecting or safely removing the device through the desktop environment's interface. Alternatively, users can use the <code>umount</code> command to unmount the device.</p>
+</li>
+<li>
+<p>Other Media Directories: Some Linux distributions use different directories for automounting removable media, such as <code>/mnt</code> or <code>/run/media/&lt;user&gt;.</code> However, <code>/media</code> is the most common location on many systems.</p>
+</li>
+</ul>
+<p>It's important to note that the <code>/media</code> directory is primarily meant for temporarily accessing the content of removable media devices. If you need to permanently mount a filesystem or network share, it's more appropriate to use the <code>/mnt</code> directory or other appropriate locations depending on the specific use case and system configuration.</p>
+<h3 id="mnt"><code>/mnt</code></h3>
+<p>On Linux and Unix-like operating systems, the <code>/mnt</code> directory is a standard location intended for temporarily mounting filesystems, network shares, or other storage devices that are not automatically mounted by the system. Unlike the <code>/media</code> directory, which is used for automatically mounting removable media devices, the <code>/mnt</code> directory is typically used for manual or one-time mounts.</p>
+<p>Here are some key points about the <code>/mnt</code> directory:</p>
+<ul>
+<li>
+<p>Manual Mount Point: The primary purpose of the <code>/mnt</code> directory is to provide a location where system administrators or users can manually mount additional filesystems or network shares when needed. It is a general-purpose mount point that can be used for various types of storage devices.</p>
+</li>
+<li>
+<p>Temporary Mounts: The <code>/mnt</code> directory is suitable for temporary mounts or one-time access to other filesystems or network shares. It is often used for mounting external storage devices, secondary hard drives, NFS shares, or other file systems that are not part of the default system setup.</p>
+</li>
+<li>
+<p>No Automatic Mounting: Unlike the <code>/media</code> directory, which is often managed by the system for automatic mounting of removable media, the <code>/mnt</code> directory does not automatically mount any devices or filesystems. Users or administrators need to manually mount devices to this location.</p>
+</li>
+<li>
+<p>Mount Subdirectories: To avoid cluttering the <code>/mnt</code> directory with multiple mounts, it is common to create subdirectories within <code>/mnt</code> for each mounted device or network share. For example, <code>/mnt/usb</code> might be used for a mounted USB drive, <code>/mnt/nfs</code> for an NFS share, and so on.</p>
+</li>
+<li>
+<p>Temporary Usage: It's essential to remember that any filesystems or network shares mounted under <code>/mnt</code> are not automatically mounted on subsequent system reboots. These mounts are typically temporary and need to be manually configured or re-mounted as needed.</p>
+</li>
+<li>
+<p>System Administrators' Convenience: The <code>/mnt</code> directory is particularly useful for system administrators who need to access and manage various storage devices and network shares during system maintenance or troubleshooting.</p>
+</li>
+</ul>
+<h2 id="third-party-software-opt">Third Party Software <code>/opt</code></h2>
+<p>The <code>/opt</code> directory on Linux and Unix-like operating systems is a standard directory used for the installation of optional or third-party software packages. Unlike the system directories such as <code>/usr</code> and <code>/bin,</code> which are typically managed by the operating system's package manager and contain essential system files, the <code>/opt</code> directory is reserved for software that is not part of the core operating system distribution.</p>
+<p>Here are some key points about the <code>/opt</code> directory:</p>
+<ul>
+<li>
+<p>Optional Software: The primary purpose of the <code>/opt</code> directory is to provide a location for installing optional software packages that are not part of the base system's distribution. These could be third-party applications or software packages that are installed separately from the operating system's standard packages.</p>
+</li>
+<li>
+<p>Self-Contained Packages: Software installed in <code>/opt</code> is typically self-contained within its own subdirectory. This helps prevent conflicts with other software installed on the system and keeps the optional packages isolated from the system's core components.</p>
+</li>
+<li>
+<p>Directory Structure: Each software package installed in <code>/opt</code> typically has its own subdirectory within <code>/opt.</code> For example, if you install a software package called <code>exampleapp,</code> it might have its files stored in <code>/opt/exampleapp.</code></p>
+</li>
+<li>
+<p>Binaries and Libraries: The <code>/opt</code> directory may contain executable binaries, libraries, documentation, configuration files, and other assets specific to the software package being installed.</p>
+</li>
+<li>
+<p>No Package Manager Management: Unlike the <code>/usr</code> and <code>/bin</code> directories, which are managed by the package manager and its package database, software installed in <code>/opt</code> is not typically managed by the system's package manager. The responsibility for installation, updates, and removal lies with the software itself or with additional package management tools provided by the software vendor.</p>
+</li>
+<li>
+<p>Multiple Versions: In some cases, software packages may support multiple versions installed side by side in separate <code>/opt</code> subdirectories to allow users to choose which version to use.</p>
+</li>
+<li>
+<p>Avoid Overwriting System Files: One of the main reasons for using <code>/opt</code> is to avoid overwriting or conflicting with system files, as software installed in <code>/opt</code> is isolated from the rest of the system.</p>
+</li>
+</ul>
+<p>It's essential to check the documentation of the software you're installing to confirm the intended usage of the <code>/opt</code> directory. Some software may use <code>/opt</code> for optional components, while others may have different conventions for installation.</p>
+<h2 id="services-data-srv">Services Data <code>/srv</code></h2>
+<p>On Linux and Unix-like operating systems, the <code>/srv</code> directory is used to store data and files related to services provided by the system. It is intended to hold data specific to individual services, such as websites, FTP servers, or other network services.</p>
+<p>Here are some key points about the <code>/srv</code> directory:</p>
+<ul>
+<li>
+<p>Service Data: The primary purpose of the <code>/srv</code> directory is to provide a location for storing data and files related to services provided by the system. It is often used to store data generated or used by network services, web servers, and other applications that offer services to users or clients.</p>
+</li>
+<li>
+<p>Service-Specific Subdirectories: Within the <code>/srv</code> directory, subdirectories are created for individual services. For example, a web server might have its website data in <code>/srv/www,</code> an FTP server might use <code>/srv/ftp,</code> and so on.</p>
+</li>
+<li>
+<p>Separation from System Data: The <code>/srv</code> directory is separate from the system directories like <code>/usr,</code> <code>/bin,</code> and <code>/etc,</code> which contain essential system files and executables. Storing service data in <code>/srv</code> helps keep the system's essential components separate from the data associated with specific services.</p>
+</li>
+<li>
+<p>Filesystem Hierarchy Standard: The use of <code>/srv</code> is encouraged by the Filesystem Hierarchy Standard (FHS), a set of guidelines that govern the organization of files and directories on Unix-like systems.</p>
+</li>
+<li>
+<p>Service Data Persistence: The data stored in <code>/srv</code> is usually meant to be persistent, as opposed to the <code>/tmp</code> directory, which holds temporary data that may be cleared upon system reboot.</p>
+</li>
+<li>
+<p>Service Configuration: While the actual configuration files for services are typically stored in other locations (e.g., <code>/etc</code>), the data managed by the services, such as websites, databases, or user uploads, may be stored in <code>/srv.</code></p>
+</li>
+<li>
+<p>Custom Setup: The use of <code>/srv</code> is not required, and some systems may have different conventions for organizing service data. Some administrators may prefer to store service data in other directories like <code>/var</code> or <code>/home,</code> depending on their preferences or system requirements.</p>
+</li>
+</ul>
+<h2 id="recovery-lostfound">Recovery <code>/lost+found</code></h2>
+<p>The "/lost+found" directory is a special directory found on Unix-like file systems, including Linux. It is used to store recovered files and directories that are found during the file system's consistency check, which is typically performed after an unexpected system shutdown or a file system error.</p>
+<p>Here are some key points about the "/lost+found" directory:</p>
+<ul>
+<li>
+<p>File System Consistency Check: File systems like ext2, ext3, ext4, and others have built-in mechanisms to check the consistency of the file system's data structures and metadata. These checks are performed regularly or during system startup to ensure the file system remains in a consistent state.</p>
+</li>
+<li>
+<p>Recovered Files: During a file system consistency check, if the system detects orphaned files or directories (i.e., files or directories that are not associated with any parent directory), it attempts to recover them and places them in the "/lost+found" directory.</p>
+</li>
+<li>
+<p>Unique Directory: The "/lost+found" directory is unique because it is automatically created at the root of the file system when the file system is formatted. It is owned by the root user and typically only accessible by the root user.</p>
+</li>
+<li>
+<p>Human Intervention: Usually, the file system consistency check is automatically performed by the system, and users do not need to interact with the "/lost+found" directory directly. However, in the case of serious file system errors or corruption, the system may prompt the administrator to manually intervene and review the recovered files.</p>
+</li>
+<li>
+<p>Ownership and Permissions: Since the "/lost+found" directory is owned by the root user, regular users do not have permissions to create or delete files directly in this directory. Only the root user or an administrator with root privileges can interact with the "/lost+found" directory.</p>
+</li>
+<li>
+<p>Recovery Process: If you encounter files or directories in the "/lost+found" directory, it's essential to carefully review them before taking any action. Some of the files may have lost their original filenames or metadata, making it necessary to determine their identities and restore them to their proper locations manually.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../disk-fs-management/disk-management/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Disk Management">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Disk Management
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../file-management/" class="md-footer__link md-footer__link--next" aria-label="Next: File Management">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                File Management
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright Shivanshu Semwal
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.footer"], "search": "../../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../../assets/javascript/mathjax.js"></script>
+      
+    
+  </body>
+</html>
