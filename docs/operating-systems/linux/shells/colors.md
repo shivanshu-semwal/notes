@@ -11,5 +11,6 @@ There are multiple ways you can use colors in linux terminals.
 ## `dircolors`
 
 - `dircolors` controls the color at terminal.
-- If you are unable to read text of `ls` due to some bad colors on
+- `dircolors --print-database`
+- If you are unable to read text of `ls` due to some bad colors on 
 - <https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console>
