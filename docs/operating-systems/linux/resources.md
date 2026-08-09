@@ -1,73 +1,55 @@
 # Resources
 
-There are many resources available for learning about linux,
-but many of them don't come under search results.
+There are many resources available for learning about Linux,
+but many of them are not easy to discover through normal search results.
 
-## Learning Resources
+## Learning Paths and Tutorials
 
-- <https://wiki.linuxquestions.org/> linux wiki
-- <https://cmdchallenge.com> interactive shell game
-- <https://www.kernel.org/doc/man-pages/> library c functions gnu
-- <https://www.explainshell.com> enter a command and get's its explanation
-- <https://wiki.archlinux.org/>
-- <https://linuxjourney.com/>
-- <https://linux.die.net/>
-- <https://tldp.org/>
-- <http://bash.cyberciti.biz/guide/Main_Page>
-- <https://en.wikipedia.org/wiki/Linux.conf.au> - lau videos
-- <https://en.wikipedia.org/wiki/Open_Source_Developers%27_Conference>
-- <https://en.wikipedia.org/wiki/Category:Linux_conferences>
-- <https://github.com/makelinux/linux_kernel_map>
-- <https://github.com/inputsh/awesome-linux>
-- <https://github.com/bpearson/Awesome-Ubuntu-Linux>
-- <https://github.com/luong-komorebi/Awesome-Linux-Software>
-- <https://github.com/madbob/awesome-linux-dev>
-- <https://github.com/manjunath5496/Linux-Books>
-- <https://github.com/manjunath5496/Important-Linux-Commands-You-Should-Know>
-- <https://github.com/manjunath5496/What-is-Linux-and-why-is-it-so-popular>
-- <https://github.com/alebcay/awesome-shell>
-- <https://github.com/awesome-lists/awesome-bash>
-- <https://github.com/agarrharr/awesome-cli-apps>
+- [The Linux Documentation Project](https://tldp.org/)
+- [Linux Documentation](https://linux.die.net/)
+- [Linux Journey](https://linuxjourney.com/)
+- [Linux Questions Wiki](https://www.linuxquestions.org/)
+- [Bash Guide for Beginners](http://bash.cyberciti.biz/guide/Main_Page)
+- [cmdchallenge](https://cmdchallenge.com) - interactive shell exercises
+- [Explain Shell](https://www.explainshell.com) - explain shell commands
+- [Kernel documentation - man pages](https://www.kernel.org/doc/man-pages/)
+- [Arch Wiki](https://wiki.archlinux.org/)
+- `man` command
+- `tldr` command
+- [Ask Ubuntu](https://askubuntu.com/)
+
+## Books, Lists and Curated Collections
+
+- [Linux Kernel Map](https://github.com/makelinux/linux_kernel_map)
+- [awesome-linux](https://github.com/inputsh/awesome-linux)
+- [Awesome Ubuntu Linux](https://github.com/bpearson/Awesome-Ubuntu-Linux)
+- [Awesome Linux Software](https://github.com/luong-komorebi/Awesome-Linux-Software)
+- [awesome-linux-dev](https://github.com/madbob/awesome-linux-dev)
+- [Linux Books](https://github.com/manjunath5496/Linux-Books)
+- [Important Linux Commands You Should Know](https://github.com/manjunath5496/Important-Linux-Commands-You-Should-Know)
+- [What is Linux and Why is It so Popular](https://github.com/manjunath5496/What-is-Linux-and-why-is-it-so-popular)
+- [awesome-shell](https://github.com/alebcay/awesome-shell)
+- [awesome-bash](https://github.com/awesome-lists/awesome-bash)
+- [awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps)
 
 ## Desktop Environments and Window Managers
 
-Must read the one you use, and it will make your life easy.
+Read the one you use and it will make your life much easier.
 
-- <https://github.com/myugan/awesome-linux-customization>
-- <https://github.com/francoism90/awesome-kde>
-- <https://github.com/Kazhnuz/awesome-gnome>
-- [make qt and gtk apps look same](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications)
+- [awesome-linux-customization](https://github.com/myugan/awesome-linux-customization)
+- [awesome-kde](https://github.com/francoism90/awesome-kde)
+- [awesome-gnome](https://github.com/Kazhnuz/awesome-gnome)
+- [Uniform look for Qt and GTK applications](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications)
 
-## Discord
+## Communities and Discussion
 
-- [Linux Hub](https://discord.gg/8MdKWGn)
-- [Linux Café](https://discord.gg/9pfb5ZB)
-- [Linux For All](https://discord.gg/gewCYyN)
-- [Linux & Technology Kingdom](https://discord.gg/5ygn9EY)
-- [The Tech Community](https://discord.gg/uuKtzCw)
-- [\*nix nest](https://discord.gg/svhXktFkAG)
-- [r/unixporn](https://discord.gg/TnJ4h5K)
-- [Mint](https://discord.gg/EVVtPpw)
-- [openSUSE](https://discord.gg/opensuse)
-- [Manjaro](https://discord.gg/JxnQTkJhFU)
-- [Void](https://discord.gg/6XUn5H3)
-- [Fedora](https://discord.gg/fedora)
-- [Arch](https://discord.gg/MrhPdhn)
-- [r/LinuxGaming](https://discord.gg/linuxgaming)
-- [Linux_Gamers_Group](https://discord.gg/ZfsCU8z)
-- [Lutris](https://discord.gg/Pnt5CuY)
-- [ProtonDB](https://discord.gg/uuwK9EV)
-- [VKx](https://discord.gg/usAgsbK)
-- [Minetest](https://discord.gg/6W84ytH)
+### Reddit
 
-## Reddit
+- [r/linux wiki](https://www.reddit.com/r/linux/wiki/index)
+- [List of largest Linux distro subreddits maintained by r/linux](https://www.reddit.com/r/linux/comments/gc1wmr/list_of_largest_linux_distro_subreddits/)
 
-- [list maintained by r/linux](https://www.reddit.com/r/linux/wiki/index)
-- [Distro subreddits list maintained by r/linux](https://www.reddit.com/r/linux/comments/gc1wmr/list_of_largest_linux_distro_subreddits/)
+## Conferences and Events
 
-## RTFM
-
-- `man` command
-- `tldr` command
-- [archwiki](https://wiki.archlinux.org/)
-- [askubuntu](https://askubuntu.com/)
+- [Linux.conf.au](https://en.wikipedia.org/wiki/Linux.conf.au)
+- [Open Source Developers' Conference](https://en.wikipedia.org/wiki/Open_Source_Developers%27_Conference)
+- [Linux conferences category](https://en.wikipedia.org/wiki/Category:Linux_conferences)
